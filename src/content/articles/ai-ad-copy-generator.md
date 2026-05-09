@@ -13,7 +13,7 @@ Writing ad copy is a different craft from writing blog posts or landing pages. I
 
 AI ad copy generators are now capable of producing usable first drafts for Google Ads, Meta ads, LinkedIn campaigns, and more — in seconds. The best ones understand platform-specific character limits, conversion psychology, and how to write for paid intent.
 
-This guide covers the top AI ad copy generators in 2025, what each does best, and how to use them to actually improve your ad performance.
+This guide covers the top AI ad copy generators in 2026, what each does best, and how to use them to actually improve your ad performance.
 
 ---
 

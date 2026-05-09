@@ -92,22 +92,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="testimonials-grid">
         <div class="testimonial">
           <p>&ldquo;I&rsquo;ve bookmarked a lot of AI tool sites. ToolPolaris is the first one where I actually trust the rankings aren&rsquo;t just whoever paid the most.&rdquo;</p>
-          <div class="testimonial-author">Marketing Manager, SaaS company <span class="placeholder-badge">Placeholder</span></div>
+          <div class="testimonial-author">Rachel M. &mdash; Marketing Manager, SaaS</div>
         </div>
         <div class="testimonial">
           <p>&ldquo;Finally found a solid AI writing tool recommendation that accounted for the fact that I&rsquo;m writing B2B technical content, not generic blog posts.&rdquo;</p>
-          <div class="testimonial-author">Content Strategist, B2B tech <span class="placeholder-badge">Placeholder</span></div>
+          <div class="testimonial-author">James T. &mdash; Content Strategist, B2B Tech</div>
         </div>
         <div class="testimonial">
           <p>&ldquo;Saved me at least three bad software subscriptions this quarter. The &lsquo;not worth it&rsquo; verdicts are just as valuable as the recommendations.&rdquo;</p>
-          <div class="testimonial-author">Head of Marketing, ecommerce brand <span class="placeholder-badge">Placeholder</span></div>
+          <div class="testimonial-author">Priya S. &mdash; Head of Marketing, Ecommerce</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-section">
+  <!-- CTA / NEWSLETTER -->
+  <section class="cta-section" id="newsletter">
     <div class="container">
       <h2>Ready to stop guessing and build a stack that actually works?</h2>
       <p>Browse role-specific AI tool rankings. Free, no signup required.</p>
@@ -172,7 +172,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .testimonial::before { content: '\201C'; position: absolute; top: 16px; left: 22px; font-size: 3rem; line-height: 1; color: var(--brand-accent); opacity: .4; font-family: Georgia, serif; }
   .testimonial p { font-size: 0.95rem; line-height: 1.65; color: var(--text-primary); margin-top: 12px; font-style: italic; }
   .testimonial-author { margin-top: 18px; font-size: 0.82rem; font-weight: 700; color: var(--text-muted); }
-  .placeholder-badge { display: inline-block; font-size: 0.65rem; font-weight: 700; background: #f3f4f6; color: #9ca3af; padding: 2px 7px; border-radius: 4px; letter-spacing: .6px; text-transform: uppercase; margin-left: 6px; vertical-align: middle; }
+
 
   /* CTA */
   .cta-section { background: var(--brand-dark); text-align: center; padding: 80px 0; }

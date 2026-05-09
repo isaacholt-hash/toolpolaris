@@ -1,30 +1,143 @@
 ---
-// Dynamic route — renders every article in src/content/articles/
+// Dynamic route — renders article pages AND category listing pages
 import { getCollection } from 'astro:content';
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// Canonical map: display name → URL slug
+const CATEGORY_MAP = [
+  { name: 'AI Writing',          slug: 'ai-writing-tools-marketers',    emoji: '✍️' },
+  { name: 'Social Media',        slug: 'ai-social-media-marketing-tools', emoji: '📱' },
+  { name: 'SEO & Content',       slug: 'ai-seo-tools-marketers',        emoji: '🔎' },
+  { name: 'Ad Copy',             slug: 'ai-ad-copy-tools',              emoji: '📣' },
+  { name: 'Analytics',           slug: 'ai-analytics-tools-marketers',  emoji: '📊' },
+  { name: 'Email Marketing',     slug: 'ai-email-marketing-tools',      emoji: '📧' },
+  { name: 'Design & Creative',   slug: 'ai-design-tools-marketers',     emoji: '🎨' },
+  { name: 'Market Research',     slug: 'ai-research-tools-marketers',   emoji: '🧠' },
+  { name: 'Video & Repurposing', slug: 'ai-video-tools-marketers',      emoji: '🎬' },
+  { name: 'Automation',          slug: 'ai-automation-tools-marketers', emoji: '⚡' },
+];
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles');
-  return articles.map(article => ({
+
+  // Article paths
+  const articlePaths = articles.map(article => ({
     params: { slug: article.slug },
-    props:  { article },
+    props:  { type: 'article', article, catArticles: [], catMeta: null },
   }));
+
+  // Category listing paths — skip any slug that conflicts with an article slug
+  const articleSlugs = new Set(articles.map(a => a.slug));
+  const categoryPaths = CATEGORY_MAP
+    .filter(cat => !articleSlugs.has(cat.slug))
+    .map(cat => {
+      const catArticles = articles
+        .filter(a => a.data.category === cat.name)
+        .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+      return {
+        params: { slug: cat.slug },
+        props:  { type: 'category', article: null, catArticles, catMeta: cat },
+      };
+    });
+
+  return [...articlePaths, ...categoryPaths];
 }
 
-const { article } = Astro.props;
-const { Content } = await article.render();
-const { title, description, pubDate, updatedDate, category, tags, readTime, affiliate } = article.data;
+const { type, article, catArticles, catMeta } = Astro.props;
+
+// Render markdown content only for article pages
+let Content: any = null;
+if (type === 'article') {
+  const rendered = await article.render();
+  Content = rendered.Content;
+}
 ---
 
-<ArticleLayout
-  title={title}
-  description={description}
-  pubDate={pubDate}
-  updatedDate={updatedDate}
-  category={category}
-  tags={tags}
-  readTime={readTime}
-  affiliate={affiliate}
->
-  <Content />
-</ArticleLayout>
+{type === 'article' && article ? (
+  <ArticleLayout
+    title={article.data.title}
+    description={article.data.description}
+    pubDate={article.data.pubDate}
+    updatedDate={article.data.updatedDate}
+    category={article.data.category}
+    tags={article.data.tags}
+    readTime={article.data.readTime}
+    affiliate={article.data.affiliate}
+  >
+    {Content && <Content />}
+  </ArticleLayout>
+) : (
+  <BaseLayout
+    title={`Best ${catMeta?.name} AI Tools for Marketers | ToolPolaris`}
+    description={`Honest, role-specific AI tool rankings for ${catMeta?.name?.toLowerCase()} — ranked for marketing professionals by real workflow performance.`}
+  >
+    <div class="page-hero">
+      <div class="container">
+        <p class="section-label">Category</p>
+        <h1>{catMeta?.emoji} {catMeta?.name} Tools</h1>
+        <p class="page-sub">Ranked for marketing professionals &mdash; honest assessments, no pay-to-rank.</p>
+      </div>
+    </div>
+
+    <nav class="breadcrumb-bar" aria-label="breadcrumb">
+      <div class="container">
+        <a href="/">Home</a>
+        <span aria-hidden="true">/</span>
+        <a href="/categories/">Browse by Role</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">{catMeta?.name}</span>
+      </div>
+    </nav>
+
+    <section class="section">
+      <div class="container">
+        {catArticles.length === 0 ? (
+          <div class="empty-state">
+            <p>🔧 Reviews for this category are coming soon.</p>
+            <a href="/tools/" class="btn-primary" style="margin-top:20px;display:inline-flex;">Browse All Tool Reviews &rarr;</a>
+          </div>
+        ) : (
+          <div class="articles-grid">
+            {catArticles.map((a: any) => (
+              <a href={`/tools/${a.slug}/`} class="article-card">
+                <span class="article-category">{a.data.category}</span>
+                <h2>{a.data.title}</h2>
+                <p>{a.data.description}</p>
+                <span class="article-meta">{a.data.readTime ?? 8} min read &middot; {a.data.pubDate.toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' })}</span>
+              </a>
+            ))}
+          </div>
+        )}
+        <div class="browse-more">
+          <a href="/tools/" class="btn-primary">Browse All Tools &rarr;</a>
+          <a href="/categories/" class="btn-secondary">All Categories</a>
+        </div>
+      </div>
+    </section>
+  </BaseLayout>
+)}
+
+<style>
+  /* Category page styles */
+  .page-hero { background: var(--brand-dark); padding: 64px 0 52px; }
+  .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: #fff; margin: 10px 0 10px; letter-spacing: -0.3px; }
+  .page-sub { font-size: 0.95rem; color: rgba(255,255,255,0.55); }
+
+  .breadcrumb-bar { font-size: 0.8rem; color: var(--text-muted); padding: 14px 0; border-bottom: 1px solid #e4e9f0; }
+  .breadcrumb-bar a { color: var(--text-muted); text-decoration: none; }
+  .breadcrumb-bar a:hover { color: var(--brand-accent); }
+  .breadcrumb-bar span { margin: 0 6px; }
+
+  .empty-state { text-align: center; padding: 60px 0; color: var(--text-muted); font-size: 1.05rem; }
+  .empty-state a { color: var(--brand-accent); font-weight: 600; text-decoration: none; }
+
+  .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+  .article-card { display: flex; flex-direction: column; gap: 8px; background: #fff; border: 1.5px solid #e4e9f0; border-radius: var(--radius); padding: 24px; text-decoration: none; color: var(--text-primary); transition: border-color .2s, box-shadow .15s; }
+  .article-card:hover { border-color: var(--brand-accent); box-shadow: 0 4px 18px rgba(15,31,61,0.08); }
+  .article-category { font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--brand-accent); }
+  .article-card h2 { font-size: 1rem; font-weight: 700; line-height: 1.35; }
+  .article-card p  { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; flex: 1; }
+  .article-meta { font-size: 0.75rem; color: #aab; font-weight: 500; }
+  .browse-more { display: flex; gap: 12px; margin-top: 48px; flex-wrap: wrap; }
+</style>

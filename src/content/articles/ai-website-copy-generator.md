@@ -152,7 +152,7 @@ With these four inputs, even a $16/month tool like Writesonic will produce copy 
 
 ## What AI Website Copy Still Gets Wrong
 
-AI copy generators in 2025 are genuinely impressive, but they still struggle with:
+AI copy generators in 2026 are genuinely impressive, but they still struggle with:
 
 **Specificity:** Generic copy like "Boost your productivity" appears in thousands of websites. The more specific and unusual your value proposition, the harder AI finds it to articulate well.
 

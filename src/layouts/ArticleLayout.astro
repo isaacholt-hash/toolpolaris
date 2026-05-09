@@ -26,7 +26,21 @@ const {
 
 const formattedPub     = pubDate.toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
 const formattedUpdated = updatedDate?.toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
-const categorySlug     = category.toLowerCase().replace(/\s+/g, '-');
+
+// Canonical map: category display name → URL slug
+const CATEGORY_SLUGS: Record<string, string> = {
+  'AI Writing':          'ai-writing-tools-marketers',
+  'Social Media':        'ai-social-media-tools',
+  'SEO & Content':       'ai-seo-tools-marketers',
+  'Ad Copy':             'ai-ad-copy-tools',
+  'Analytics':           'ai-analytics-tools-marketers',
+  'Email Marketing':     'ai-email-marketing-tools',
+  'Design & Creative':   'ai-design-tools-marketers',
+  'Market Research':     'ai-research-tools-marketers',
+  'Video & Repurposing': 'ai-video-tools-marketers',
+  'Automation':          'ai-automation-tools-marketers',
+};
+const categorySlug = CATEGORY_SLUGS[category] ?? category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 ---
 
 <BaseLayout title={`${title} | ToolPolaris`} description={description}>
