@@ -1,5 +1,5 @@
 ---
-title: "Best AI Website Copy Generator Tools in 2025 (Reviewed)"
+title: "Best AI Website Copy Generator Tools in 2026 (Reviewed)"
 description: "Find the best AI website copy generator for your needs — from landing pages to full site copy. Honest comparison of the top tools, pricing, and what each does best."
 pubDate: 2026-05-09
 category: "Ad Copy"

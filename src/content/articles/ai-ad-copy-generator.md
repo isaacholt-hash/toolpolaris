@@ -1,5 +1,5 @@
 ---
-title: "Best AI Ad Copy Generator Tools in 2025 (Google, Meta & More)"
+title: "Best AI Ad Copy Generator Tools in 2026 (Google, Meta & More)"
 description: "Find the best AI ad copy generator for Google Ads, Meta, LinkedIn, and more. Comparison of Copy.ai, Jasper, AdCreative.ai, Anyword, and Writesonic for paid ads."
 pubDate: 2026-05-09
 category: "Ad Copy"

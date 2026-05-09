@@ -1,5 +1,5 @@
 ---
-title: "Best AI Tools for Digital Marketers in 2025 (Tested & Ranked)"
+title: "Best AI Tools for Digital Marketers in 2026 (Tested & Ranked)"
 description: "The definitive guide to AI tools for digital marketers — covering SEO, content, ads, email, social, and analytics. Find the right stack for your budget and role."
 pubDate: 2026-05-09
 category: "AI Writing"

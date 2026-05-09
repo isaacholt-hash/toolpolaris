@@ -49,8 +49,8 @@ const { title, description, canonicalUrl } = Astro.props;
     .section    { padding: 80px 0; }
     .section--alt { background: var(--brand-light); }
 
-    /* NAV */
-    nav { position: sticky; top: 0; z-index: 100; background: var(--brand-dark); padding: 16px 0; }
+    /* NAV — scoped to .site-nav so breadcrumb <nav> elements are not affected */
+    .site-nav { position: sticky; top: 0; z-index: 100; background: var(--brand-dark); padding: 16px 0; }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; }
     .nav-logo  { font-weight: 800; font-size: 1.25rem; color: #fff; text-decoration: none; letter-spacing: -0.3px; }
     .nav-logo span { color: var(--brand-accent); }
@@ -98,7 +98,7 @@ const { title, description, canonicalUrl } = Astro.props;
 </head>
 <body>
 
-  <nav>
+  <nav class="site-nav">
     <div class="container nav-inner">
       <a class="nav-logo" href="/">Tool<span>Polaris</span></a>
       <ul class="nav-links">
