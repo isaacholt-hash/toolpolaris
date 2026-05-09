@@ -1,7 +1,7 @@
 ---
 title: "Best Free AI Tools for Content Writing in 2025 (No Credit Card Required)"
 description: "Discover the best free AI tools for content writing — from blog posts to social captions. Honest reviews of what's actually free vs. what's just a trial."
-pubDate: 2025-06-01
+pubDate: 2026-05-09
 category: "AI Writing"
 tags: ["free AI tools", "content writing", "AI writing", "free tools", "content creation"]
 affiliate: true
