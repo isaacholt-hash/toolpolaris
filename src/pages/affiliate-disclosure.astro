@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Affiliate Disclosure | ToolPolaris"
+  description="ToolPolaris participates in affiliate programs. This page explains how we earn commissions and how that does — and doesn't — affect our rankings."
+>
+  <div class="page-hero">
+    <div class="container">
+      <p class="section-label">Legal</p>
+      <h1>Affiliate Disclosure</h1>
+      <p class="page-sub">Last updated: May 2026</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container prose-page">
+
+      <p class="lead">ToolPolaris participates in affiliate programs run by software companies and networks. When you click a link on this site and sign up for a paid product, we may earn a commission &mdash; at no additional cost to you.</p>
+
+      <h2>What this means in practice</h2>
+      <p>Some of the links on ToolPolaris are affiliate links. If you click one of these links and make a purchase or sign up for a subscription, ToolPolaris earns a percentage of the sale as a commission. You pay the same price you would have paid if you went directly to the vendor.</p>
+
+      <h2>How commissions affect our rankings</h2>
+      <p><strong>They don&rsquo;t.</strong> Our rankings are based on editorial criteria: output quality, workflow fit, price-to-value ratio, reliability, and transparency. A tool does not earn a higher ranking by offering us a higher commission rate, and a tool does not get excluded because it has no affiliate programme.</p>
+      <p>We have a financial incentive to be accurate. If we recommend a bad tool to earn a commission, readers stop trusting us &mdash; and without trust, the business fails. Long-term revenue depends on editorial integrity, not short-term commission maximisation.</p>
+
+      <h2>Sponsored content</h2>
+      <p>Occasionally, tool companies pay for clearly-labelled &ldquo;Featured&rdquo; or &ldquo;Sponsored&rdquo; placements on ToolPolaris. This is separate from affiliate commissions and is always disclosed with a visible &ldquo;Sponsored&rdquo; label. Sponsored placements do not affect editorial rankings.</p>
+
+      <h2>FTC compliance</h2>
+      <p>This disclosure is provided in accordance with the U.S. Federal Trade Commission&rsquo;s guidelines on endorsements and testimonials (16 C.F.R. Part 255). We disclose material connections to the products and services we recommend.</p>
+
+      <h2>Questions?</h2>
+      <p>If you have questions about our affiliate relationships or how we evaluate tools, <a href="/contact/">contact us</a>. We&rsquo;re happy to explain our process for any specific recommendation.</p>
+
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero { background: var(--brand-dark); padding: 64px 0 52px; }
+  .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: #fff; margin: 10px 0 8px; letter-spacing: -0.3px; }
+  .page-sub { font-size: 0.85rem; color: rgba(255,255,255,0.4); }
+
+  .prose-page { max-width: 740px; }
+  .lead { font-size: 1.1rem; line-height: 1.75; color: var(--text-primary); margin-bottom: 2em; font-weight: 500; }
+  .prose-page h2 { font-size: 1.25rem; font-weight: 800; color: var(--brand-dark); margin: 2em 0 0.6em; }
+  .prose-page p  { font-size: 1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 1em; }
+  .prose-page strong { color: var(--text-primary); font-weight: 700; }
+  .prose-page a { color: var(--brand-accent); font-weight: 600; text-decoration: none; }
+  .prose-page a:hover { text-decoration: underline; }
+</style>

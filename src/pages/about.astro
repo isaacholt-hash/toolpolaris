@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="About ToolPolaris — Honest AI Tool Rankings for Marketers"
+  description="ToolPolaris exists to give marketing professionals a fixed point of reference in a noisy AI tools landscape. Here's how we work and why you can trust our rankings."
+>
+  <div class="page-hero">
+    <div class="container">
+      <p class="section-label">About</p>
+      <h1>A fixed point in a noisy landscape</h1>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container prose-page">
+
+      <p class="lead">Polaris is the north star &mdash; the one point in the sky that doesn&rsquo;t move. ToolPolaris exists for the same reason: to give marketing professionals a stable, reliable reference point when everything else in the AI tools space is spinning.</p>
+
+      <h2>The problem we&rsquo;re solving</h2>
+      <p>There are now more than 3,000 AI tools available. New ones launch daily. Existing tools change pricing, features, and quality without warning. Generic "best AI tools" lists are written for everyone, which means they&rsquo;re optimised for no one.</p>
+      <p>A content marketer needs fundamentally different tools than a paid media manager. A solo consultant needs different tools than a marketing ops team at a 200-person company. Most review sites don&rsquo;t make this distinction. ToolPolaris does.</p>
+
+      <h2>How our rankings work</h2>
+      <p>Every tool on ToolPolaris is evaluated against real marketing workflows &mdash; not marketing copy, not aggregate user reviews, not spec sheets. We assess tools on the specific tasks marketers use them for: writing, campaign planning, performance analysis, reporting, content repurposing, and automation.</p>
+      <p>Our ranking criteria:</p>
+      <ul>
+        <li><strong>Output quality</strong> for the specific use case</li>
+        <li><strong>Workflow fit</strong> &mdash; how well it integrates with tools marketers already use</li>
+        <li><strong>Price-to-value ratio</strong> at each budget tier</li>
+        <li><strong>Reliability</strong> &mdash; uptime, support quality, how often the tool changes</li>
+        <li><strong>Transparency</strong> &mdash; clear pricing, no dark patterns</li>
+      </ul>
+      <p>Where we haven&rsquo;t tested something hands-on, we say so explicitly and lean on verified user data instead.</p>
+
+      <h2>How we make money</h2>
+      <p>ToolPolaris earns affiliate commissions when readers sign up for a tool through our links. This is disclosed on every page and in our <a href="/affiliate-disclosure/">affiliate disclosure</a>.</p>
+      <p>Our business model only works if readers trust our rankings. That means we have a strong financial incentive to be honest &mdash; recommending a bad tool to earn a higher commission destroys the trust that makes the business viable. We do not accept payment to influence rankings. Sponsored content is clearly labelled as such.</p>
+
+      <h2>Update cadence</h2>
+      <p>Rankings are reviewed monthly. We publish updates whenever a tool releases a meaningful change, raises or cuts pricing, or a new competitor enters a category. Every article shows its last-reviewed date.</p>
+
+      <h2>Contact &amp; requests</h2>
+      <p>Want to suggest a tool, request a category, or flag an error? <a href="/contact/">Use our contact form</a>. We read every submission and prioritise review requests from readers.</p>
+
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero { background: var(--brand-dark); padding: 64px 0 52px; }
+  .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: #fff; margin: 10px 0 0; letter-spacing: -0.3px; }
+
+  .prose-page { max-width: 740px; }
+  .lead { font-size: 1.15rem; line-height: 1.75; color: var(--text-primary); margin-bottom: 2em; font-weight: 500; }
+  .prose-page h2 { font-size: 1.35rem; font-weight: 800; color: var(--brand-dark); margin: 2.2em 0 0.7em; }
+  .prose-page p  { font-size: 1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 1.1em; }
+  .prose-page ul { margin: 0.6em 0 1.1em 1.4em; }
+  .prose-page li { font-size: 1rem; line-height: 1.75; color: var(--text-muted); margin-bottom: 0.35em; }
+  .prose-page strong { color: var(--text-primary); font-weight: 700; }
+  .prose-page a { color: var(--brand-accent); font-weight: 600; text-decoration: none; }
+  .prose-page a:hover { text-decoration: underline; }
+</style>

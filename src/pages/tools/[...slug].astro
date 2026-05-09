@@ -1,0 +1,30 @@
+---
+// Dynamic route — renders every article in src/content/articles/
+import { getCollection } from 'astro:content';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles');
+  return articles.map(article => ({
+    params: { slug: article.slug },
+    props:  { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await article.render();
+const { title, description, pubDate, updatedDate, category, tags, readTime, affiliate } = article.data;
+---
+
+<ArticleLayout
+  title={title}
+  description={description}
+  pubDate={pubDate}
+  updatedDate={updatedDate}
+  category={category}
+  tags={tags}
+  readTime={readTime}
+  affiliate={affiliate}
+>
+  <Content />
+</ArticleLayout>

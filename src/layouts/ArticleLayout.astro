@@ -1,0 +1,167 @@
+---
+// ArticleLayout.astro — template for all tool review & comparison articles
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title:        string;
+  description:  string;
+  pubDate:      Date;
+  updatedDate?: Date;
+  category:     string;
+  tags?:        string[];
+  readTime?:    number;
+  affiliate?:   boolean;
+}
+
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  category,
+  tags      = [],
+  readTime  = 8,
+  affiliate = true,
+} = Astro.props;
+
+const formattedPub     = pubDate.toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
+const formattedUpdated = updatedDate?.toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
+const categorySlug     = category.toLowerCase().replace(/\s+/g, '-');
+---
+
+<BaseLayout title={`${title} | ToolPolaris`} description={description}>
+
+  <!-- BREADCRUMB -->
+  <div class="container">
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">/</span>
+      <a href="/tools/">Tools</a>
+      <span aria-hidden="true">/</span>
+      <a href={`/tools/${categorySlug}/`}>{category}</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">{title}</span>
+    </nav>
+  </div>
+
+  <!-- ARTICLE HEADER -->
+  <header class="article-header">
+    <div class="container article-header-inner">
+      <a href={`/tools/${categorySlug}/`} class="category-badge">{category}</a>
+      <h1>{title}</h1>
+      <p class="article-description">{description}</p>
+      <div class="article-meta">
+        <span>Published {formattedPub}</span>
+        {updatedDate && <span>&middot; Updated {formattedUpdated}</span>}
+        <span>&middot; {readTime} min read</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- AFFILIATE DISCLOSURE BANNER -->
+  {affiliate && (
+    <div class="disclosure-banner">
+      <div class="container">
+        <strong>Affiliate disclosure:</strong> ToolPolaris earns a commission if you sign up through our links &mdash; at no extra cost to you. This never influences our rankings or recommendations. <a href="/affiliate-disclosure/">Learn more &rarr;</a>
+      </div>
+    </div>
+  )}
+
+  <!-- ARTICLE BODY -->
+  <div class="article-wrap">
+    <div class="container article-layout">
+
+      <!-- MAIN CONTENT -->
+      <article class="article-body prose">
+        <slot />
+      </article>
+
+      <!-- SIDEBAR -->
+      <aside class="article-sidebar">
+        <div class="sidebar-card">
+          <div class="sidebar-card-title">📬 Weekly AI Tool Picks</div>
+          <p class="sidebar-card-desc">Get the best new tools for marketers — straight to your inbox, free.</p>
+          <a href="/#newsletter" class="btn-sidebar">Subscribe Free &rarr;</a>
+        </div>
+        {tags.length > 0 && (
+          <div class="sidebar-tags">
+            <div class="sidebar-tags-label">Tags</div>
+            <div class="tags-wrap">
+              {tags.map(tag => <span class="tag">{tag}</span>)}
+            </div>
+          </div>
+        )}
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- BOTTOM CTA -->
+  <section class="article-cta">
+    <div class="container">
+      <h2>Found this useful?</h2>
+      <p>Explore more role-specific AI tool rankings &mdash; free, no signup required.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="/categories/" class="btn-primary">Browse by Role &rarr;</a>
+        <a href="/tools/" class="btn-secondary">All Tool Reviews</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* HEADER */
+  .article-header { background: var(--brand-dark); padding: 52px 0 44px; }
+  .article-header-inner { max-width: 760px; }
+  .category-badge { display: inline-block; background: rgba(245,166,35,0.15); color: var(--brand-accent); font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; text-decoration: none; margin-bottom: 18px; transition: background .2s; }
+  .category-badge:hover { background: rgba(245,166,35,0.28); }
+  .article-header h1 { font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 800; color: #fff; line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 14px; }
+  .article-description { font-size: 1.05rem; color: rgba(255,255,255,0.68); line-height: 1.65; margin-bottom: 18px; max-width: 680px; }
+  .article-meta { font-size: 0.8rem; color: rgba(255,255,255,0.4); display: flex; gap: 8px; flex-wrap: wrap; }
+
+  /* DISCLOSURE */
+  .disclosure-banner { background: #fffbeb; border-bottom: 1px solid #fde68a; padding: 10px 0; font-size: 0.82rem; color: #78350f; }
+  .disclosure-banner a { color: #92400e; font-weight: 600; text-decoration: none; }
+  .disclosure-banner a:hover { text-decoration: underline; }
+
+  /* LAYOUT */
+  .article-wrap { padding: 52px 0 64px; }
+  .article-layout { display: grid; grid-template-columns: 1fr 280px; gap: 52px; align-items: start; }
+  @media (max-width: 880px) { .article-layout { grid-template-columns: 1fr; } .article-sidebar { display: none; } }
+
+  /* PROSE */
+  .prose { font-size: 1rem; line-height: 1.8; color: var(--text-primary); }
+  .prose h2 { font-size: 1.5rem; font-weight: 800; margin: 2.4em 0 0.7em; color: var(--brand-dark); letter-spacing: -0.2px; }
+  .prose h3 { font-size: 1.15rem; font-weight: 700; margin: 1.8em 0 0.5em; color: var(--brand-dark); }
+  .prose p  { margin-bottom: 1.2em; }
+  .prose ul, .prose ol { margin: 0.8em 0 1.2em 1.4em; }
+  .prose li { margin-bottom: 0.4em; }
+  .prose strong { font-weight: 700; color: var(--brand-dark); }
+  .prose a  { color: var(--brand-accent); font-weight: 600; text-decoration: none; }
+  .prose a:hover { text-decoration: underline; }
+  .prose blockquote { border-left: 3px solid var(--brand-accent); padding: 12px 20px; background: var(--brand-light); border-radius: 0 var(--radius) var(--radius) 0; margin: 1.6em 0; font-style: italic; color: var(--text-muted); }
+  .prose table { width: 100%; border-collapse: collapse; margin: 1.6em 0; font-size: 0.9rem; }
+  .prose th { background: var(--brand-dark); color: #fff; padding: 10px 14px; text-align: left; font-size: 0.82rem; letter-spacing: 0.5px; text-transform: uppercase; }
+  .prose td { padding: 10px 14px; border-bottom: 1px solid #e4e9f0; }
+  .prose tr:nth-child(even) td { background: var(--brand-light); }
+  .prose hr { border: none; border-top: 2px solid #e4e9f0; margin: 2.5em 0; }
+  .prose img { border-radius: var(--radius); margin: 1.6em 0; }
+
+  /* SIDEBAR */
+  .article-sidebar { position: sticky; top: 80px; }
+  .sidebar-card { background: var(--brand-dark); border-radius: var(--radius); padding: 24px; margin-bottom: 20px; }
+  .sidebar-card-title { font-size: 0.92rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+  .sidebar-card-desc  { font-size: 0.82rem; color: rgba(255,255,255,0.6); line-height: 1.55; margin-bottom: 16px; }
+  .btn-sidebar { display: block; text-align: center; background: var(--brand-accent); color: var(--brand-dark); font-weight: 700; font-size: 0.88rem; padding: 10px 16px; border-radius: 6px; text-decoration: none; transition: opacity .2s; }
+  .btn-sidebar:hover { opacity: .88; }
+  .sidebar-tags { padding: 16px; background: var(--brand-light); border-radius: var(--radius); }
+  .sidebar-tags-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; }
+  .tags-wrap { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { background: #fff; border: 1px solid #e4e9f0; color: var(--text-muted); font-size: 0.75rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; }
+
+  /* BOTTOM CTA */
+  .article-cta { background: var(--brand-dark); text-align: center; padding: 64px 0; }
+  .article-cta h2 { font-size: 1.8rem; font-weight: 800; color: #fff; margin-bottom: 10px; }
+  .article-cta p  { color: rgba(255,255,255,0.65); margin-bottom: 28px; }
+</style>
