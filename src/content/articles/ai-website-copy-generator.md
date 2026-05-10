@@ -7,6 +7,7 @@ tags: ["AI website copy", "landing page copy", "website copywriting", "AI copywr
 affiliate: true
 readTime: 8
 featured: false
+heroImage:    /images/ai-website-copy-generator.png
 ---
 
 Writing website copy is one of the most high-stakes copywriting tasks you'll face. It needs to convert visitors, communicate your value proposition instantly, and rank on Google — all at once.

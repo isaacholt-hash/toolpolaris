@@ -7,6 +7,7 @@ tags: ["AI marketing tools", "marketing automation", "AI tools 2026", "digital m
 affiliate: true
 readTime: 12
 featured: true
+heroImage:    /images/ai-marketing-tools.png
 ---
 
 The marketing teams winning in 2026 aren't working harder. They're using AI to move faster, test more, and produce more output with smaller teams.

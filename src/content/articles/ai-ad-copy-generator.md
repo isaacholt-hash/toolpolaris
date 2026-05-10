@@ -7,6 +7,7 @@ tags: ["AI ad copy", "ad copy generator", "Google Ads copy", "Facebook ad copy",
 affiliate: true
 readTime: 9
 featured: false
+heroImage:    /images/ai-ad-copy-generator.png
 ---
 
 Writing ad copy is a different craft from writing blog posts or landing pages. It demands compression: you have 30 characters for a headline, 90 for a description. Every word has to earn its place.

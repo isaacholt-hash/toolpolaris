@@ -7,6 +7,7 @@ tags: ["AI tools for social media posting", "social media scheduling AI", "AI so
 affiliate: true
 readTime: 9
 featured: false
+heroImage:    /images/ai-tools-for-social-media-posting.png
 ---
 
 Consistent social media requires volume. Most brands need 3–7 posts per week per platform to maintain visibility in algorithms. For teams without a dedicated social media manager, that's an impossible manual commitment.

@@ -7,6 +7,7 @@ tags: ["digital marketing AI tools", "AI tools for digital marketing", "marketin
 affiliate: true
 readTime: 9
 featured: false
+heroImage:    /images/digital-marketing-ai-tools.png
 ---
 
 There's a difference between AI tools that sound impressive in demos and AI tools that actually change how digital marketers work day-to-day.

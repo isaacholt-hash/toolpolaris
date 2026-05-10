@@ -7,6 +7,7 @@ tags: ["best AI tools for writing", "AI writing assistant", "AI writer free", "w
 affiliate: true
 readTime: 9
 featured: false
+heroImage:    /images/best-ai-tools-for-writing.png
 ---
 
 AI writing tools have become genuinely useful. Not as a replacement for good writers — but as a way to write faster, get unstuck, and produce more output without sacrificing quality.

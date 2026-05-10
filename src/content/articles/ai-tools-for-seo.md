@@ -7,6 +7,7 @@ tags: ["ai tools for seo", "seo ai tools", "ai seo software", "seo automation"]
 affiliate: true
 readTime: 9
 featured: false
+heroImage:    /images/ai-tools-for-seo.png
 ---
 
 Plenty of tools slap "AI" on their product pages. Far fewer actually change what's possible for an SEO professional. This guide covers the nine that genuinely move the needle — what they do, where they fit in a real workflow, and who they're best for.

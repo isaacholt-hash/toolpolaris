@@ -7,6 +7,7 @@ tags: ["AI tools for small business", "small business AI", "AI for SMB", "busine
 affiliate: true
 readTime: 10
 featured: false
+heroImage:    /images/best-ai-tools-for-small-business.png
 ---
 
 Small business owners are time-poor by definition. You're doing the work of three or four people, often across functions you didn't train for — marketing, customer service, operations, finance.

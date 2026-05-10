@@ -7,6 +7,7 @@ tags: ["AI tools", "digital marketing", "marketing automation", "content marketi
 affiliate: true
 readTime: 10
 featured: false
+heroImage:    /images/ai-tools-for-digital-marketers.png
 ---
 
 Digital marketing moves fast. AI tools are now deciding who wins — and who falls behind.

@@ -12,6 +12,7 @@ const articles = defineCollection({
     affiliate:    z.boolean().default(true),
     readTime:     z.number().optional(),   // minutes
     featured:     z.boolean().default(false),
+    heroImage:    z.string().optional(),   // e.g. /images/slug.png
   }),
 });
 

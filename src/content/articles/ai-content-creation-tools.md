@@ -7,6 +7,7 @@ tags: ["AI content creation tools", "content creation AI", "AI content tools", "
 affiliate: true
 readTime: 9
 featured: false
+heroImage:    /images/ai-content-creation-tools.png
 ---
 
 Content creation is the biggest time drain in most marketing teams. Writing, designing, filming, editing, scheduling — the average content marketer spends more time producing content than distributing or analysing it.

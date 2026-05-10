@@ -7,6 +7,7 @@ tags: ["chatgpt prompts for content creation", "chatgpt prompts", "ai writing pr
 affiliate: true
 readTime: 10
 featured: false
+heroImage:    /images/chatgpt-prompts-for-content-creation.png
 ---
 
 Most ChatGPT prompts give you generic, forgettable output. The problem isn't the AI — it's the prompt. Vague inputs produce vague outputs. Specific, structured prompts produce usable, on-brand content that cuts your editing time significantly.
