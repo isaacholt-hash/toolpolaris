@@ -22,6 +22,16 @@ const { title, description, canonicalUrl } = Astro.props;
   <meta property="og:url"         content={canonicalUrl ?? Astro.url.href} />
   <meta name="twitter:card"       content="summary_large_image" />
   <meta name='impact-site-verification' value='c20f023a-c3e8-462d-8d04-3087ad16aa2a' />
+
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2N0WYYH45V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2N0WYYH45V');
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
