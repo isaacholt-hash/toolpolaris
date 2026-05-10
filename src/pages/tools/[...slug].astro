@@ -4,21 +4,21 @@ import { getCollection } from 'astro:content';
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-// Canonical map: display name → URL slug
-const CATEGORY_MAP = [
-  { name: 'AI Writing',          slug: 'ai-writing-tools-marketers',    emoji: '✍️' },
-  { name: 'Social Media',        slug: 'ai-social-media-marketing-tools', emoji: '📱' },
-  { name: 'SEO & Content',       slug: 'ai-seo-tools-marketers',        emoji: '🔎' },
-  { name: 'Ad Copy',             slug: 'ai-ad-copy-tools',              emoji: '📣' },
-  { name: 'Analytics',           slug: 'ai-analytics-tools-marketers',  emoji: '📊' },
-  { name: 'Email Marketing',     slug: 'ai-email-marketing-tools',      emoji: '📧' },
-  { name: 'Design & Creative',   slug: 'ai-design-tools-marketers',     emoji: '🎨' },
-  { name: 'Market Research',     slug: 'ai-research-tools-marketers',   emoji: '🧠' },
-  { name: 'Video & Repurposing', slug: 'ai-video-tools-marketers',      emoji: '🎬' },
-  { name: 'Automation',          slug: 'ai-automation-tools-marketers', emoji: '⚡' },
-];
-
 export async function getStaticPaths() {
+  // Canonical map defined inside getStaticPaths to guarantee scope in Astro's compiled output
+  const CATEGORY_MAP = [
+    { name: 'AI Writing',          slug: 'ai-writing-tools-marketers',    emoji: '✍️' },
+    { name: 'Social Media',        slug: 'ai-social-media-marketing-tools', emoji: '📱' },
+    { name: 'SEO & Content',       slug: 'ai-seo-tools-marketers',        emoji: '🔎' },
+    { name: 'Ad Copy',             slug: 'ai-ad-copy-tools',              emoji: '📣' },
+    { name: 'Analytics',           slug: 'ai-analytics-tools-marketers',  emoji: '📊' },
+    { name: 'Email Marketing',     slug: 'ai-email-marketing-tools',      emoji: '📧' },
+    { name: 'Design & Creative',   slug: 'ai-design-tools-marketers',     emoji: '🎨' },
+    { name: 'Market Research',     slug: 'ai-research-tools-marketers',   emoji: '🧠' },
+    { name: 'Video & Repurposing', slug: 'ai-video-tools-marketers',      emoji: '🎬' },
+    { name: 'Automation',          slug: 'ai-automation-tools-marketers', emoji: '⚡' },
+  ];
+
   const articles = await getCollection('articles');
 
   // Article paths
