@@ -94,6 +94,8 @@ Publer covers all the core social media scheduling features (multi-platform, cal
 
 **Pricing:** Free plan (3 accounts); Professional from $12/month.
 
+[Try Publer →](https://publer.com/toolpolaris) *(affiliate link)*
+
 ---
 
 ### 5. Ocoya — Best for E-commerce and Product Brands

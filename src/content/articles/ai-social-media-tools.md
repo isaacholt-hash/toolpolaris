@@ -72,7 +72,7 @@ Publer's AI features focus on content repurposing — paste a blog URL and it ge
 
 The **hashtag generator** and first-comment automation (useful for posting hashtags in the first comment rather than the caption) are practical features that save real time.
 
-[Check Publer pricing →](https://publer.io)
+[Check Publer pricing →](https://publer.com/toolpolaris)
 
 ---
 
