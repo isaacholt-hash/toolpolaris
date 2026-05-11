@@ -63,7 +63,7 @@ Semrush is the most comprehensive marketing intelligence platform available. For
 
 **Pricing:** $129.95/month for Pro. Worth every cent for agencies and in-house teams managing multiple channels. Affiliate commission: 40% recurring.
 
-[Try Semrush →](https://semrush.com?ref=toolpolaris) *(affiliate link)*
+[Try Semrush →](https://semrush.com) *(affiliate link)*
 
 ---
 
@@ -137,7 +137,7 @@ AdCreative.ai generates conversion-optimised ad creatives — banners, social ad
 
 **Pricing:** From $21/month. Affiliate commission: 30% recurring.
 
-[Try AdCreative.ai →](https://adcreative.ai?ref=toolpolaris) *(affiliate link)*
+[Try AdCreative.ai →](https://free-trial.adcreative.ai/706wlvvtk3mp) *(affiliate link)*
 
 ---
 

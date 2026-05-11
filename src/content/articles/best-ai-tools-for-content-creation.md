@@ -112,7 +112,7 @@ The best tool for creating performance-optimised ad creatives at scale. Trained 
 
 **Pricing:** From $21/month. Affiliate commission: 30% recurring.
 
-[Try AdCreative.ai →](https://adcreative.ai?ref=toolpolaris) *(affiliate link)*
+[Try AdCreative.ai →](https://free-trial.adcreative.ai/706wlvvtk3mp) *(affiliate link)*
 
 ---
 

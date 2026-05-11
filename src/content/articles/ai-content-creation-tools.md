@@ -72,7 +72,7 @@ AdCreative.ai generates performance-optimised ad creatives — image and copy to
 
 **Pricing:** From $21/month. Affiliate commission: 30% recurring.
 
-[Try AdCreative.ai →](https://adcreative.ai?ref=toolpolaris) *(affiliate link)*
+[Try AdCreative.ai →](https://free-trial.adcreative.ai/706wlvvtk3mp) *(affiliate link)*
 
 ---
 

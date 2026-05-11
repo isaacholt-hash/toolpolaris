@@ -94,7 +94,7 @@ AdCreative.ai generates complete ad creatives — copy and visual together — r
 
 Copy quality is optimised specifically for ad formats, and the tool integrates your brand assets (logo, colours, fonts) automatically. Not for long-form copy, but excellent for high-volume paid social production.
 
-[Check AdCreative.ai pricing →](https://adcreative.ai?ref=toolpolaris) *(affiliate link)*
+[Check AdCreative.ai pricing →](https://free-trial.adcreative.ai/706wlvvtk3mp) *(affiliate link)*
 
 ---
 

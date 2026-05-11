@@ -71,7 +71,7 @@ Its AI is trained on ad performance data, so it predicts which creatives are mos
 
 **Pricing:** From $21/month. Affiliate commission: 30% recurring.
 
-[Try AdCreative.ai →](https://adcreative.ai?ref=toolpolaris) *(affiliate link)*
+[Try AdCreative.ai →](https://free-trial.adcreative.ai/706wlvvtk3mp) *(affiliate link)*
 
 ---
 

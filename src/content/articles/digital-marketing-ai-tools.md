@@ -36,7 +36,7 @@ Three patterns emerge from conversations with experienced digital marketers:
 
 **Pricing:** $129.95/month (Pro). Affiliate commission: 40% recurring.
 
-[Try Semrush →](https://semrush.com?ref=toolpolaris) *(affiliate link)*
+[Try Semrush →](https://semrush.com) *(affiliate link)*
 
 ---
 
@@ -86,7 +86,7 @@ Previously, testing 20 creative variants required a designer and copywriter. Now
 
 **Pricing:** From $21/month. Affiliate commission: 30% recurring.
 
-[Try AdCreative.ai →](https://adcreative.ai?ref=toolpolaris) *(affiliate link)*
+[Try AdCreative.ai →](https://free-trial.adcreative.ai/706wlvvtk3mp) *(affiliate link)*
 
 ---
 
