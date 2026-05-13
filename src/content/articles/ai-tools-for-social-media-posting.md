@@ -68,7 +68,7 @@ Predis.ai is the most capable tool for generating visual social content. Input a
 
 **Pricing:** Free plan; Solo from $25/month. Affiliate commission: 20% recurring.
 
-[Try Predis.ai →](https://predis.ai?ref=toolpolaris) *(affiliate link)*
+[Try Predis.ai →](https://predis.ai?ref=isaac77) *(affiliate link)*
 
 ---
 

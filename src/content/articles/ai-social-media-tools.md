@@ -42,7 +42,7 @@ The **competitor analysis** feature is underrated: it monitors competitor social
 
 **Best for:** E-commerce brands, content creators, and agencies that need high-volume social content without a dedicated designer.
 
-[Check Predis.ai pricing →](https://predis.ai)
+[Check Predis.ai pricing →](https://predis.ai?ref=isaac77)
 
 ---
 
