@@ -44,7 +44,7 @@ For a small business maintaining a consistent social presence, Buffer eliminates
 
 **Pricing:** Free plan (3 channels); Essentials from $5/month/channel. Affiliate commission: 20% recurring.
 
-[Try Buffer →](https://buffer.com?ref=toolpolaris) *(affiliate link)*
+[Try Buffer →](https://buffer.com)
 
 ---
 
@@ -54,7 +54,7 @@ Copy.ai is the fastest tool for producing conversion-focused copy: website headl
 
 **Pricing:** Free (2,000 words/month); Pro from $36/month. Affiliate commission: 45% recurring.
 
-[Try Copy.ai →](https://copy.ai?ref=toolpolaris) *(affiliate link)*
+[Try Copy.ai →](https://copy.ai)
 
 ---
 

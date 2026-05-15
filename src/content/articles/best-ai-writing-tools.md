@@ -47,7 +47,7 @@ Jasper is the most capable AI writing tool for professional use. The key differe
 
 **Pricing:** From $39/month. Affiliate commission: 25% recurring.
 
-[Try Jasper free for 7 days →](https://jasper.ai?ref=toolpolaris) *(affiliate link)*
+[Try Jasper free for 7 days →](https://jasper.ai)
 
 ---
 
@@ -65,7 +65,7 @@ Copy.ai was built specifically for marketing copy — not repurposed from a gene
 
 **Pricing:** Free (2,000 words/month); Pro from $36/month. Affiliate commission: 45% recurring.
 
-[Try Copy.ai free →](https://copy.ai?ref=toolpolaris) *(affiliate link)*
+[Try Copy.ai free →](https://copy.ai)
 
 ---
 

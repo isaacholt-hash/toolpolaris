@@ -28,7 +28,7 @@ For blog writing specifically, the Long-Form Assistant produces structured first
 
 **Pricing:** From $39/month. Affiliate commission: 25% recurring.
 
-[Try Jasper →](https://jasper.ai?ref=toolpolaris) *(affiliate link)*
+[Try Jasper →](https://jasper.ai)
 
 ---
 
@@ -68,7 +68,7 @@ Purpose-built for conversion copy: ads, landing pages, email sequences, and prod
 
 **Pricing:** Free (2,000 words/month); Pro from $36/month. Affiliate commission: 45% recurring.
 
-[Try Copy.ai →](https://copy.ai?ref=toolpolaris) *(affiliate link)*
+[Try Copy.ai →](https://copy.ai)
 
 ---
 

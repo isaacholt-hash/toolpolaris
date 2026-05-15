@@ -28,7 +28,7 @@ For content teams producing blogs, email campaigns, landing pages, social captio
 
 **Pricing:** From $39/month. Affiliate commission: 25% recurring.
 
-[Try Jasper →](https://jasper.ai?ref=toolpolaris) *(affiliate link)*
+[Try Jasper →](https://jasper.ai)
 
 ---
 
@@ -38,7 +38,7 @@ Copy.ai is the specialist for content that needs to convert: ads, landing pages,
 
 **Pricing:** Free (2,000 words/month); Pro from $36/month. Affiliate commission: 45% recurring.
 
-[Try Copy.ai →](https://copy.ai?ref=toolpolaris) *(affiliate link)*
+[Try Copy.ai →](https://copy.ai)
 
 ---
 
@@ -114,7 +114,7 @@ Buffer's AI Assistant generates post ideas and repurposes long-form content into
 
 **Pricing:** Free plan; Essentials from $5/month/channel. Affiliate commission: 20% recurring.
 
-[Try Buffer →](https://buffer.com?ref=toolpolaris) *(affiliate link)*
+[Try Buffer →](https://buffer.com)
 
 ---
 

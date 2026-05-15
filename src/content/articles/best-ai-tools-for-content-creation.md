@@ -44,7 +44,7 @@ Jasper has maintained its position as the leading AI writing tool for profession
 
 **Pricing:** Creator $39/month; Pro $99/month (teams). Affiliate commission: 25% recurring.
 
-[Try Jasper free for 7 days →](https://jasper.ai?ref=toolpolaris) *(affiliate link)*
+[Try Jasper free for 7 days →](https://jasper.ai)
 
 ---
 
@@ -56,7 +56,7 @@ The **Workflows** feature is the most powerful element in 2026: build automated 
 
 **Pricing:** Free (2,000 words/month); Pro from $36/month. Affiliate commission: 45% recurring.
 
-[Try Copy.ai →](https://copy.ai?ref=toolpolaris) *(affiliate link)*
+[Try Copy.ai →](https://copy.ai)
 
 ---
 
@@ -124,7 +124,7 @@ Buffer handles the distribution side of content creation — scheduling posts, p
 
 **Pricing:** Free plan; from $5/month/channel. Affiliate commission: 20% recurring.
 
-[Try Buffer →](https://buffer.com?ref=toolpolaris) *(affiliate link)*
+[Try Buffer →](https://buffer.com)
 
 ---
 

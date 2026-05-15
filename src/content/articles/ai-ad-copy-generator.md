@@ -50,7 +50,7 @@ Copy.ai's ad copy templates are among the best in any AI writing tool. The Googl
 
 **Pricing:** Free (2,000 words/month); Pro from $36/month. Affiliate commission: 45% recurring.
 
-[Try Copy.ai →](https://copy.ai?ref=toolpolaris) *(affiliate link)*
+[Try Copy.ai →](https://copy.ai)
 
 ---
 
@@ -90,7 +90,7 @@ Jasper's ad copy capabilities are strong, but the real advantage is Brand Voice 
 
 **Pricing:** From $39/month. Affiliate commission: 25% recurring.
 
-[Try Jasper →](https://jasper.ai?ref=toolpolaris) *(affiliate link)*
+[Try Jasper →](https://jasper.ai)
 
 ---
 
@@ -138,7 +138,7 @@ These are the tools that handle PPC ad generation best:
 
 | Tool | PPC Platforms | Char-Count Aware | Predictive Scoring | Starting Price | Affiliate Link |
 |---|---|---|---|---|---|
-| **[Copy.ai](https://copy.ai?ref=toolpolaris)** | Google, Meta, LinkedIn, Twitter | ✅ Yes | ❌ No | $36/mo | 45% recurring |
+| **[Copy.ai](https://copy.ai)** | Google, Meta, LinkedIn, Twitter | ✅ Yes | ❌ No | $36/mo | 45% recurring |
 | **Anyword** | Google, Meta | ✅ Yes | ✅ Best-in-class | $39/mo | — |
 | **[AdCreative.ai](https://free-trial.adcreative.ai/706wlvvtk3mp)** | Google Display, Meta, LinkedIn | ✅ Yes | ✅ Performance Score | $21/mo | 30% recurring |
 | **[Writesonic](https://writesonic.com?ref=toolpolaris)** | Google, Meta, LinkedIn, Twitter | ✅ Yes | ❌ No | $16/mo | 30% recurring |

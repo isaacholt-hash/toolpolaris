@@ -63,7 +63,7 @@ Copy.ai's free plan gives you 2,000 words per month and access to 90+ marketing 
 
 **Type:** Free tier (monthly reset)
 
-[Try Copy.ai Free →](https://copy.ai?ref=toolpolaris) *(affiliate link)*
+[Try Copy.ai Free →](https://copy.ai)
 
 ---
 

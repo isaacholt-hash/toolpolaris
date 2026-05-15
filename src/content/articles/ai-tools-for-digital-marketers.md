@@ -63,7 +63,7 @@ Semrush is the most comprehensive marketing intelligence platform available. For
 
 **Pricing:** $129.95/month for Pro. Worth every cent for agencies and in-house teams managing multiple channels. Affiliate commission: 40% recurring.
 
-[Try Semrush →](https://semrush.com) *(affiliate link)*
+[Try Semrush →](https://semrush.com)
 
 ---
 
@@ -93,7 +93,7 @@ Jasper is purpose-built for marketing teams. Its Brand Voice feature trains the 
 
 **Pricing:** From $39/month. Affiliate commission: 25% recurring.
 
-[Try Jasper →](https://jasper.ai?ref=toolpolaris) *(affiliate link)*
+[Try Jasper →](https://jasper.ai)
 
 ---
 
@@ -109,7 +109,7 @@ Copy.ai excels at short-form conversion copy: headlines, CTAs, product descripti
 
 **Pricing:** Free plan (2,000 words/month); Pro from $36/month. Affiliate commission: 45% recurring.
 
-[Try Copy.ai →](https://copy.ai?ref=toolpolaris) *(affiliate link)*
+[Try Copy.ai →](https://copy.ai)
 
 ---
 
@@ -159,7 +159,7 @@ Buffer's AI Assistant generates post ideas, repurposes long-form content into so
 
 **Pricing:** Free plan available; Essentials from $5/month/channel. Affiliate commission: 20% recurring.
 
-[Try Buffer →](https://buffer.com?ref=toolpolaris) *(affiliate link)*
+[Try Buffer →](https://buffer.com)
 
 ---
 

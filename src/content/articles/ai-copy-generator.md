@@ -38,7 +38,7 @@ The **Brand Voice** feature (Pro+) learns from your existing content and applies
 
 **Best output in our tests:** Email subject lines and Facebook ad primary text.
 
-[Check Copy.ai pricing →](https://copy.ai?ref=toolpolaris) *(affiliate link)*
+[Check Copy.ai pricing →](https://copy.ai)
 
 ---
 
@@ -52,7 +52,7 @@ Jasper has the largest template library of any tool here (50+ copy templates), t
 
 For pure copy quality on ads and product descriptions, Jasper consistently produced the most polished first drafts in our tests — requiring the least editing before being usable. The downside is price: it's the most expensive option on this list.
 
-[Check Jasper pricing →](https://jasper.ai?ref=toolpolaris) *(affiliate link)*
+[Check Jasper pricing →](https://jasper.ai)
 
 ---
 

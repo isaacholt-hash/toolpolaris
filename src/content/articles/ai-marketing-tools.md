@@ -42,7 +42,7 @@ Standout AI features: ContentShake AI (generates full articles from keyword data
 
 **Pricing:** $129.95/month (Pro). Affiliate commission: 40% recurring.
 
-[Try Semrush →](https://semrush.com) *(affiliate link)*
+[Try Semrush →](https://semrush.com)
 
 ---
 
@@ -60,7 +60,7 @@ Standout AI features: ContentShake AI (generates full articles from keyword data
 
 **Pricing:** From $39/month. Affiliate commission: 25% recurring.
 
-[Try Jasper →](https://jasper.ai?ref=toolpolaris) *(affiliate link)*
+[Try Jasper →](https://jasper.ai)
 
 ---
 
@@ -68,7 +68,7 @@ Standout AI features: ContentShake AI (generates full articles from keyword data
 
 **Pricing:** Free (2,000 words/month); Pro from $36/month. Affiliate commission: 45% recurring.
 
-[Try Copy.ai →](https://copy.ai?ref=toolpolaris) *(affiliate link)*
+[Try Copy.ai →](https://copy.ai)
 
 ---
 
@@ -106,7 +106,7 @@ Standout AI features: ContentShake AI (generates full articles from keyword data
 
 **Pricing:** Free plan; Essentials from $5/month/channel. Affiliate commission: 20% recurring.
 
-[Try Buffer →](https://buffer.com?ref=toolpolaris) *(affiliate link)*
+[Try Buffer →](https://buffer.com)
 
 ---
 

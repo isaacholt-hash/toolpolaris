@@ -36,7 +36,7 @@ Three patterns emerge from conversations with experienced digital marketers:
 
 **Pricing:** $129.95/month (Pro). Affiliate commission: 40% recurring.
 
-[Try Semrush →](https://semrush.com) *(affiliate link)*
+[Try Semrush →](https://semrush.com)
 
 ---
 
@@ -66,7 +66,7 @@ Teams producing 20+ articles/month, email campaigns, and ad copy across channels
 
 **Pricing:** From $39/month. Affiliate commission: 25% recurring.
 
-[Try Jasper →](https://jasper.ai?ref=toolpolaris) *(affiliate link)*
+[Try Jasper →](https://jasper.ai)
 
 ---
 
@@ -74,7 +74,7 @@ Teams producing 20+ articles/month, email campaigns, and ad copy across channels
 
 **Pricing:** Free (2,000 words/month); Pro from $36/month. Affiliate commission: 45% recurring.
 
-[Try Copy.ai →](https://copy.ai?ref=toolpolaris) *(affiliate link)*
+[Try Copy.ai →](https://copy.ai)
 
 ---
 
@@ -102,7 +102,7 @@ Previously, testing 20 creative variants required a designer and copywriter. Now
 
 **Pricing:** Free plan; from $5/month/channel. Affiliate commission: 20% recurring.
 
-[Try Buffer →](https://buffer.com?ref=toolpolaris) *(affiliate link)*
+[Try Buffer →](https://buffer.com)
 
 ---
 

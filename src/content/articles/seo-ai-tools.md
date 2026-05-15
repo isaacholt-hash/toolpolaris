@@ -47,7 +47,7 @@ Semrush is the most comprehensive SEO platform available, and its AI features ha
 
 **Pricing:** $129.95/month (Pro). Affiliate commission: 40% recurring.
 
-[Try Semrush free for 7 days →](https://semrush.com) *(affiliate link)*
+[Try Semrush free for 7 days →](https://semrush.com)
 
 ---
 

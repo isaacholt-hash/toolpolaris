@@ -48,7 +48,7 @@ Buffer has established itself as the clean, reliable choice for social media sch
 
 **Pricing:** Free (3 channels, 10 scheduled posts); Essentials from $5/month/channel. Affiliate commission: 20% recurring.
 
-[Try Buffer →](https://buffer.com?ref=toolpolaris) *(affiliate link)*
+[Try Buffer →](https://buffer.com)
 
 ---
 
