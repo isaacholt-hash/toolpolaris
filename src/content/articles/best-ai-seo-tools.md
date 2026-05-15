@@ -111,15 +111,28 @@ The AI-generated briefs score each topic on "personal difficulty" (how hard it i
 
 ---
 
-## Quick Comparison Table
+## AI SEO Tools Comparison: Head-to-Head
 
-| Tool | Best For | Starting Price | AI Writing | Free Trial |
-|------|----------|---------------|------------|------------|
-| **Surfer SEO** | On-page optimization | $89/mo | Via integration | 7 days |
-| **Semrush** | All-in-one platform | $129/mo | Yes (ContentShake) | 7 days |
-| **Frase** | Briefs + first drafts | $15/mo | Yes | $1 for 5 days |
-| **Clearscope** | Enterprise grading | $189/mo | No | Demo |
-| **MarketMuse** | Topical authority | $149/mo | Yes (briefs) | Free plan |
+If you're evaluating multiple tools, here's the full side-by-side. All five tools were tested against the same brief: a mid-competition keyword in the B2B SaaS space.
+
+| Tool | Starting Price | Keyword Research | Content Briefs | AI Writing | On-Page Scoring | Best Fit |
+|------|---------------|-----------------|---------------|------------|----------------|----------|
+| **[Surfer SEO](https://surferseo.com)** | $89/mo | ✅ Basic | ✅ Strong | Via integration | ✅ Best-in-class | Content teams, 8+ articles/mo |
+| **[Semrush](https://semrush.com)** | $129/mo | ✅ Best (25B+ keywords) | ✅ Yes | ✅ ContentShake AI | ✅ Strong | All-in-one SEO teams |
+| **[Frase](https://frase.io)** | $15/mo | ❌ Limited | ✅ Best for price | ✅ Good | ✅ Good | Solo bloggers, small agencies |
+| **Clearscope** | $189/mo | ❌ No | ✅ Yes | ❌ No | ✅ Enterprise-grade | Large content teams |
+| **MarketMuse** | $149/mo | ❌ Limited | ✅ Deep AI briefs | ✅ Yes | ✅ Yes | Established sites, 50+ articles |
+
+### How They Compare on Price vs. Value
+
+- **Best value under $20/mo:** Frase — gets you 80% of Surfer's optimization power at 17% of the price.
+- **Best value for growing teams:** Surfer SEO — the tightest link between optimization score and actual ranking lift.
+- **Best all-in-one under $150/mo:** Semrush — replaces 3–4 separate tools (keyword research, competitor tracking, content grading, site audit).
+- **Best enterprise ROI:** Clearscope — used by content teams at Adobe and HubSpot for a reason; consistency at scale.
+
+### What the Comparison Won't Tell You
+
+Raw feature comparisons don't capture workflow fit. A tool you'll actually use daily beats a more powerful tool that stays closed in a browser tab. Run a 7-day trial with a real content project before committing.
 
 ---
 
