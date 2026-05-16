@@ -1,6 +1,7 @@
 ---
 // ArticleLayout.astro — template for all tool review & comparison articles
 import BaseLayout from './BaseLayout.astro';
+import StackAuditCTA from '../components/StackAuditCTA.astro';
 
 interface Props {
   title:        string;
@@ -110,6 +111,7 @@ const categorySlug = CATEGORY_SLUGS[category] ?? category.toLowerCase().replace(
 
       <!-- SIDEBAR -->
       <aside class="article-sidebar">
+        <StackAuditCTA />
         <div class="sidebar-card">
           <div class="sidebar-card-title">📬 Weekly AI Tool Picks</div>
           <p class="sidebar-card-desc">Get the best new tools for marketers — straight to your inbox, free.</p>

@@ -1,0 +1,89 @@
+---
+// StackAuditCTA.astro — sidebar card promoting the Polaris Stack Audit
+// Drop into any sidebar; links to /stack-audit/ landing page
+---
+
+<div class="audit-cta-card">
+  <div class="audit-cta-badge">⭐ Featured Service</div>
+  <div class="audit-cta-title">Wasting money on AI tools you don't need?</div>
+  <p class="audit-cta-desc">
+    Get a personal Polaris Stack Audit — we'll review your exact tool stack and tell you what to cut, keep, and add. 48-hr delivery.
+  </p>
+  <ul class="audit-cta-list">
+    <li>✓ Custom Loom walkthrough</li>
+    <li>✓ One-page action plan PDF</li>
+    <li>✓ Avg. $340/mo saved</li>
+  </ul>
+  <a href="/stack-audit/" class="audit-cta-btn">Get My Stack Audit — $197 →</a>
+</div>
+
+<style>
+  .audit-cta-card {
+    background: linear-gradient(135deg, #0f1f3d 0%, #1a3060 100%);
+    border: 1px solid rgba(245, 166, 35, 0.3);
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 20px;
+  }
+
+  .audit-cta-badge {
+    display: inline-block;
+    background: rgba(245, 166, 35, 0.15);
+    color: #f5a623;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+
+  .audit-cta-title {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.35;
+    margin-bottom: 10px;
+  }
+
+  .audit-cta-desc {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.62);
+    line-height: 1.55;
+    margin-bottom: 14px;
+  }
+
+  .audit-cta-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .audit-cta-list li {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 600;
+  }
+
+  .audit-cta-btn {
+    display: block;
+    text-align: center;
+    background: #f5a623;
+    color: #0f1f3d;
+    font-weight: 800;
+    font-size: 0.85rem;
+    padding: 11px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+    line-height: 1.3;
+  }
+
+  .audit-cta-btn:hover {
+    opacity: 0.88;
+  }
+</style>
