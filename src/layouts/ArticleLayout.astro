@@ -47,6 +47,33 @@ const categorySlug = CATEGORY_SLUGS[category] ?? category.toLowerCase().replace(
 
 <BaseLayout title={`${title} | ToolPolaris`} description={description}>
 
+  <!-- JSON-LD: Article schema for Google AIO citation eligibility -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": title,
+    "description": description,
+    "datePublished": pubDate.toISOString(),
+    ...(updatedDate ? { "dateModified": updatedDate.toISOString() } : {}),
+    "author": {
+      "@type": "Organization",
+      "name": "ToolPolaris",
+      "url": "https://toolpolaris.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ToolPolaris",
+      "url": "https://toolpolaris.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://toolpolaris.com/images/toolpolaris-logo-300.png"
+      }
+    },
+    ...(heroImage ? {
+      "image": { "@type": "ImageObject", "url": `https://toolpolaris.com${heroImage}` }
+    } : {})
+  })} />
+
   <!-- BREADCRUMB -->
   <div class="container">
     <nav class="breadcrumb" aria-label="breadcrumb">
