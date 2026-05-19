@@ -65,6 +65,7 @@ if (type === 'article') {
     readTime={article.data.readTime}
     affiliate={article.data.affiliate}
     heroImage={article.data.heroImage}
+    tools={article.data.tools}
   >
     {Content && <Content />}
   </ArticleLayout>
@@ -140,5 +141,4 @@ if (type === 'article') {
   .article-card h2 { font-size: 1rem; font-weight: 700; line-height: 1.35; }
   .article-card p  { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; flex: 1; }
   .article-meta { font-size: 0.75rem; color: #aab; font-weight: 500; }
-  .browse-more { display: flex; gap: 12px; margin-top: 48px; flex-wrap: wrap; }
-</style>
+  .browse-more { display: flex; gap: 12px; margin-top: 48p

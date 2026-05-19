@@ -1,5 +1,13 @@
 import { defineCollection, z } from 'astro:content';
 
+const toolEntrySchema = z.object({
+  name:    z.string(),
+  url:     z.string(),
+  bestFor: z.string(),
+  price:   z.string().optional(),
+  rating:  z.string().optional(),
+});
+
 const articles = defineCollection({
   type: 'content',
   schema: z.object({
@@ -10,10 +18,4 @@ const articles = defineCollection({
     category:     z.string(),
     tags:         z.array(z.string()).default([]),
     affiliate:    z.boolean().default(true),
-    readTime:     z.number().optional(),   // minutes
-    featured:     z.boolean().default(false),
-    heroImage:    z.string().optional(),   // e.g. /images/slug.png
-  }),
-});
-
-export const collections = { articles };
+    readTime:     z.number().optional(),   
