@@ -1,0 +1,250 @@
+---
+// Polaris Stack Report — $39 digital product sales page
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const stripeLink = "https://buy.stripe.com/aFa5kwag8eYm1TC2nAe3e00";
+
+const included = [
+  { icon: "🗂️", title: "The Complete AI Marketing Stack (2026 Edition)", desc: "A curated, function-by-function breakdown of the best AI tools for SEO, social media, email, ads, analytics, and content — with honest ratings and no vendor bias." },
+  { icon: "💰", title: "Pricing & Free Tier Cheat Sheet", desc: "Every tool's pricing tier, free plan limits, and what you actually get before you pay. Know exactly what you're signing up for." },
+  { icon: "📊", title: "Side-by-Side Comparison Tables", desc: "12 head-to-head tool comparisons across the most contested categories — so you pick the right tool for your workflow, not the most-marketed one." },
+  { icon: "🔗", title: "Affiliate & Referral Programme Database", desc: "Which tools pay marketers for referrals, what the commission rates are, and how to apply. The list your peers haven't published." },
+  { icon: "⚡", title: "30-Day Stack Setup Guide", desc: "A step-by-step action plan for going from 'zero AI tools' to a fully running AI marketing stack — in under 30 days, without blowing your budget." },
+  { icon: "🔄", title: "Lifetime Updates", desc: "AI tools move fast. This report is updated quarterly. Buy once, get every future edition free." },
+];
+
+const faqs = [
+  { q: "Who is this for?", a: "Marketing professionals, freelancers, consultants, and small teams who want to build a serious AI tool stack — without wasting hours on tools that don't fit how marketers actually work." },
+  { q: "Is this just a list of tools I can Google?", a: "No. The report is an opinionated, tested guide built around how marketing professionals actually work. It includes comparison tables, affiliate programme details, and a setup roadmap — none of which you'll find in a generic 'top AI tools' listicle." },
+  { q: "What format is the report?", a: "PDF, delivered instantly to your email after purchase via Stripe. Designed for easy reading and printing. Compatible with all PDF readers." },
+  { q: "What if I'm not satisfied?", a: "If the report doesn't deliver value, email hello@toolpolaris.com within 7 days and we'll refund you in full. No questions asked." },
+  { q: "Do you take a commission on the tools you recommend?", a: "Yes — ToolPolaris participates in affiliate programmes for some recommended tools. This is disclosed clearly in the report and never influences which tools make the cut. Tools are included based on quality and fit, not commission rate." },
+];
+---
+
+<BaseLayout
+  title="The Polaris Stack Report — AI Tools for Marketing Professionals | ToolPolaris"
+  description="The complete AI tool stack guide for marketing professionals. 2026 edition. Side-by-side comparisons, pricing cheat sheet, and a 30-day setup plan. $39 one-time."
+>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-badge">NEW — 2026 EDITION</div>
+      <h1>The AI marketing stack<br/>your peers haven't built yet.</h1>
+      <p class="hero-sub">Stop wasting hours testing tools that don't fit how marketers work. The Polaris Stack Report gives you a complete, opinionated AI tool stack — with side-by-side comparisons, pricing breakdowns, and a 30-day setup plan.</p>
+      <div class="hero-cta-wrap">
+        <a href={stripeLink} class="btn-buy">Get the Report — $39 <span class="btn-note">one-time · instant PDF delivery</span></a>
+      </div>
+      <p class="hero-trust">✓ 30-page PDF &nbsp;·&nbsp; ✓ Quarterly updates included &nbsp;·&nbsp; ✓ 7-day money-back guarantee</p>
+    </div>
+  </section>
+
+  <!-- PAIN POINTS -->
+  <section class="pain section">
+    <div class="container">
+      <p class="section-label">Sound familiar?</p>
+      <h2 class="section-heading">You're drowning in AI tool noise.</h2>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="pain-icon">😤</div>
+          <p>You've tried 6 AI writing tools and can't figure out which one is actually worth paying for.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">💸</div>
+          <p>You're paying for 4 subscriptions that overlap, and 2 you barely use.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">⏳</div>
+          <p>You spend more time reading AI tool reviews than actually using them.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">🤷</div>
+          <p>Every "best AI tools" list online is either outdated, vendor-sponsored, or written by someone who's never run a campaign.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S INCLUDED -->
+  <section class="included section section--alt">
+    <div class="container">
+      <p class="section-label">What's inside</p>
+      <h2 class="section-heading">Everything you need. Nothing you don't.</h2>
+      <div class="included-grid">
+        {included.map(item => (
+          <div class="included-card">
+            <div class="included-icon">{item.icon}</div>
+            <div>
+              <h3>{item.title}</h3>
+              <p>{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON PREVIEW -->
+  <section class="preview section">
+    <div class="container preview-inner">
+      <div class="preview-text">
+        <p class="section-label">Inside the report</p>
+        <h2 class="section-heading">Side-by-side comparisons across every major category.</h2>
+        <p>No more bouncing between 10 browser tabs. The Polaris Stack Report puts every comparison you need in one place — SEO tools, social media platforms, AI writers, ad copy generators, and more.</p>
+        <ul class="preview-list">
+          <li>✓ Best AI SEO tools — ranked by real-world marketing use</li>
+          <li>✓ Social media AI tools — scheduling, captions &amp; analytics</li>
+          <li>✓ AI writing tools — with affiliate programme details</li>
+          <li>✓ Ad copy generators — for Google, Meta, and PPC</li>
+          <li>✓ Free tier filter — what's actually usable for free</li>
+        </ul>
+        <a href={stripeLink} class="btn-primary">Get the Report — $39 →</a>
+      </div>
+      <div class="preview-table-wrap">
+        <div class="preview-table">
+          <div class="pt-header">AI SEO Tools — Quick Comparison</div>
+          <table>
+            <thead>
+              <tr><th>Tool</th><th>Best For</th><th>Free Plan</th><th>From</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>SurferSEO</strong></td><td>Content optimisation</td><td>No</td><td>$89/mo</td></tr>
+              <tr><td><strong>Frase</strong></td><td>Brief creation</td><td>Trial only</td><td>$15/mo</td></tr>
+              <tr><td><strong>Semrush AI</strong></td><td>Full SEO suite</td><td>Limited</td><td>$139/mo</td></tr>
+              <tr><td><strong>RankMath AI</strong></td><td>WordPress on-page</td><td>Yes ✓</td><td>Free</td></tr>
+            </tbody>
+          </table>
+          <p class="pt-note">12 categories · 40+ tools · full comparisons inside the report</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING + CTA -->
+  <section class="pricing section" id="buy">
+    <div class="container">
+      <p class="section-label">Simple pricing</p>
+      <h2 class="section-heading">One price. No subscription.</h2>
+      <div class="pricing-card">
+        <div class="pricing-top">
+          <div class="pricing-name">Polaris Stack Report</div>
+          <div class="pricing-price">$39 <span class="pricing-once">one-time</span></div>
+          <p class="pricing-sub">Instant PDF delivery · 30-page guide · Quarterly updates included</p>
+        </div>
+        <ul class="pricing-features">
+          <li>✓ Complete 2026 AI marketing stack guide</li>
+          <li>✓ Side-by-side comparison tables (12 categories)</li>
+          <li>✓ Pricing &amp; free tier cheat sheet</li>
+          <li>✓ Affiliate &amp; referral programme database</li>
+          <li>✓ 30-day stack setup action plan</li>
+          <li>✓ All future quarterly updates — free</li>
+          <li>✓ 7-day money-back guarantee</li>
+        </ul>
+        <a href={stripeLink} class="btn-buy-large">Get Instant Access — $39 →</a>
+        <p class="pricing-secure">🔒 Secure payment via Stripe &nbsp;·&nbsp; Instant PDF delivery to your email</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq section section--alt">
+    <div class="container faq-inner">
+      <p class="section-label">Questions</p>
+      <h2 class="section-heading">Frequently asked</h2>
+      <div class="faq-list">
+        {faqs.map(item => (
+          <div class="faq-item">
+            <h3>{item.q}</h3>
+            <p>{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Stop guessing. Start with the right stack.</h2>
+      <p>The Polaris Stack Report is the only AI tool guide written specifically for marketing professionals — not tech generalists, not VC-backed blogs, not vendors promoting themselves.</p>
+      <a href={stripeLink} class="btn-buy">Get the Report — $39 →</a>
+      <p class="final-trust">✓ 7-day money-back guarantee &nbsp;·&nbsp; ✓ Instant PDF delivery &nbsp;·&nbsp; ✓ No subscription</p>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* HERO */
+  .hero { background: var(--brand-dark); padding: 80px 0 72px; text-align: center; }
+  .hero-badge { display: inline-block; background: rgba(245,166,35,0.15); color: var(--brand-accent); font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-bottom: 22px; }
+  .hero-inner { max-width: 760px; margin: 0 auto; }
+  .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; color: #fff; line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 20px; }
+  .hero-sub { font-size: 1.1rem; color: rgba(255,255,255,0.7); line-height: 1.7; max-width: 620px; margin: 0 auto 32px; }
+  .hero-cta-wrap { margin-bottom: 18px; }
+  .hero-trust { font-size: 0.82rem; color: rgba(255,255,255,0.45); }
+
+  /* BUY BUTTONS */
+  .btn-buy { display: inline-flex; flex-direction: column; align-items: center; background: var(--brand-accent); color: var(--brand-dark); font-weight: 800; font-size: 1.1rem; padding: 16px 36px; border-radius: var(--radius); text-decoration: none; transition: opacity .2s; line-height: 1.3; }
+  .btn-buy:hover { opacity: .88; }
+  .btn-note { font-size: 0.72rem; font-weight: 500; opacity: .75; margin-top: 3px; }
+  .btn-buy-large { display: block; width: 100%; max-width: 380px; margin: 0 auto 16px; text-align: center; background: var(--brand-accent); color: var(--brand-dark); font-weight: 800; font-size: 1.15rem; padding: 18px 32px; border-radius: var(--radius); text-decoration: none; transition: opacity .2s; }
+  .btn-buy-large:hover { opacity: .88; }
+
+  /* SECTION HEADINGS */
+  .section-heading { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: var(--brand-dark); line-height: 1.25; margin-bottom: 36px; letter-spacing: -0.3px; }
+
+  /* PAIN */
+  .pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+  .pain-card { background: var(--brand-light); border-radius: var(--radius); padding: 28px 24px; }
+  .pain-icon { font-size: 2rem; margin-bottom: 12px; }
+  .pain-card p { font-size: 0.95rem; color: var(--text-primary); line-height: 1.6; }
+
+  /* INCLUDED */
+  .included-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  .included-card { background: #fff; border-radius: var(--radius); padding: 24px; display: flex; gap: 18px; align-items: flex-start; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .included-icon { font-size: 1.8rem; flex-shrink: 0; }
+  .included-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--brand-dark); margin-bottom: 6px; }
+  .included-card p { font-size: 0.87rem; color: var(--text-muted); line-height: 1.6; }
+
+  /* PREVIEW */
+  .preview-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  @media (max-width: 760px) { .preview-inner { grid-template-columns: 1fr; } }
+  .preview-text p { font-size: 0.97rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 24px; }
+  .preview-list { list-style: none; margin-bottom: 32px; display: flex; flex-direction: column; gap: 10px; }
+  .preview-list li { font-size: 0.95rem; color: var(--text-primary); }
+  .preview-table-wrap { }
+  .preview-table { background: var(--brand-light); border-radius: var(--radius); overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+  .pt-header { background: var(--brand-dark); color: #fff; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.5px; padding: 12px 16px; }
+  .preview-table table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  .preview-table th { background: rgba(15,31,61,0.06); color: var(--text-muted); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 9px 14px; text-align: left; }
+  .preview-table td { padding: 10px 14px; border-bottom: 1px solid #e4e9f0; color: var(--text-primary); }
+  .preview-table tr:last-child td { border-bottom: none; }
+  .pt-note { font-size: 0.75rem; color: var(--text-muted); text-align: center; padding: 10px 14px; }
+
+  /* PRICING */
+  .pricing-card { max-width: 480px; margin: 0 auto; background: var(--brand-dark); border-radius: 16px; padding: 44px 40px; text-align: center; box-shadow: 0 8px 40px rgba(15,31,61,0.25); }
+  .pricing-top { margin-bottom: 28px; }
+  .pricing-name { font-size: 0.82rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--brand-accent); margin-bottom: 10px; }
+  .pricing-price { font-size: 3rem; font-weight: 800; color: #fff; line-height: 1; }
+  .pricing-once { font-size: 1rem; font-weight: 500; color: rgba(255,255,255,0.5); }
+  .pricing-sub { font-size: 0.82rem; color: rgba(255,255,255,0.45); margin-top: 8px; }
+  .pricing-features { list-style: none; margin-bottom: 32px; display: flex; flex-direction: column; gap: 10px; }
+  .pricing-features li { font-size: 0.92rem; color: rgba(255,255,255,0.8); text-align: left; }
+  .pricing-secure { font-size: 0.75rem; color: rgba(255,255,255,0.35); }
+
+  /* FAQ */
+  .faq-inner { max-width: 700px; margin: 0 auto; }
+  .faq-list { display: flex; flex-direction: column; gap: 24px; }
+  .faq-item { border-bottom: 1px solid #e4e9f0; padding-bottom: 24px; }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-item h3 { font-size: 1rem; font-weight: 700; color: var(--brand-dark); margin-bottom: 8px; }
+  .faq-item p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; }
+
+  /* FINAL CTA */
+  .final-cta { background: var(--brand-dark); text-align: center; padding: 80px 0; }
+  .final-cta h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: #fff; max-width: 600px; margin: 0 auto 16px; line-height: 1.25; }
+  .final-cta p { font-size: 0.97rem; color: rgba(255,255,255,0.6); max-width: 560px; margin: 0 auto 32px; line-height: 1.7; }
+  .final-trust { font-size: 0.8rem; color: rgba(255,255,255,0.4); margin-top: 18px; }
+</style>
