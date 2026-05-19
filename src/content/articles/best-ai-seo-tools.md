@@ -20,17 +20,17 @@ Skip straight to the side-by-side? Here's how the top five stack up. [Full revie
 
 | Tool | Starting Price | Best For | Our Rating |
 |------|---------------|----------|------------|
-| **[Surfer SEO](https://surferseo.com)** | $89/mo | Content teams publishing 8+ articles/month | ⭐⭐⭐⭐⭐ 4.8/5 |
+| **[Surfer SEO](https://surferseo.com/?fpr=toolpolaris)** | $89/mo | Content teams publishing 8+ articles/month | ⭐⭐⭐⭐⭐ 4.8/5 |
 | **[Semrush](https://semrush.com)** | $129/mo | Teams needing keyword research + content + audits in one place | ⭐⭐⭐⭐½ 4.6/5 |
-| **[Frase](https://frase.io)** | $15/mo | Solo bloggers and small agencies on a tight budget | ⭐⭐⭐⭐ 4.4/5 |
+| **[Frase](https://frase.io/?fp_ref=toolpolaris)** | $15/mo | Solo bloggers and small agencies on a tight budget | ⭐⭐⭐⭐ 4.4/5 |
 | **Clearscope** | $189/mo | Large content teams needing consistent, scalable grading | ⭐⭐⭐⭐ 4.2/5 |
 | **MarketMuse** | $149/mo | Established sites building long-term topical authority | ⭐⭐⭐⭐ 4.0/5 |
 
 *Ratings based on four weeks of hands-on testing: feature depth, ranking impact, workflow fit, and value for money.*
 
 **Quick verdict:**
-- **Tightest budget?** → [Frase](https://frase.io) at $15/mo gives you 80% of Surfer's power
-- **Best pure optimization?** → [Surfer SEO](https://surferseo.com) — strongest link between score and ranking lift
+- **Tightest budget?** → [Frase](https://frase.io/?fp_ref=toolpolaris) at $15/mo gives you 80% of Surfer's power
+- **Best pure optimization?** → [Surfer SEO](https://surferseo.com/?fpr=toolpolaris) — strongest link between score and ranking lift
 - **Need keyword research too?** → [Semrush](https://semrush.com) replaces 3–4 separate tools
 - **Enterprise scale?** → Clearscope for consistency; MarketMuse for strategy
 
@@ -61,7 +61,7 @@ The **Topical Map** feature (added in 2025) is a standout: it analyses your doma
 
 > **Verdict:** Best-in-class for optimization. If you're serious about rankings, this is table stakes.
 
-[Check Surfer SEO pricing →](https://surferseo.com)
+[Check Surfer SEO pricing →](https://surferseo.com/?fpr=toolpolaris)
 
 ---
 
@@ -97,7 +97,7 @@ The **AI Writer** (included in all plans) generates first drafts that are alread
 
 > **Verdict:** Exceptional value. Solo bloggers and small agencies get 80% of Surfer's optimization power at a fraction of the cost.
 
-[Check Frase pricing →](https://frase.io)
+[Check Frase pricing →](https://frase.io/?fp_ref=toolpolaris)
 
 ---
 
@@ -139,9 +139,9 @@ If you're evaluating multiple tools, here's the full side-by-side. All five tool
 
 | Tool | Starting Price | Keyword Research | Content Briefs | AI Writing | On-Page Scoring | Best Fit |
 |------|---------------|-----------------|---------------|------------|----------------|----------|
-| **[Surfer SEO](https://surferseo.com)** | $89/mo | ✅ Basic | ✅ Strong | Via integration | ✅ Best-in-class | Content teams, 8+ articles/mo |
+| **[Surfer SEO](https://surferseo.com/?fpr=toolpolaris)** | $89/mo | ✅ Basic | ✅ Strong | Via integration | ✅ Best-in-class | Content teams, 8+ articles/mo |
 | **[Semrush](https://semrush.com)** | $129/mo | ✅ Best (25B+ keywords) | ✅ Yes | ✅ ContentShake AI | ✅ Strong | All-in-one SEO teams |
-| **[Frase](https://frase.io)** | $15/mo | ❌ Limited | ✅ Best for price | ✅ Good | ✅ Good | Solo bloggers, small agencies |
+| **[Frase](https://frase.io/?fp_ref=toolpolaris)** | $15/mo | ❌ Limited | ✅ Best for price | ✅ Good | ✅ Good | Solo bloggers, small agencies |
 | **Clearscope** | $189/mo | ❌ No | ✅ Yes | ❌ No | ✅ Enterprise-grade | Large content teams |
 | **MarketMuse** | $149/mo | ❌ Limited | ✅ Deep AI briefs | ✅ Yes | ✅ Yes | Established sites, 50+ articles |
 
@@ -160,9 +160,40 @@ Raw feature comparisons don't capture workflow fit. A tool you'll actually use d
 
 ## Which AI SEO Tool Should You Use?
 
-- **Just starting out / tight budget?** → Start with **Frase** ($15/mo). Get the brief + draft workflow running, then upgrade when revenue justifies it.
-- **Growing content team (5–20 articles/month)?** → **Surfer SEO** is the best pure optimization value. Pair it with Jasper or Writesonic for writing.
+- **Just starting out / tight budget?** → Start with **[Frase](https://frase.io/?fp_ref=toolpolaris)** ($15/mo). Get the brief + draft workflow running, then upgrade when revenue justifies it.
+- **Growing content team (5–20 articles/month)?** → **[Surfer SEO](https://surferseo.com/?fpr=toolpolaris)** is the best pure optimization value. Pair it with Jasper or Writesonic for writing.
 - **Need keyword research + content + competitor tracking?** → **Semrush** is the only tool that covers all three without duct-taping multiple subscriptions together.
 - **Enterprise, 50+ articles/month?** → **Clearscope** for consistency, **MarketMuse** for strategy.
 
 The worst outcome is paralysis from tool-shopping. Pick one, publish 20 articles with it, then re-evaluate. The tool that gets you publishing beats the perfect tool you're still comparing.
+
+---
+
+## AI SEO Tool Quick-Pick by Situation
+
+| Your Situation | Best Tool | Why |
+|---|---|---|
+| Solo blogger, under $20/mo budget | **[Frase](https://frase.io/?fp_ref=toolpolaris)** ($15/mo) | Full brief + AI draft workflow at the lowest price of any serious tool |
+| Content team publishing 8–20 articles/month | **[Surfer SEO](https://surferseo.com/?fpr=toolpolaris)** ($89/mo) | Strongest link between optimization score and actual ranking lift |
+| Need keyword research + competitor tracking + content in one tool | **Semrush** ($129/mo) | Replaces 3–4 separate tools; 25B+ keyword database |
+| Freelance writer needing faster briefs | **[Frase](https://frase.io/?fp_ref=toolpolaris)** ($15/mo) | Synthesises top 20 SERP results into a brief in seconds |
+| Agency with 10+ clients, needs consistency | **Clearscope** ($189/mo) | Enterprise-grade grading; integrates with Google Docs + WordPress |
+| Established site (50+ articles), building topical authority | **MarketMuse** ($149/mo) | Maps your domain vs. competitors; prioritises next articles by personal difficulty |
+| Building a new site, need a content strategy first | **[Surfer SEO](https://surferseo.com/?fpr=toolpolaris)** | Topical Map feature generates a prioritised article list for your domain |
+| Want to replace a freelance SEO editor | **Clearscope** | Content grading so consistent your writers can self-edit without human review |
+
+---
+
+## AI SEO Tools: Pricing & Free Trial Breakdown
+
+Before committing, test with real content — every tool on this list has a trial or limited free tier.
+
+| Tool | Entry Plan | Mid Plan | Free Trial | Worth Upgrading? |
+|------|-----------|----------|-----------|-----------------|
+| **[Surfer SEO](https://surferseo.com/?fpr=toolpolaris)** | $89/mo (Essential) | $129/mo (Scale) | 7-day free trial | Yes — Scale adds Topical Map + team seats |
+| **Semrush** | $129/mo (Pro) | $249/mo (Guru, includes ContentShake AI) | 7-day free trial | Only if you need keyword research *and* content tools |
+| **[Frase](https://frase.io/?fp_ref=toolpolaris)** | $15/mo (Solo) | $45/mo (Basic) | 5-day trial ($1) | Basic plan adds team seats + unlimited articles |
+| **Clearscope** | $189/mo (Essentials) | $399/mo (Business) | Demo only | At enterprise scale, yes |
+| **MarketMuse** | Free (limited) | $149/mo (Optimize) | Free plan | Only for established sites (50+ articles) |
+
+**Tip:** Start with Frase's $1 five-day trial. It's the fastest way to feel what AI-assisted SEO briefing actually looks like in practice before spending $89–$189/mo on a higher-tier tool.
