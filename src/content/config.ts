@@ -18,4 +18,11 @@ const articles = defineCollection({
     category:     z.string(),
     tags:         z.array(z.string()).default([]),
     affiliate:    z.boolean().default(true),
-    readTime:     z.number().optional(),   
+    readTime:     z.number().optional(),   // minutes
+    featured:     z.boolean().default(false),
+    heroImage:    z.string().optional(),   // e.g. /images/slug.png
+    tools:        z.array(toolEntrySchema).optional(), // ItemList schema data
+  }),
+});
+
+export const collections = { articles };

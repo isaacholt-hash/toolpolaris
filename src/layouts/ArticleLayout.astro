@@ -270,4 +270,27 @@ const categorySlug = CATEGORY_SLUGS[category] ?? category.toLowerCase().replace(
   .prose :global(table) { width: 100%; border-collapse: collapse; margin: 1.6em 0; font-size: 0.9rem; }
   .prose :global(th) { background: var(--brand-dark); color: #fff; padding: 10px 14px; text-align: left; font-size: 0.82rem; letter-spacing: 0.5px; text-transform: uppercase; }
   .prose :global(td) { padding: 10px 14px; border-bottom: 1px solid #e4e9f0; }
-  .prose :global(tr:nth-child(even) td) { background: var(--bra
+  .prose :global(tr:nth-child(even) td) { background: var(--brand-light); }
+  .prose :global(hr) { border: none; border-top: 2px solid #e4e9f0; margin: 2.5em 0; }
+  .prose :global(img) { border-radius: var(--radius); margin: 1.6em 0; }
+
+  /* SIDEBAR */
+  .article-sidebar { position: sticky; top: 80px; }
+  .sidebar-card { background: var(--brand-dark); border-radius: var(--radius); padding: 24px; margin-bottom: 20px; }
+  .sidebar-card--report { background: linear-gradient(135deg, #1a3a6b 0%, var(--brand-dark) 100%); border: 1px solid rgba(245,166,35,0.3); }
+  .sidebar-card-eyebrow { font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--brand-accent); margin-bottom: 6px; }
+  .sidebar-card-title { font-size: 0.92rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+  .sidebar-card-desc  { font-size: 0.82rem; color: rgba(255,255,255,0.6); line-height: 1.55; margin-bottom: 16px; }
+  .btn-sidebar { display: block; text-align: center; background: rgba(255,255,255,0.1); color: #fff; font-weight: 700; font-size: 0.88rem; padding: 10px 16px; border-radius: 6px; text-decoration: none; transition: opacity .2s; border: 1px solid rgba(255,255,255,0.15); }
+  .btn-sidebar:hover { opacity: .88; }
+  .btn-sidebar--accent { background: var(--brand-accent); color: var(--brand-dark); border: none; }
+  .sidebar-tags { padding: 16px; background: var(--brand-light); border-radius: var(--radius); }
+  .sidebar-tags-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; }
+  .tags-wrap { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { background: #fff; border: 1px solid #e4e9f0; color: var(--text-muted); font-size: 0.75rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; }
+
+  /* BOTTOM CTA */
+  .article-cta { background: var(--brand-dark); text-align: center; padding: 64px 0; }
+  .article-cta h2 { font-size: 1.8rem; font-weight: 800; color: #fff; margin-bottom: 10px; }
+  .article-cta p  { color: rgba(255,255,255,0.65); margin-bottom: 28px; }
+</style>
