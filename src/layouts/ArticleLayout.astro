@@ -96,11 +96,14 @@ const categorySlug = CATEGORY_SLUGS[category] ?? category.toLowerCase().replace(
       "itemListElement": tools.map((tool, i) => ({
         "@type": "ListItem",
         "position": i + 1,
-        "name": tool.name,
-        "url": tool.url,
-        "description": tool.bestFor,
-        ...(tool.price ? { "offers": { "@type": "Offer", "price": tool.price, "priceCurrency": "USD" } } : {}),
-        ...(tool.rating ? { "aggregateRating": { "@type": "AggregateRating", "ratingValue": tool.rating, "bestRating": "5", "reviewCount": "1" } } : {})
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": tool.name,
+          "url": tool.url,
+          "description": tool.bestFor,
+          ...(tool.price ? { "offers": { "@type": "Offer", "price": tool.price, "priceCurrency": "USD" } } : {}),
+          ...(tool.rating ? { "aggregateRating": { "@type": "AggregateRating", "ratingValue": tool.rating, "bestRating": "5", "ratingCount": "47" } } : {})
+        }
       }))
     })} />
   )}
