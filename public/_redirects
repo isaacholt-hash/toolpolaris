@@ -1,0 +1,13 @@
+# SEO tools cluster — redirect duplicates to canonical
+/tools/ai-tools-for-seo/    /tools/best-ai-seo-tools/   301
+/tools/ai-tools-for-seo     /tools/best-ai-seo-tools/   301
+/tools/seo-ai-tools/        /tools/best-ai-seo-tools/   301
+/tools/seo-ai-tools         /tools/best-ai-seo-tools/   301
+
+# Writing tools cluster — redirect duplicate to canonical
+/tools/best-ai-tools-for-writing/   /tools/best-ai-writing-tools/   301
+/tools/best-ai-tools-for-writing    /tools/best-ai-writing-tools/   301
+
+# Social media tools cluster — redirect duplicate to canonical
+/tools/ai-tools-for-social-media-posting/   /tools/ai-social-media-tools/   301
+/tools/ai-tools-for-social-media-posting    /tools/ai-social-media-tools/   301
