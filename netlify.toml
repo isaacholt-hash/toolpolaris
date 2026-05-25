@@ -4,3 +4,81 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+# Cannibalization fixes — 301 redirects to canonical pages
+# SEO cluster: seo-ai-tools and ai-tools-for-seo -> best-ai-seo-tools
+[[redirects]]
+  from = "/tools/seo-ai-tools"
+  to   = "/tools/best-ai-seo-tools/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/tools/seo-ai-tools/"
+  to   = "/tools/best-ai-seo-tools/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/tools/ai-tools-for-seo"
+  to   = "/tools/best-ai-seo-tools/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/tools/ai-tools-for-seo/"
+  to   = "/tools/best-ai-seo-tools/"
+  status = 301
+  force  = true
+
+# Writing cluster: best-ai-tools-for-writing -> best-ai-writing-tools
+[[redirects]]
+  from = "/tools/best-ai-tools-for-writing"
+  to   = "/tools/best-ai-writing-tools/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/tools/best-ai-tools-for-writing/"
+  to   = "/tools/best-ai-writing-tools/"
+  status = 301
+  force  = true
+
+# Social media cluster: ai-tools-for-social-media-posting -> ai-social-media-tools
+[[redirects]]
+  from = "/tools/ai-tools-for-social-media-posting"
+  to   = "/tools/ai-social-media-tools/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/tools/ai-tools-for-social-media-posting/"
+  to   = "/tools/ai-social-media-tools/"
+  status = 301
+  force  = true
+
+# Content creation cluster: best-ai-tools-for-content-creation -> ai-content-creation-tools
+[[redirects]]
+  from = "/tools/best-ai-tools-for-content-creation"
+  to   = "/tools/ai-content-creation-tools/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/tools/best-ai-tools-for-content-creation/"
+  to   = "/tools/ai-content-creation-tools/"
+  status = 301
+  force  = true
+
+# Digital marketing cluster: digital-marketing-ai-tools -> ai-tools-for-digital-marketers
+[[redirects]]
+  from = "/tools/digital-marketing-ai-tools"
+  to   = "/tools/ai-tools-for-digital-marketers/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/tools/digital-marketing-ai-tools/"
+  to   = "/tools/ai-tools-for-digital-marketers/"
+  status = 301
+  force  = true
