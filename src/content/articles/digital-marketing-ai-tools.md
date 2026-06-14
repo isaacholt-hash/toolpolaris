@@ -126,7 +126,7 @@ For marketing teams currently running separate tools for CRM, email, forms, land
 **Pricing:** Free plan available; Starter from $45/month; Professional from $800/month.  
 **Affiliate commission:** 30% for 12 months via Impact.com.
 
-[Try HubSpot →](https://hubspot.sjv.io/toolpolaris) *(affiliate link)*
+[Try HubSpot →](https://www.hubspot.com/products/marketing)
 
 For more detail on the free CRM limits, Breeze AI features, and upgrade path, see the full [HubSpot review](/tools/hubspot-review/).
 

@@ -1,6 +1,6 @@
 ---
 title: "Best AI SEO Tools 2026 — Compared"
-description: "The best AI SEO tools for 2026 compared: AI content briefs, on-page scoring, rank tracking, and pricing. Tested 12 tools — find the right fit for your workflow and budget."
+description: "The best AI SEO tools for 2026 compared: content briefs, on-page scoring, rank tracking, pricing, and workflow fit."
 pubDate: 2026-05-09
 updatedDate: 2026-06-01
 category: "SEO & Content"

@@ -1,6 +1,6 @@
 ---
 title: "AdCreative.ai Review 2026: Does AI Ad Creative Actually Convert?"
-description: "Honest AdCreative.ai review after testing the platform for 30 days. Covers pricing ($29-$499/mo), ad generation quality, predictive scoring, billing warnings, and who it is actually for."
+description: "Honest AdCreative.ai review: pricing, ad generation quality, predictive scoring, billing warnings, and who it is actually for."
 pubDate: 2026-05-25
 updatedDate: 2026-05-25
 category: "Ad Copy & Creative"

@@ -1,6 +1,6 @@
 ---
-title: "Best Free AI Tools for Marketing in 2026 (No Credit Card Required)"
-description: "The best free AI tools for marketing in 2026 — content writing, social posts, ad copy, email, SEO planning, and design. Honest limits, upgrade triggers, and free-tier picks."
+title: "Best Free AI Marketing Tools in 2026"
+description: "The best free AI tools for marketing in 2026, covering content, social posts, ad copy, email, SEO planning, design, and free-tier limits."
 pubDate: 2026-05-09
 category: "AI Writing"
 tags: ["free AI tools for marketing", "free AI marketing tools", "content writing", "AI writing", "free tools"]

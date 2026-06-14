@@ -202,9 +202,9 @@ HubSpot's AI capabilities have grown substantially. The **AI Content Writer** dr
 For digital marketers managing inbound funnels end-to-end, HubSpot is the only platform that covers CRM, email automation, landing page builder, analytics, and AI-assisted content creation in one subscription — which meaningfully reduces the total cost of your stack.
 
 **Pricing:** Free plan (CRM + email + forms); Starter from $45/month; Professional from $800/month.  
-**Affiliate commission:** 30% for 12 months via Impact.com.
+**Affiliate status:** Direct vendor link; replace with the approved Impact.com tracking URL when available.
 
-[Try HubSpot →](https://hubspot.sjv.io/toolpolaris) *(affiliate link)*
+[Try HubSpot →](https://www.hubspot.com/products/marketing)
 
 If HubSpot is on your shortlist, read the full [HubSpot review for marketers](/tools/hubspot-review/) before choosing between Free, Starter, and Professional.
 

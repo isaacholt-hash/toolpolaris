@@ -134,9 +134,9 @@ The free plan is genuinely useful (CRM + email + forms), and the upgrade path is
 
 **Best for:** Marketing teams wanting a single platform for CRM, email, landing pages, and content — rather than a stack of point solutions.  
 **Pricing:** Free plan available; Starter from $45/month; Professional from $800/month.  
-**Affiliate commission:** 30% for 12 months.
+**Affiliate status:** Direct vendor link; replace with the approved Impact.com tracking URL when available.
 
-[Try HubSpot →](https://hubspot.sjv.io/toolpolaris) *(affiliate link — update with real Impact.com tracking URL)*
+[Try HubSpot →](https://www.hubspot.com/products/marketing)
 
 For a deeper breakdown of the free CRM, Breeze AI features, and the Professional pricing cliff, read our full [HubSpot review for marketers](/tools/hubspot-review/).
 

@@ -10,7 +10,7 @@ featured: true
 heroImage: /images/ai-marketing-tools-comparison.png
 tools:
   - name: "HubSpot"
-    url: "https://hubspot.sjv.io/toolpolaris"
+    url: "https://www.hubspot.com/products/marketing"
     bestFor: "Marketing teams wanting CRM, email, landing pages, and analytics in one platform"
     price: "45"
     rating: "4.8"

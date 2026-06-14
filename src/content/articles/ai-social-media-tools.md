@@ -1,6 +1,6 @@
 ---
 title: "Best AI for Social Media (2026): Top Tools Compared"
-description: "The best AI social media tools for marketers in 2026 — compare top picks for content creation, scheduling, and analytics. Includes pricing, free tiers, and ratings for each tool."
+description: "The best AI social media tools for marketers in 2026, with top picks for content creation, scheduling, analytics, pricing, and free tiers."
 pubDate: 2026-05-09
 updatedDate: 2026-06-01
 category: "Social Media"

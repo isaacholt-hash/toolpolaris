@@ -64,9 +64,11 @@ const CATEGORY_SLUGS: Record<string, string> = {
   'Automation':          'ai-automation-tools-marketers',
 };
 const categorySlug = CATEGORY_SLUGS[category] ?? category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+const brandedTitle = `${title} | ToolPolaris`;
+const seoTitle = brandedTitle.length <= 65 ? brandedTitle : title;
 ---
 
-<BaseLayout title={`${title} | ToolPolaris`} description={description} canonicalUrl={canonicalUrl}>
+<BaseLayout title={seoTitle} description={description} canonicalUrl={canonicalUrl}>
 
   <!-- JSON-LD: Article schema for Google AIO citation eligibility -->
   <script type="application/ld+json" set:html={JSON.stringify({

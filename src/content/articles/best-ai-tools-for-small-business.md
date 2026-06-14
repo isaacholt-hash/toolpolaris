@@ -1,5 +1,5 @@
 ---
-title: "Best AI Tools for Small Business in 2026 (That Actually Save Time)"
+title: "Best AI Tools for Small Business in 2026"
 description: "The best AI tools for small businesses in 2026 — covering marketing, customer service, operations, and finance. No enterprise pricing, no unnecessary complexity."
 pubDate: 2026-05-09
 category: "Automation"
