@@ -47,7 +47,7 @@ tools:
   - name: "Publer"
     url: "https://publer.com/toolpolaris"
     bestFor: "Content teams repurposing long-form content across multiple social platforms"
-    price: "12"
+    price: "5"
     rating: "4.2"
 ---
 
@@ -73,7 +73,7 @@ The complete side-by-side. All 20 tools, all categories.
 |------|----------|---------------|-----------|----------|------------|
 | **[Predis.ai](https://predis.ai?ref=isaac77)** | Social Media | $32/mo | ✅ Yes | AI post generation (image + caption) | ⭐⭐⭐⭐⭐ 4.7 |
 | **Buffer** | Social Media | $6/channel/mo | ✅ Yes (3 channels) | Affordable scheduling + AI captions | ⭐⭐⭐⭐ 4.3 |
-| **[Publer](https://publer.com/toolpolaris)** | Social Media | $12/mo | ✅ Yes | Multi-platform repurposing | ⭐⭐⭐⭐ 4.2 |
+| **[Publer](https://publer.com/toolpolaris)** | Social Media | $5/mo | ✅ Yes | Multi-platform repurposing | ⭐⭐⭐⭐ 4.2 |
 | **FeedHive** | Social Media | $19/mo | ✅ Yes | Content recycling + conditional posting | ⭐⭐⭐⭐ 4.1 |
 | **ContentStudio** | Social Media | $25/mo | ✅ 14-day trial | Topic monitoring + full AI workflow | ⭐⭐⭐⭐ 4.0 |
 | **[Hootsuite](https://hootsuite.com)** | Social Media | $99/mo | ❌ No | Enterprise team management | ⭐⭐⭐⭐½ 4.5 |
@@ -104,7 +104,7 @@ Need the CRM-specific details? Read our full [HubSpot review for marketers](/too
 |------|----------|-------|-----------|
 | **[Predis.ai](https://predis.ai?ref=isaac77)** | AI generates the full post — image + caption + hashtags | $32/mo | ✅ Yes |
 | **Buffer** | Affordable scheduling with AI caption assistant | $6/channel/mo | ✅ Yes |
-| **[Publer](https://publer.com/toolpolaris)** | Blog → social repurposing; first-comment automation | $12/mo | ✅ Yes |
+| **[Publer](https://publer.com/toolpolaris)** | Blog → social repurposing; first-comment automation | $5/mo | ✅ Yes |
 | **FeedHive** | Content recycling queues + conditional posting rules | $19/mo | ✅ Yes |
 | **ContentStudio** | Topic discovery + content calendar + AI captions end-to-end | $25/mo | ✅ 14-day trial |
 | **[Hootsuite](https://hootsuite.com)** | Enterprise: approval workflows, 35+ platforms, deep analytics | $99/mo | ❌ No |
@@ -112,7 +112,7 @@ Need the CRM-specific details? Read our full [HubSpot review for marketers](/too
 **Winner by use case:**
 - **Solo creator, tight budget** → Buffer (free → $6/channel)
 - **Need AI to create the actual post** → [Predis.ai](https://predis.ai?ref=isaac77) — generates image + caption + hashtags together
-- **Multi-platform repurposing from long-form content** → [Publer](https://publer.com/toolpolaris) — paste a blog URL, get 5 platform-adapted posts in 60 seconds
+- **Multi-platform repurposing from long-form content** → [Publer](https://publer.com/toolpolaris) — paste a blog URL, get 5 platform-adapted posts in 60 seconds. See the [full Publer review](/tools/publer-review/) for pricing and workflow notes.
 - **Content recycling + evergreen automation** → FeedHive — best "set it and forget it" recycling logic
 - **Agency managing multiple brands** → [Hootsuite](https://hootsuite.com) — only tool with proper approval workflows
 - **End-to-end AI content workflow** → ContentStudio — topic monitoring + drafting + scheduling in one place
@@ -192,7 +192,7 @@ Most marketers have one primary bottleneck: writing content, scheduling social, 
 
 | Monthly Budget | Recommended Starting Stack |
 |---|---|
-| Under $30/mo | [Frase](https://frase.io/?fp_ref=toolpolaris) ($15) + [Publer](https://publer.com/toolpolaris) ($12) — covers SEO content + social |
+| Under $30/mo | [Frase](https://frase.io/?fp_ref=toolpolaris) ($15) + [Publer](https://publer.com/toolpolaris) ($5) — covers SEO content + social |
 | $50–$100/mo | [Predis.ai](https://predis.ai?ref=isaac77) ($32) + [Surfer SEO](https://surferseo.com/?fpr=toolpolaris) ($89) — covers social content + SEO optimization |
 | $100–$200/mo | Semrush ($129) + [Predis.ai](https://predis.ai?ref=isaac77) ($32) — all-in-one SEO + social content creation |
 | $200+/mo | Add [Hootsuite](https://hootsuite.com) for team approval workflows or [AdCreative.ai](https://app.adcreative.ai) for paid social scale |

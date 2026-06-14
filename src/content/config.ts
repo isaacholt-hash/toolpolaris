@@ -8,6 +8,11 @@ const toolEntrySchema = z.object({
   rating:  z.string().optional(),
 });
 
+const faqEntrySchema = z.object({
+  question: z.string(),
+  answer:   z.string(),
+});
+
 const articles = defineCollection({
   type: 'content',
   schema: z.object({
@@ -22,6 +27,7 @@ const articles = defineCollection({
     featured:     z.boolean().default(false),
     heroImage:    z.string().optional(),   // e.g. /images/slug.png
     tools:        z.array(toolEntrySchema).optional(), // ItemList schema data
+    faqs:         z.array(faqEntrySchema).optional(),  // FAQPage schema data
   }),
 });
 

@@ -10,6 +10,11 @@ interface ToolEntry {
   rating?:  string;
 }
 
+interface FaqEntry {
+  question: string;
+  answer:   string;
+}
+
 interface Props {
   title:        string;
   description:  string;
@@ -21,6 +26,8 @@ interface Props {
   affiliate?:   boolean;
   heroImage?:   string;
   tools?:       ToolEntry[];
+  faqs?:        FaqEntry[];
+  canonicalUrl?: string;
 }
 
 const {
@@ -34,6 +41,8 @@ const {
   affiliate = true,
   heroImage,
   tools     = [],
+  faqs      = [],
+  canonicalUrl,
 } = Astro.props;
 
 const formattedPub     = pubDate.toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
@@ -55,7 +64,7 @@ const CATEGORY_SLUGS: Record<string, string> = {
 const categorySlug = CATEGORY_SLUGS[category] ?? category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 ---
 
-<BaseLayout title={`${title} | ToolPolaris`} description={description}>
+<BaseLayout title={`${title} | ToolPolaris`} description={description} canonicalUrl={canonicalUrl}>
 
   <!-- JSON-LD: Article schema for Google AIO citation eligibility -->
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -96,21 +105,32 @@ const categorySlug = CATEGORY_SLUGS[category] ?? category.toLowerCase().replace(
       "itemListElement": tools.map((tool, i) => ({
         "@type": "ListItem",
         "position": i + 1,
-        "name": tool.name,
-        "url": tool.url,
-        "description": tool.bestFor,
-        ...(tool.price ? { "offers": { "@type": "Offer", "price": tool.price, "priceCurrency": "USD" } } : {}),
-        ...(tool.rating ? { "aggregateRating": { "@type": "AggregateRating", "ratingValue": tool.rating, "bestRating": "5", "reviewCount": "1" } } : {})
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": tool.name,
+          "url": tool.url,
+          "applicationCategory": category,
+          "description": tool.bestFor,
+          ...(tool.price ? { "offers": { "@type": "Offer", "price": tool.price, "priceCurrency": "USD" } } : {}),
+          ...(tool.rating ? { "aggregateRating": { "@type": "AggregateRating", "ratingValue": tool.rating, "bestRating": "5", "worstRating": "1", "reviewCount": "1" } } : {})
+        }
       }))
     })} />
   )}
 
   <!-- JSON-LD: FAQPage schema — PAA question eligibility for Google AIO -->
-  {tools.length > 0 && (
+  {(faqs.length > 0 || tools.length > 0) && (
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": [
+      "mainEntity": faqs.length > 0 ? faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      })) : [
         {
           "@type": "Question",
           "name": `What are the top ${tools.length} most popular AI tools?`,

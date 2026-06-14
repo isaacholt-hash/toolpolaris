@@ -28,7 +28,7 @@ tools:
   - name: "Publer"
     url: "https://publer.com/toolpolaris"
     bestFor: "Content teams that create long-form content and need to repurpose across social channels"
-    price: "12"
+    price: "5"
     rating: "4.2"
   - name: "FeedHive"
     url: "https://feedhive.com"
@@ -53,7 +53,7 @@ AI has finally made a meaningful dent in most of these tasks. Here are the tools
 | **[Predis.ai](https://predis.ai?ref=isaac77)** | $32/mo | ✅ Yes | AI-generated posts (image + caption + hashtags) | ⭐⭐⭐⭐⭐ 4.7/5 |
 | **[Hootsuite](https://hootsuite.com)** | $99/mo | ❌ No | Enterprise social media management | ⭐⭐⭐⭐½ 4.5/5 |
 | **Buffer** | $6/channel/mo | ✅ Yes (3 channels) | Affordable scheduling for solo creators | ⭐⭐⭐⭐ 4.3/5 |
-| **[Publer](https://publer.com/toolpolaris)** | $12/mo | ✅ Yes | Multi-platform content repurposing | ⭐⭐⭐⭐ 4.2/5 |
+| **[Publer](https://publer.com/toolpolaris)** | $5/mo | ✅ Yes | Multi-platform content repurposing | ⭐⭐⭐⭐ 4.2/5 |
 | **FeedHive** | $19/mo | ✅ Yes | Content recycling + conditional posting | ⭐⭐⭐⭐ 4.1/5 |
 | **ContentStudio** | $25/mo | ✅ 14-day trial | Topic monitoring + end-to-end AI workflow | ⭐⭐⭐⭐ 4.0/5 |
 | **Ocoya** | $19/mo | ❌ No | E-commerce product-to-social automation | ⭐⭐⭐ 3.8/5 |
@@ -115,12 +115,14 @@ The AI content calendar feature suggests optimal posting times based on your spe
 ## 4. Publer — Best for Multi-Platform Repurposing
 
 **Best for:** Content teams that create long-form content and need to efficiently repurpose across social channels  
-**Price:** From $12/month  
+**Price:** From $5/month  
 **Free trial:** Free plan available
 
 Publer's AI features focus on content repurposing — paste a blog URL and it generates platform-optimised posts for LinkedIn, Twitter/X, Instagram, and Facebook simultaneously. The tone-adaptation is competent: it doesn't just truncate long content but genuinely rewrites for each platform's conventions.
 
 The **hashtag generator** and first-comment automation (useful for posting hashtags in the first comment rather than the caption) are practical features that save real time.
+
+[Read the full Publer review](/tools/publer-review/) for pricing, AI Assist limits, recycling workflows, and when to choose it over Buffer.
 
 [Check Publer pricing →](https://publer.com/toolpolaris)
 
@@ -175,7 +177,7 @@ Ocoya integrates directly with Shopify, WooCommerce, and Etsy to generate produc
 | **[Predis.ai](https://predis.ai?ref=isaac77)** | AI post generation (image + caption) | $32/mo | Full posts + images | ✅ Yes | ✅ Competitor tracking | ⭐⭐⭐⭐⭐ | Yes (limited) |
 | **[Hootsuite](https://hootsuite.com)** | Enterprise management + approval flows | $99/mo | OwlyWriter AI | ✅ Best-in-class | ✅ Deep reporting | ⭐⭐⭐⭐½ | No |
 | **Buffer** | Affordable scheduling | $6/channel/mo | Captions + repurposing | ✅ Excellent | ✅ Basic | ⭐⭐⭐⭐ | Yes (3 channels) |
-| **[Publer](https://publer.com/toolpolaris)** | Multi-platform repurposing | $12/mo | Cross-platform adapting | ✅ Yes | ✅ Basic | ⭐⭐⭐⭐ | Yes |
+| **[Publer](https://publer.com/toolpolaris)** | Multi-platform repurposing | $5/mo | Cross-platform adapting | ✅ Yes | ✅ Basic | ⭐⭐⭐⭐ | Yes |
 | **FeedHive** | Content recycling + conditional rules | $19/mo | Caption generation | ✅ Yes | ✅ Yes | ⭐⭐⭐⭐ | Yes |
 | **ContentStudio** | Topic discovery + end-to-end workflow | $25/mo | Full AI writing | ✅ Yes | ✅ Yes | ⭐⭐⭐⭐ | 14-day trial |
 | **Ocoya** | E-commerce content | $19/mo | Product-specific posts | ✅ Yes | ❌ Limited | ⭐⭐⭐ | No |
@@ -192,7 +194,7 @@ Not all AI social media tools solve the same problem. If scheduling is your prim
 |------|---------------|---------------------|-------------|-----------------|-------------------|
 | **[Hootsuite](https://hootsuite.com)** | $99/mo | 35+ | ✅ Yes | ✅ Audience-based | ✅ Yes |
 | **Buffer** | $6/channel/mo | 6 core | ❌ Limited | ✅ Basic | ❌ No |
-| **[Publer](https://publer.com/toolpolaris)** | $12/mo | 9 | ✅ Yes | ✅ Yes | ❌ No |
+| **[Publer](https://publer.com/toolpolaris)** | $5/mo | 9 | ✅ Yes | ✅ Yes | ❌ No |
 | **[Predis.ai](https://predis.ai?ref=isaac77)** | $32/mo | 7 | ✅ Yes | ✅ Yes | ❌ No |
 
 **[Hootsuite](https://hootsuite.com)** wins at enterprise scale — bulk calendar view, approval workflows for teams, and optimal posting time predictions based on your specific audience data (not generic "post Tuesdays at 10am" advice). If you're managing 10+ accounts or need a client approval step, nothing else comes close.
@@ -305,7 +307,7 @@ Analytics depth varies sharply across tools:
 | Solo creator, tight budget | **Buffer** (free → $6/channel) | Cheapest reliable scheduling with AI captions |
 | Need AI to write *and* design posts | **[Predis.ai](https://predis.ai?ref=isaac77)** ($32/mo) | Generates full post: image + caption + hashtags |
 | Agency managing 10+ clients | **[Hootsuite](https://hootsuite.com)** ($99/mo) | Approval workflows + team collaboration |
-| Publishing long-form content to social | **Publer** ($12/mo) | Best cross-platform repurposing from blog URLs |
+| Publishing long-form content to social | **Publer** ($5/mo) | Best cross-platform repurposing from blog URLs |
 | E-commerce brand, Shopify/WooCommerce | **Ocoya** ($19/mo) | Direct product catalogue → social post automation |
 | Competitor research + content inspiration | **[Predis.ai](https://predis.ai?ref=isaac77)** | Built-in competitor social monitoring |
 | Running paid social ads (Meta, LinkedIn, Google) | **[AdCreative.ai](https://free-trial.adcreative.ai/706wlvvtk3mp)** ($21/mo) | AI-generated ad creatives scored for conversion performance |

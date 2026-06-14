@@ -92,7 +92,9 @@ Publer covers all the core social media scheduling features (multi-platform, cal
 
 **Best for:** Teams that have outgrown Buffer's free plan but don't need Hootsuite's full enterprise features.
 
-**Pricing:** Free plan (3 accounts); Professional from $12/month.
+**Pricing:** Free plan available; Professional from $5/month for one social account.
+
+[Read the full Publer review](/tools/publer-review/) for the pricing tradeoffs, recycling features, and best-fit workflows.
 
 [Try Publer →](https://publer.com/toolpolaris) *(affiliate link)*
 
