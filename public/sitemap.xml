@@ -9,32 +9,38 @@
   <url><loc>https://toolpolaris.com/privacy/</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
   <url><loc>https://toolpolaris.com/tools/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://toolpolaris.com/categories/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolpolaris.com/polaris-stack-report/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <!-- Batch 1 articles (KD 35–40) -->
-  <url><loc>https://toolpolaris.com/tools/best-ai-seo-tools/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://toolpolaris.com/tools/ai-tools-for-seo/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://toolpolaris.com/tools/ai-social-media-tools/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://toolpolaris.com/tools/ai-copy-generator/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://toolpolaris.com/tools/chatgpt-prompts-for-content-creation/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://toolpolaris.com/tools/ai-tools-for-market-research/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://toolpolaris.com/tools/ai-tools-for-digital-marketers/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://toolpolaris.com/tools/best-free-ai-tools-for-content-writing/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://toolpolaris.com/tools/ai-website-copy-generator/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <!-- Category hubs -->
+  <url><loc>https://toolpolaris.com/tools/ai-writing-tools-marketers/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://toolpolaris.com/tools/ai-social-media-marketing-tools/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://toolpolaris.com/tools/ai-seo-tools-marketers/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://toolpolaris.com/tools/ai-ad-copy-tools/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://toolpolaris.com/tools/ai-analytics-tools-marketers/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://toolpolaris.com/tools/ai-email-marketing-tools/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://toolpolaris.com/tools/ai-design-tools-marketers/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://toolpolaris.com/tools/ai-research-tools-marketers/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://toolpolaris.com/tools/ai-video-tools-marketers/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://toolpolaris.com/tools/ai-automation-tools-marketers/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Canonical article and review pages -->
+  <url><loc>https://toolpolaris.com/tools/adcreative-ai-review/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://toolpolaris.com/tools/ai-ad-copy-generator/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-
-  <!-- Comparison pages (high-priority targets) -->
-  <url><loc>https://toolpolaris.com/tools/ai-marketing-tools-comparison/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-
-  <!-- Batch 2 articles (KD 41–45) -->
-  <url><loc>https://toolpolaris.com/tools/ai-marketing-tools/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://toolpolaris.com/tools/best-ai-writing-tools/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://toolpolaris.com/tools/seo-ai-tools/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://toolpolaris.com/tools/best-ai-tools-for-writing/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://toolpolaris.com/tools/ai-content-creation-tools/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://toolpolaris.com/tools/best-ai-tools-for-content-creation/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://toolpolaris.com/tools/best-ai-tools-for-small-business/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolpolaris.com/tools/ai-copy-generator/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://toolpolaris.com/tools/ai-customer-service-chatbot/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://toolpolaris.com/tools/digital-marketing-ai-tools/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://toolpolaris.com/tools/ai-tools-for-social-media-posting/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolpolaris.com/tools/ai-marketing-tools/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolpolaris.com/tools/ai-marketing-tools-comparison/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://toolpolaris.com/tools/ai-social-media-tools/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolpolaris.com/tools/ai-tools-for-digital-marketers/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolpolaris.com/tools/ai-tools-for-market-research/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolpolaris.com/tools/ai-website-copy-generator/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolpolaris.com/tools/best-ai-seo-tools/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolpolaris.com/tools/best-ai-tools-for-small-business/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolpolaris.com/tools/best-ai-writing-tools/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolpolaris.com/tools/best-ai-writing-tools-affiliate-programs/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://toolpolaris.com/tools/best-free-ai-tools-for-content-writing/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolpolaris.com/tools/chatgpt-prompts-for-content-creation/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://toolpolaris.com/tools/hubspot-review/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
 </urlset>

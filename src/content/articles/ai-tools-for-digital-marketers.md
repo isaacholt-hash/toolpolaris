@@ -206,6 +206,8 @@ For digital marketers managing inbound funnels end-to-end, HubSpot is the only p
 
 [Try HubSpot →](https://hubspot.sjv.io/toolpolaris) *(affiliate link)*
 
+If HubSpot is on your shortlist, read the full [HubSpot review for marketers](/tools/hubspot-review/) before choosing between Free, Starter, and Professional.
+
 ---
 
 ## Building Your Stack: Three Budget Tiers

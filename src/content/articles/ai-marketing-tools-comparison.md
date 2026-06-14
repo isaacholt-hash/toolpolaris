@@ -92,6 +92,8 @@ The complete side-by-side. All 20 tools, all categories.
 | **Canva** | Design | Free–$15/mo | ✅ Yes | AI graphic + social design | ⭐⭐⭐⭐⭐ 4.8 |
 | **Opus Clip** | Video | $19/mo | ✅ Yes | Long-form video → short clips | ⭐⭐⭐⭐ 4.3 |
 
+Need the CRM-specific details? Read our full [HubSpot review for marketers](/tools/hubspot-review/) before comparing it against point solutions.
+
 ---
 
 ## Social Media AI Tools Comparison

@@ -138,6 +138,8 @@ The free plan is genuinely useful (CRM + email + forms), and the upgrade path is
 
 [Try HubSpot →](https://hubspot.sjv.io/toolpolaris) *(affiliate link — update with real Impact.com tracking URL)*
 
+For a deeper breakdown of the free CRM, Breeze AI features, and the Professional pricing cliff, read our full [HubSpot review for marketers](/tools/hubspot-review/).
+
 ---
 
 ## Three AI Marketing Stacks by Budget

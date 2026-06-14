@@ -126,6 +126,8 @@ For marketing teams currently running separate tools for CRM, email, forms, land
 
 [Try HubSpot →](https://hubspot.sjv.io/toolpolaris) *(affiliate link)*
 
+For more detail on the free CRM limits, Breeze AI features, and upgrade path, see the full [HubSpot review](/tools/hubspot-review/).
+
 ---
 
 ## What Digital Marketers Are Still Doing Manually

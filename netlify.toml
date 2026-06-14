@@ -5,6 +5,11 @@
 [build.environment]
   NODE_VERSION = "20"
 
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
 # Cannibalization fixes — 301 redirects to canonical pages
 # SEO cluster: seo-ai-tools and ai-tools-for-seo -> best-ai-seo-tools
 [[redirects]]
