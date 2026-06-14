@@ -203,6 +203,27 @@ const categorySlug = CATEGORY_SLUGS[category] ?? category.toLowerCase().replace(
     </div>
   )}
 
+  {tools.length > 0 && (
+    <section class="tool-quick-picks">
+      <div class="container">
+        <h2>Tool Quick Picks</h2>
+        <div class="tool-picks-grid">
+          {tools.map((tool) => (
+            <a class="tool-pick" href={tool.url}>
+              <span class="tool-pick-name">{tool.name}</span>
+              <span class="tool-pick-best"><strong>Best for:</strong> {tool.bestFor}</span>
+              <span class="tool-pick-meta">
+                {tool.price && <>From ${tool.price}/mo</>}
+                {tool.price && tool.rating && <span aria-hidden="true"> &middot; </span>}
+                {tool.rating && <>{tool.rating}/5 rating</>}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
   <!-- ARTICLE BODY -->
   <div class="article-wrap">
     <div class="container article-layout">
@@ -270,6 +291,16 @@ const categorySlug = CATEGORY_SLUGS[category] ?? category.toLowerCase().replace(
   .disclosure-banner { background: #fffbeb; border-bottom: 1px solid #fde68a; padding: 10px 0; font-size: 0.82rem; color: #78350f; }
   .disclosure-banner a { color: #92400e; font-weight: 600; text-decoration: none; }
   .disclosure-banner a:hover { text-decoration: underline; }
+
+  /* QUICK PICKS */
+  .tool-quick-picks { background: #fff; border-bottom: 1px solid #e4e9f0; padding: 28px 0; }
+  .tool-quick-picks h2 { font-size: 1rem; font-weight: 800; color: var(--brand-dark); margin-bottom: 14px; }
+  .tool-picks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+  .tool-pick { display: flex; flex-direction: column; gap: 5px; padding: 14px; border: 1px solid #e4e9f0; border-radius: 8px; text-decoration: none; color: var(--text-primary); background: var(--brand-light); transition: border-color .2s, box-shadow .2s; }
+  .tool-pick:hover { border-color: var(--brand-accent); box-shadow: 0 4px 14px rgba(15,31,61,0.08); }
+  .tool-pick-name { font-weight: 800; color: var(--brand-dark); font-size: 0.95rem; }
+  .tool-pick-best { font-size: 0.82rem; color: var(--text-primary); line-height: 1.45; }
+  .tool-pick-meta { font-size: 0.74rem; color: var(--text-muted); font-weight: 600; }
 
   /* LAYOUT */
   .article-wrap { padding: 52px 0 64px; }
