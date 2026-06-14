@@ -12,6 +12,8 @@ heroImage:    /images/ai-tools-for-market-research.png
 
 Market research used to mean expensive surveys, weeks of competitive analysis, and spreadsheets no one wanted to maintain. AI has compressed that timeline dramatically. The tools below can surface insights in hours that previously took weeks — if you choose the right ones.
 
+If you want the broader category view before comparing individual tools, start with the [AI market research tools hub](/tools/ai-research-tools-marketers/).
+
 Here's what we'd actually recommend in 2026.
 
 ## What to Look For in an AI Market Research Tool

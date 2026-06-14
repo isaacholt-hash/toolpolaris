@@ -111,7 +111,7 @@ Need the CRM-specific details? Read our full [HubSpot review for marketers](/too
 
 **Winner by use case:**
 - **Solo creator, tight budget** → Buffer (free → $6/channel)
-- **Need AI to create the actual post** → [Predis.ai](https://predis.ai?ref=isaac77) — generates image + caption + hashtags together
+- **Need AI to create the actual post** → [Predis.ai](https://predis.ai?ref=isaac77) — generates image + caption + hashtags together. See the [full Predis.ai review](/tools/predis-ai-review/) for pricing and credit notes.
 - **Multi-platform repurposing from long-form content** → [Publer](https://publer.com/toolpolaris) — paste a blog URL, get 5 platform-adapted posts in 60 seconds. See the [full Publer review](/tools/publer-review/) for pricing and workflow notes.
 - **Content recycling + evergreen automation** → FeedHive — best "set it and forget it" recycling logic
 - **Agency managing multiple brands** → [Hootsuite](https://hootsuite.com) — only tool with proper approval workflows
