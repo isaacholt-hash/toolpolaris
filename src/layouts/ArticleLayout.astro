@@ -48,6 +48,8 @@ const {
 
 const formattedPub     = pubDate.toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
 const formattedUpdated = updatedDate?.toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
+const reviewDate       = updatedDate ?? pubDate;
+const formattedReview  = reviewDate.toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
 
 // Canonical map: category display name → URL slug
 const CATEGORY_SLUGS: Record<string, string> = {
@@ -79,7 +81,7 @@ const showDisclosure = affiliate || tools.length > 0;
     "headline": title,
     "description": description,
     "datePublished": pubDate.toISOString(),
-    ...(updatedDate ? { "dateModified": updatedDate.toISOString() } : {}),
+    "dateModified": reviewDate.toISOString(),
     "author": {
       "@type": "Organization",
       "name": "ToolPolaris",
@@ -91,7 +93,7 @@ const showDisclosure = affiliate || tools.length > 0;
       "url": "https://toolpolaris.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://toolpolaris.com/images/toolpolaris-logo-300.png"
+        "url": "https://toolpolaris.com/toolpolaris-logo-300.png"
       }
     },
     ...(heroImage ? {
@@ -176,6 +178,7 @@ const showDisclosure = affiliate || tools.length > 0;
       <a href={`/tools/${categorySlug}/`} class="category-badge">{category}</a>
       <h1>{title}</h1>
       <p class="article-description">{description}</p>
+      <p class="review-date">Last reviewed: {formattedReview}</p>
       <div class="article-meta">
         <span>Published {formattedPub}</span>
         {updatedDate && <span>&middot; Updated {formattedUpdated}</span>}
@@ -291,6 +294,7 @@ const showDisclosure = affiliate || tools.length > 0;
   .category-badge:hover { background: rgba(245,166,35,0.28); }
   .article-header h1 { font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 800; color: #fff; line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 14px; }
   .article-description { font-size: 1.05rem; color: rgba(255,255,255,0.68); line-height: 1.65; margin-bottom: 18px; max-width: 680px; }
+  .review-date { color: rgba(255,255,255,0.72); font-size: 0.86rem; font-weight: 700; margin-bottom: 8px; }
   .article-meta { font-size: 0.8rem; color: rgba(255,255,255,0.4); display: flex; gap: 8px; flex-wrap: wrap; }
 
   /* DISCLOSURE */

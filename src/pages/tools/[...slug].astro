@@ -1,47 +1,89 @@
 ---
-// Dynamic route — renders article pages AND category listing pages
+// Dynamic route: renders article pages and category listing pages.
 import { getCollection } from 'astro:content';
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-export async function getStaticPaths() {
-  // Canonical map defined inside getStaticPaths to guarantee scope in Astro's compiled output
-  const CATEGORY_MAP = [
-    { name: 'AI Writing',          slug: 'ai-writing-tools-marketers',    emoji: '✍️' },
-    { name: 'Social Media',        slug: 'ai-social-media-marketing-tools', emoji: '📱' },
-    { name: 'SEO & Content',       slug: 'ai-seo-tools-marketers',        emoji: '🔎' },
-    { name: 'Ad Copy',             slug: 'ai-ad-copy-tools',              emoji: '📣' },
-    { name: 'Market Research',     slug: 'ai-research-tools-marketers',   emoji: '🧠' },
-    { name: 'Automation',          slug: 'ai-automation-tools-marketers', emoji: '⚡' },
-  ];
-
-  const articles = await getCollection('articles');
-
-  // Article paths
-  const articlePaths = articles.map(article => ({
-    params: { slug: article.slug },
-    props:  { type: 'article', article, catArticles: [], catMeta: null },
-  }));
-
-  // Category listing paths — skip any slug that conflicts with an article slug
-  const articleSlugs = new Set(articles.map(a => a.slug));
-  const categoryPaths = CATEGORY_MAP
-    .filter(cat => !articleSlugs.has(cat.slug))
-    .map(cat => {
-      const catArticles = articles
-        .filter(a => a.data.category === cat.name)
-        .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-      return {
-        params: { slug: cat.slug },
-        props:  { type: 'category', article: null, catArticles, catMeta: cat },
-      };
-    })
-    .filter(path => path.props.catArticles.length > 0);
-
-  return [...articlePaths, ...categoryPaths];
-}
-
-const { type, article, catArticles, catMeta } = Astro.props;
+const CATEGORY_MAP = [
+  {
+    name: 'AI Writing',
+    slug: 'ai-writing-tools-marketers',
+    emoji: '✍️',
+    title: 'Best AI Writing Tools for Marketers | ToolPolaris',
+    h1: 'AI Writing Tools for Marketers',
+    description: 'Compare Writesonic, Frase, Jasper, Copy.ai, and other AI writing tools for marketing workflows, SEO content, and campaign copy.',
+    picks: [
+      { name: 'Writesonic', url: 'https://writesonic.com/?via=toolpolaris', verdict: 'Best for SEO-first AI articles with live search data.', cta: 'Try Writesonic' },
+      { name: 'Frase', url: 'https://frase.io/?fp_ref=toolpolaris', verdict: 'Best for affordable content briefs and first drafts.', cta: 'Try Frase' },
+      { name: 'Copy.ai', url: 'https://copy.ai', verdict: 'Best for GTM workflows and repeatable marketing copy.', cta: 'Compare Copy.ai' },
+    ],
+  },
+  {
+    name: 'Social Media',
+    slug: 'ai-social-media-marketing-tools',
+    emoji: '📱',
+    title: 'Best AI Social Media Tools for Marketers | ToolPolaris',
+    h1: 'AI Social Media Tools for Marketers',
+    description: 'Compare Predis.ai, Publer, Buffer, Hootsuite, and other AI social media tools for content creation, scheduling, and repurposing.',
+    picks: [
+      { name: 'Predis.ai', url: 'https://predis.ai?ref=isaac77', verdict: 'Best for generating full social posts with visuals and captions.', cta: 'Try Predis.ai' },
+      { name: 'Publer', url: 'https://publer.com/toolpolaris', verdict: 'Best budget pick for repurposing and scheduling.', cta: 'Try Publer' },
+      { name: 'Buffer', url: 'https://buffer.com', verdict: 'Best free scheduler when budget matters most.', cta: 'Compare Buffer' },
+    ],
+  },
+  {
+    name: 'SEO & Content',
+    slug: 'ai-seo-tools-marketers',
+    emoji: '🔎',
+    title: 'Best AI SEO Tools for Marketers | ToolPolaris',
+    h1: 'AI SEO Tools for Marketers',
+    description: 'Compare Surfer SEO, Frase, Semrush, Writesonic, and other AI SEO tools for briefs, optimization, keyword research, and refreshes.',
+    picks: [
+      { name: 'Surfer SEO', url: 'https://surferseo.com/?fpr=toolpolaris', verdict: 'Best for on-page optimization scoring.', cta: 'Try Surfer SEO' },
+      { name: 'Frase', url: 'https://frase.io/?fp_ref=toolpolaris', verdict: 'Best value for AI briefs and draft workflows.', cta: 'Try Frase' },
+      { name: 'Writesonic', url: 'https://writesonic.com/?via=toolpolaris', verdict: 'Best for writing with live SEO data built in.', cta: 'Try Writesonic' },
+    ],
+  },
+  {
+    name: 'Ad Copy',
+    slug: 'ai-ad-copy-tools',
+    emoji: '📣',
+    title: 'Best AI Ad Copy Tools for Marketers | ToolPolaris',
+    h1: 'AI Ad Copy Tools for Marketers',
+    description: 'Compare AdCreative.ai, Anyword, HubSpot Campaign Assistant, and other AI ad copy tools for paid search, social ads, and landing pages.',
+    picks: [
+      { name: 'AdCreative.ai', url: 'https://free-trial.adcreative.ai/706wlvvtk3mp', verdict: 'Best for AI ad creative and copy scored for conversion.', cta: 'Try AdCreative.ai' },
+      { name: 'HubSpot', url: 'https://hubspot.com', verdict: 'Best free campaign copy assistant for starters.', cta: 'Compare HubSpot' },
+      { name: 'Anyword', url: 'https://anyword.com', verdict: 'Best for predictive copy scoring.', cta: 'Compare Anyword' },
+    ],
+  },
+  {
+    name: 'Market Research',
+    slug: 'ai-research-tools-marketers',
+    emoji: '🧠',
+    title: 'Best AI Market Research Tools for Marketers | ToolPolaris',
+    h1: 'AI Market Research Tools for Marketers',
+    description: 'Compare AI market research tools for competitor intelligence, survey analysis, trend monitoring, audience insights, and faster briefs.',
+    picks: [
+      { name: 'Semrush', url: 'https://semrush.com', verdict: 'Best for competitor and keyword-led market intelligence.', cta: 'Compare Semrush' },
+      { name: 'HubSpot', url: 'https://hubspot.com', verdict: 'Best for combining CRM insights with campaign planning.', cta: 'Compare HubSpot' },
+      { name: 'Frase', url: 'https://frase.io/?fp_ref=toolpolaris', verdict: 'Best for turning SERP research into briefs.', cta: 'Try Frase' },
+    ],
+  },
+  {
+    name: 'Automation',
+    slug: 'ai-automation-tools-marketers',
+    emoji: '⚡',
+    title: 'Best AI Automation Tools for Marketers | ToolPolaris',
+    h1: 'AI Automation Tools for Marketers',
+    description: 'Compare AI automation tools for marketing workflows, customer service, campaign operations, reporting, routing, and content pipelines.',
+    picks: [
+      { name: 'HubSpot', url: 'https://hubspot.com', verdict: 'Best for CRM-connected marketing automation.', cta: 'Compare HubSpot' },
+      { name: 'Publer', url: 'https://publer.com/toolpolaris', verdict: 'Best for automating social repurposing and recycling.', cta: 'Try Publer' },
+      { name: 'Predis.ai', url: 'https://predis.ai?ref=isaac77', verdict: 'Best for batch-generating weekly social content.', cta: 'Try Predis.ai' },
+    ],
+  },
+];
 
 const CANONICAL_OVERRIDES: Record<string, string> = {
   'ai-tools-for-seo': 'https://toolpolaris.com/tools/best-ai-seo-tools/',
@@ -52,7 +94,120 @@ const CANONICAL_OVERRIDES: Record<string, string> = {
   'digital-marketing-ai-tools': 'https://toolpolaris.com/tools/ai-tools-for-digital-marketers/',
 };
 
-// Render markdown content only for article pages
+const isAffiliateUrl = (url: string) => (
+  /[?&](ref|fp_ref|fpr|via)=/i.test(url) ||
+  /free-trial\.adcreative\.ai|publer\.com\/toolpolaris/i.test(url)
+);
+
+export async function getStaticPaths() {
+const CATEGORY_MAP = [
+  {
+    name: 'AI Writing',
+    slug: 'ai-writing-tools-marketers',
+    emoji: '✍️',
+    title: 'Best AI Writing Tools for Marketers | ToolPolaris',
+    h1: 'AI Writing Tools for Marketers',
+    description: 'Compare Writesonic, Frase, Jasper, Copy.ai, and other AI writing tools for marketing workflows, SEO content, and campaign copy.',
+    picks: [
+      { name: 'Writesonic', url: 'https://writesonic.com/?via=toolpolaris', verdict: 'Best for SEO-first AI articles with live search data.', cta: 'Try Writesonic' },
+      { name: 'Frase', url: 'https://frase.io/?fp_ref=toolpolaris', verdict: 'Best for affordable content briefs and first drafts.', cta: 'Try Frase' },
+      { name: 'Copy.ai', url: 'https://copy.ai', verdict: 'Best for GTM workflows and repeatable marketing copy.', cta: 'Compare Copy.ai' },
+    ],
+  },
+  {
+    name: 'Social Media',
+    slug: 'ai-social-media-marketing-tools',
+    emoji: '📱',
+    title: 'Best AI Social Media Tools for Marketers | ToolPolaris',
+    h1: 'AI Social Media Tools for Marketers',
+    description: 'Compare Predis.ai, Publer, Buffer, Hootsuite, and other AI social media tools for content creation, scheduling, and repurposing.',
+    picks: [
+      { name: 'Predis.ai', url: 'https://predis.ai?ref=isaac77', verdict: 'Best for generating full social posts with visuals and captions.', cta: 'Try Predis.ai' },
+      { name: 'Publer', url: 'https://publer.com/toolpolaris', verdict: 'Best budget pick for repurposing and scheduling.', cta: 'Try Publer' },
+      { name: 'Buffer', url: 'https://buffer.com', verdict: 'Best free scheduler when budget matters most.', cta: 'Compare Buffer' },
+    ],
+  },
+  {
+    name: 'SEO & Content',
+    slug: 'ai-seo-tools-marketers',
+    emoji: '🔎',
+    title: 'Best AI SEO Tools for Marketers | ToolPolaris',
+    h1: 'AI SEO Tools for Marketers',
+    description: 'Compare Surfer SEO, Frase, Semrush, Writesonic, and other AI SEO tools for briefs, optimization, keyword research, and refreshes.',
+    picks: [
+      { name: 'Surfer SEO', url: 'https://surferseo.com/?fpr=toolpolaris', verdict: 'Best for on-page optimization scoring.', cta: 'Try Surfer SEO' },
+      { name: 'Frase', url: 'https://frase.io/?fp_ref=toolpolaris', verdict: 'Best value for AI briefs and draft workflows.', cta: 'Try Frase' },
+      { name: 'Writesonic', url: 'https://writesonic.com/?via=toolpolaris', verdict: 'Best for writing with live SEO data built in.', cta: 'Try Writesonic' },
+    ],
+  },
+  {
+    name: 'Ad Copy',
+    slug: 'ai-ad-copy-tools',
+    emoji: '📣',
+    title: 'Best AI Ad Copy Tools for Marketers | ToolPolaris',
+    h1: 'AI Ad Copy Tools for Marketers',
+    description: 'Compare AdCreative.ai, Anyword, HubSpot Campaign Assistant, and other AI ad copy tools for paid search, social ads, and landing pages.',
+    picks: [
+      { name: 'AdCreative.ai', url: 'https://free-trial.adcreative.ai/706wlvvtk3mp', verdict: 'Best for AI ad creative and copy scored for conversion.', cta: 'Try AdCreative.ai' },
+      { name: 'HubSpot', url: 'https://hubspot.com', verdict: 'Best free campaign copy assistant for starters.', cta: 'Compare HubSpot' },
+      { name: 'Anyword', url: 'https://anyword.com', verdict: 'Best for predictive copy scoring.', cta: 'Compare Anyword' },
+    ],
+  },
+  {
+    name: 'Market Research',
+    slug: 'ai-research-tools-marketers',
+    emoji: '🧠',
+    title: 'Best AI Market Research Tools for Marketers | ToolPolaris',
+    h1: 'AI Market Research Tools for Marketers',
+    description: 'Compare AI market research tools for competitor intelligence, survey analysis, trend monitoring, audience insights, and faster briefs.',
+    picks: [
+      { name: 'Semrush', url: 'https://semrush.com', verdict: 'Best for competitor and keyword-led market intelligence.', cta: 'Compare Semrush' },
+      { name: 'HubSpot', url: 'https://hubspot.com', verdict: 'Best for combining CRM insights with campaign planning.', cta: 'Compare HubSpot' },
+      { name: 'Frase', url: 'https://frase.io/?fp_ref=toolpolaris', verdict: 'Best for turning SERP research into briefs.', cta: 'Try Frase' },
+    ],
+  },
+  {
+    name: 'Automation',
+    slug: 'ai-automation-tools-marketers',
+    emoji: '⚡',
+    title: 'Best AI Automation Tools for Marketers | ToolPolaris',
+    h1: 'AI Automation Tools for Marketers',
+    description: 'Compare AI automation tools for marketing workflows, customer service, campaign operations, reporting, routing, and content pipelines.',
+    picks: [
+      { name: 'HubSpot', url: 'https://hubspot.com', verdict: 'Best for CRM-connected marketing automation.', cta: 'Compare HubSpot' },
+      { name: 'Publer', url: 'https://publer.com/toolpolaris', verdict: 'Best for automating social repurposing and recycling.', cta: 'Try Publer' },
+      { name: 'Predis.ai', url: 'https://predis.ai?ref=isaac77', verdict: 'Best for batch-generating weekly social content.', cta: 'Try Predis.ai' },
+    ],
+  },
+];
+
+
+  const articles = await getCollection('articles');
+
+  const articlePaths = articles.map(article => ({
+    params: { slug: article.slug },
+    props: { type: 'article', article, catArticles: [], catMeta: null },
+  }));
+
+  const articleSlugs = new Set(articles.map(a => a.slug));
+  const categoryPaths = CATEGORY_MAP
+    .filter(cat => !articleSlugs.has(cat.slug))
+    .map(cat => {
+      const catArticles = articles
+        .filter(a => a.data.category === cat.name)
+        .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+      return {
+        params: { slug: cat.slug },
+        props: { type: 'category', article: null, catArticles, catMeta: cat },
+      };
+    })
+    .filter(path => path.props.catArticles.length > 0);
+
+  return [...articlePaths, ...categoryPaths];
+}
+
+const { type, article, catArticles, catMeta } = Astro.props;
+
 let Content: any = null;
 if (type === 'article') {
   const rendered = await article.render();
@@ -78,15 +233,38 @@ if (type === 'article') {
     {Content && <Content />}
   </ArticleLayout>
 ) : (
-  <BaseLayout
-    title={`Best ${catMeta?.name} AI Tools for Marketers | ToolPolaris`}
-    description={`Honest, role-specific AI tool rankings for ${catMeta?.name?.toLowerCase()} — ranked for marketing professionals by real workflow performance.`}
-  >
+  <BaseLayout title={catMeta?.title} description={catMeta?.description}>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: catMeta?.h1,
+      description: catMeta?.description,
+      url: `https://toolpolaris.com/tools/${catMeta?.slug}/`,
+      publisher: {
+        '@type': 'Organization',
+        name: 'ToolPolaris',
+        url: 'https://toolpolaris.com',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://toolpolaris.com/toolpolaris-logo-300.png',
+        },
+      },
+      mainEntity: {
+        '@type': 'ItemList',
+        itemListElement: catArticles.slice(0, 12).map((a: any, i: number) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          url: `https://toolpolaris.com/tools/${a.slug}/`,
+          name: a.data.title,
+        })),
+      },
+    })} />
+
     <div class="page-hero">
       <div class="container">
         <p class="section-label">Category</p>
-        <h1>{catMeta?.emoji} {catMeta?.name} Tools</h1>
-        <p class="page-sub">Ranked for marketing professionals &mdash; honest assessments, no pay-to-rank.</p>
+        <h1><span aria-hidden="true">{catMeta?.emoji}</span> {catMeta?.h1}</h1>
+        <p class="page-sub">Ranked for marketing workflows, budget fit, and the job you actually need the tool to do.</p>
       </div>
     </div>
 
@@ -102,9 +280,24 @@ if (type === 'article') {
 
     <section class="section">
       <div class="container">
+        {catMeta?.picks?.length > 0 && (
+          <div class="top-picks">
+            <p class="section-label">Top Picks</p>
+            <div class="top-picks-grid">
+              {catMeta.picks.map((pick: any) => (
+                <a class="top-pick-card" href={pick.url} rel={isAffiliateUrl(pick.url) ? 'sponsored nofollow' : undefined}>
+                  <span class="top-pick-name">{pick.name}</span>
+                  <span class="top-pick-verdict">{pick.verdict}</span>
+                  <span class="top-pick-cta">{pick.cta} &rarr;</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
         {catArticles.length === 0 ? (
           <div class="empty-state">
-            <p>🔧 Reviews for this category are coming soon.</p>
+            <p>Reviews for this category are coming soon.</p>
             <a href="/tools/" class="btn-primary" style="margin-top:20px;display:inline-flex;">Browse All Tool Reviews &rarr;</a>
           </div>
         ) : (
@@ -114,7 +307,7 @@ if (type === 'article') {
                 <span class="article-category">{a.data.category}</span>
                 <h2>{a.data.title}</h2>
                 <p>{a.data.description}</p>
-                <span class="article-meta">{a.data.readTime ?? 8} min read &middot; {a.data.pubDate.toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' })}</span>
+                <span class="article-meta">{a.data.readTime ?? 8} min read &middot; Last reviewed {(a.data.updatedDate ?? a.data.pubDate).toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' })}</span>
               </a>
             ))}
           </div>
@@ -129,7 +322,6 @@ if (type === 'article') {
 )}
 
 <style>
-  /* Category page styles */
   .page-hero { background: var(--brand-dark); padding: 64px 0 52px; }
   .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: #fff; margin: 10px 0 10px; letter-spacing: -0.3px; }
   .page-sub { font-size: 0.95rem; color: rgba(255,255,255,0.55); }
@@ -142,12 +334,20 @@ if (type === 'article') {
   .empty-state { text-align: center; padding: 60px 0; color: var(--text-muted); font-size: 1.05rem; }
   .empty-state a { color: var(--brand-accent); font-weight: 600; text-decoration: none; }
 
+  .top-picks { margin-bottom: 44px; }
+  .top-picks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .top-pick-card { display: flex; flex-direction: column; gap: 8px; background: var(--brand-light); border: 1.5px solid #d9e2f2; border-radius: var(--radius); padding: 20px; text-decoration: none; color: var(--text-primary); transition: border-color .2s, box-shadow .2s; }
+  .top-pick-card:hover { border-color: var(--brand-accent); box-shadow: 0 4px 18px rgba(15,31,61,0.08); }
+  .top-pick-name { font-size: 1rem; font-weight: 800; color: var(--brand-dark); }
+  .top-pick-verdict { font-size: 0.86rem; color: var(--text-muted); line-height: 1.55; flex: 1; }
+  .top-pick-cta { font-size: 0.8rem; font-weight: 800; color: var(--brand-dark); }
+
   .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
   .article-card { display: flex; flex-direction: column; gap: 8px; background: #fff; border: 1.5px solid #e4e9f0; border-radius: var(--radius); padding: 24px; text-decoration: none; color: var(--text-primary); transition: border-color .2s, box-shadow .15s; }
   .article-card:hover { border-color: var(--brand-accent); box-shadow: 0 4px 18px rgba(15,31,61,0.08); }
   .article-category { font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--brand-accent); }
   .article-card h2 { font-size: 1rem; font-weight: 700; line-height: 1.35; }
-  .article-card p  { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; flex: 1; }
+  .article-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; flex: 1; }
   .article-meta { font-size: 0.75rem; color: #aab; font-weight: 500; }
   .browse-more { display: flex; gap: 12px; margin-top: 48px; flex-wrap: wrap; }
 </style>

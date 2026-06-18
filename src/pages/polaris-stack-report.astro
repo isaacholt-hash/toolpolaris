@@ -26,6 +26,24 @@ const faqs = [
   title="Polaris Stack Report | AI Marketing Stack Guide"
   description="The complete AI tool stack guide for marketing professionals. 2026 edition. Side-by-side comparisons, pricing cheat sheet, and a 30-day setup plan. $39 one-time."
 >
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Polaris Stack Report",
+    "description": "The complete AI tool stack guide for marketing professionals, with side-by-side comparisons, pricing notes, and a 30-day setup plan.",
+    "brand": {
+      "@type": "Brand",
+      "name": "ToolPolaris"
+    },
+    "url": "https://toolpolaris.com/polaris-stack-report/",
+    "offers": {
+      "@type": "Offer",
+      "price": "39",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": stripeLink
+    }
+  })} />
 
   <!-- HERO -->
   <section class="hero">
