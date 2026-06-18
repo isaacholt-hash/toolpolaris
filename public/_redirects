@@ -12,6 +12,16 @@
 /tools/ai-tools-for-social-media-posting/   /tools/ai-social-media-tools/   301!
 /tools/ai-tools-for-social-media-posting    /tools/ai-social-media-tools/   301!
 
+# Empty category pages - send visitors to the populated tools hub until content exists
+/tools/ai-analytics-tools-marketers/   /tools/   301!
+/tools/ai-analytics-tools-marketers    /tools/   301!
+/tools/ai-email-marketing-tools/       /tools/   301!
+/tools/ai-email-marketing-tools        /tools/   301!
+/tools/ai-design-tools-marketers/      /tools/   301!
+/tools/ai-design-tools-marketers       /tools/   301!
+/tools/ai-video-tools-marketers/       /tools/   301!
+/tools/ai-video-tools-marketers        /tools/   301!
+
 # Content creation and digital marketing duplicate clusters
 /tools/best-ai-tools-for-content-creation/  /tools/ai-content-creation-tools/       301!
 /tools/best-ai-tools-for-content-creation   /tools/ai-content-creation-tools/       301!

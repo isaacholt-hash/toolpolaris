@@ -11,11 +11,7 @@ export async function getStaticPaths() {
     { name: 'Social Media',        slug: 'ai-social-media-marketing-tools', emoji: '📱' },
     { name: 'SEO & Content',       slug: 'ai-seo-tools-marketers',        emoji: '🔎' },
     { name: 'Ad Copy',             slug: 'ai-ad-copy-tools',              emoji: '📣' },
-    { name: 'Analytics',           slug: 'ai-analytics-tools-marketers',  emoji: '📊' },
-    { name: 'Email Marketing',     slug: 'ai-email-marketing-tools',      emoji: '📧' },
-    { name: 'Design & Creative',   slug: 'ai-design-tools-marketers',     emoji: '🎨' },
     { name: 'Market Research',     slug: 'ai-research-tools-marketers',   emoji: '🧠' },
-    { name: 'Video & Repurposing', slug: 'ai-video-tools-marketers',      emoji: '🎬' },
     { name: 'Automation',          slug: 'ai-automation-tools-marketers', emoji: '⚡' },
   ];
 
@@ -39,7 +35,8 @@ export async function getStaticPaths() {
         params: { slug: cat.slug },
         props:  { type: 'category', article: null, catArticles, catMeta: cat },
       };
-    });
+    })
+    .filter(path => path.props.catArticles.length > 0);
 
   return [...articlePaths, ...categoryPaths];
 }

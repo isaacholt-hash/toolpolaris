@@ -195,6 +195,6 @@ It is not the cheapest way to schedule posts, and video-heavy teams should watch
 ## Related Comparisons
 
 - [Best AI Social Media Tools](/tools/ai-social-media-tools/)
-- [Best AI Tools for Social Media Posting](/tools/ai-tools-for-social-media-posting/)
+- [Best AI Social Media Tools](/tools/ai-social-media-tools/)
 - [Publer Review](/tools/publer-review/)
 - [AI Marketing Tools Comparison Chart](/tools/ai-marketing-tools-comparison/)

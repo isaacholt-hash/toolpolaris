@@ -1,6 +1,7 @@
 ---
 // ArticleLayout.astro — template for all tool review & comparison articles
 import BaseLayout from './BaseLayout.astro';
+import { isAffiliateUrl } from '../lib/affiliateLinks.mjs';
 
 interface ToolEntry {
   name:     string;
@@ -66,6 +67,7 @@ const CATEGORY_SLUGS: Record<string, string> = {
 const categorySlug = CATEGORY_SLUGS[category] ?? category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 const brandedTitle = `${title} | ToolPolaris`;
 const seoTitle = brandedTitle.length <= 65 ? brandedTitle : title;
+const showDisclosure = affiliate || tools.length > 0;
 ---
 
 <BaseLayout title={seoTitle} description={description} canonicalUrl={canonicalUrl}>
@@ -199,10 +201,10 @@ const seoTitle = brandedTitle.length <= 65 ? brandedTitle : title;
   )}
 
   <!-- AFFILIATE DISCLOSURE BANNER -->
-  {affiliate && (
+  {showDisclosure && (
     <div class="disclosure-banner">
       <div class="container">
-        <strong>Affiliate disclosure:</strong> ToolPolaris earns a commission if you sign up through our links &mdash; at no extra cost to you. This never influences our rankings or recommendations. <a href="/affiliate-disclosure/">Learn more &rarr;</a>
+        <strong>Affiliate disclosure:</strong> ToolPolaris may earn a commission if you sign up through qualifying links &mdash; at no extra cost to you. This never influences our rankings or recommendations. <a href="/affiliate-disclosure/">Learn more &rarr;</a>
       </div>
     </div>
   )}
@@ -213,7 +215,7 @@ const seoTitle = brandedTitle.length <= 65 ? brandedTitle : title;
         <h2>Tool Quick Picks</h2>
         <div class="tool-picks-grid">
           {tools.map((tool) => (
-            <a class="tool-pick" href={tool.url}>
+            <a class="tool-pick" href={tool.url} rel={isAffiliateUrl(tool.url) ? 'sponsored nofollow' : undefined}>
               <span class="tool-pick-name">{tool.name}</span>
               <span class="tool-pick-best"><strong>Best for:</strong> {tool.bestFor}</span>
               <span class="tool-pick-meta">

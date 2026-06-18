@@ -226,5 +226,5 @@ For content-led marketers, Publer is one of the better budget tools in the categ
 ## Related Comparisons
 
 - [Best AI Social Media Tools](/tools/ai-social-media-tools/)
-- [Best AI Tools for Social Media Posting](/tools/ai-tools-for-social-media-posting/)
+- [Best AI Social Media Tools](/tools/ai-social-media-tools/)
 - [AI Marketing Tools Comparison Chart](/tools/ai-marketing-tools-comparison/)

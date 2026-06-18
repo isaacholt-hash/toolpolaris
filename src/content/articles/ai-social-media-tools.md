@@ -336,7 +336,7 @@ Starting price: $21/month. [10 free credits, no credit card required →](https:
 
 ## Also Worth Reading
 
-If you're managing social media for clients or a brand, scheduling posts is only part of the workflow. See also: [Best AI Tools for Social Media Posting](/tools/ai-tools-for-social-media-posting/) — a deeper look at AI tools specifically built for post automation, queue management, and evergreen recycling.
+If you're managing social media for clients or a brand, scheduling posts is only part of the workflow. See also: [Best AI Social Media Tools](/tools/ai-social-media-tools/) — a deeper look at AI tools specifically built for post automation, queue management, and evergreen recycling.
 
 ---
 
