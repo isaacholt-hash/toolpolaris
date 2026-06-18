@@ -78,6 +78,19 @@
   status = 301
   force  = true
 
+# Free tools slug alignment: old content-writing URL -> broader free marketing tools page
+[[redirects]]
+  from = "/tools/best-free-ai-tools-for-content-writing"
+  to   = "/tools/best-free-ai-marketing-tools/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "/tools/best-free-ai-tools-for-content-writing/"
+  to   = "/tools/best-free-ai-marketing-tools/"
+  status = 301
+  force  = true
+
 # Digital marketing cluster: digital-marketing-ai-tools -> ai-tools-for-digital-marketers
 [[redirects]]
   from = "/tools/digital-marketing-ai-tools"

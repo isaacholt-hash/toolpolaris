@@ -1,5 +1,5 @@
 ---
-title: "Best AI Writing Tools in 2026"
+title: "Best AI Writing Tools for Marketers in 2026 - Tested & Ranked"
 description: "The definitive ranking of the best AI writing tools in 2026 — tested across blog posts, marketing copy, long-form content, and social media. Honest pricing included."
 pubDate: 2026-05-09
 category: "AI Writing"

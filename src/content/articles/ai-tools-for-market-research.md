@@ -28,13 +28,14 @@ The category is noisy, with vendors stretching the label "AI market research" to
 
 | Use Case | Best Tool | Why |
 |---|---|---|
+| Content and SERP research | **[Frase](https://frase.io/?fp_ref=toolpolaris)** | Turns live search results into briefs, questions, competitor themes, and content angles |
 | Competitive landscape analysis | **Semrush Market Explorer** | Fast domain-level market maps, audience overlap, and traffic trends |
 | Qualitative interview analysis | **Speak.ai** | Turns calls, interviews, and recordings into themes and sentiment |
 | Ongoing competitive intelligence | **Crayon** | Monitors competitor changes across sites, jobs, reviews, and messaging |
 | Fast secondary research | **Perplexity Pro** | Cited research assistant for market sizing, trends, and background briefs |
 | Survey-based primary research | **Typeform + AI analysis** | Better survey completion plus quick theme extraction |
 
-For most marketing teams, the workflow is not one tool. It is one tool per research mode: competitive intelligence, qualitative research, survey research, and secondary research.
+For most marketing teams, the workflow is not one tool. It is one tool per research mode: content research, competitive intelligence, qualitative research, survey research, and secondary research.
 
 ---
 
@@ -66,23 +67,37 @@ Secondary research is the work of understanding a market before you run your own
 
 ---
 
-## 1. Semrush Market Explorer — Best for Competitive Landscape Analysis
+## 1. Frase - Best for Search-Driven Content Research
 
-**Best for:** Understanding market share, competitor positioning, and audience overlap  
-**Price:** Included with Semrush Guru ($229/mo) or as add-on  
+**Best for:** Turning SERP research into briefs, questions, and content angles
+**Price:** From $15/month
+
+Frase is the most practical starting point when your market research is tied to content strategy. It analyzes the pages already ranking for a topic, pulls out repeated themes, questions, headings, and topical gaps, then turns that research into a brief your team can actually use.
+
+It is not a replacement for survey research or full competitive intelligence. But for marketers deciding what buyers are searching for, what competitors are explaining, and which angles are underserved, Frase is the fastest affordable workflow.
+
+[Try Frase ->](https://frase.io/?fp_ref=toolpolaris) *(affiliate link)*
+
+---
+## 2. Semrush Market Explorer — Best for Competitive Landscape Analysis
+
+**Best for:** Understanding market share, competitor positioning, and audience overlap
+**Price:** Included with Semrush Guru ($229/mo) or as add-on
 
 Semrush's Market Explorer lets you input any domain and instantly maps the competitive landscape — traffic estimates, audience demographics, seasonal trends, and which competitors are growing or declining. The AI-powered **Growth Quadrant** classifies all players in a market as Niche Players, Game Changers, Leaders, or Established Players, which is genuinely useful for positioning decisions.
 
 For a marketer trying to understand a new vertical quickly, Market Explorer compresses days of competitive research into an afternoon.
 
-[Explore Semrush →](https://semrush.com)
+[Explore Semrush ->](https://semrush.com)
+
+**Affiliate note:** Semrush is recommended on merit here, but ToolPolaris does not currently have an active Semrush tracking link. If you mainly need content and SERP research, [Frase](https://frase.io/?fp_ref=toolpolaris) is the monetizable lower-cost alternative.
 
 ---
 
-## 2. Speak.ai — Best for Qualitative Research at Scale
+## 3. Speak.ai — Best for Qualitative Research at Scale
 
-**Best for:** Teams doing customer interviews, focus groups, or user research  
-**Price:** From $67/month  
+**Best for:** Teams doing customer interviews, focus groups, or user research
+**Price:** From $67/month
 **Free trial:** Free plan available
 
 Speak.ai turns unstructured qualitative data — interview recordings, customer calls, support transcripts — into structured, searchable insights. Upload an audio or video file and it transcribes, analyses sentiment, extracts key themes, and identifies the questions and topics your customers keep raising.
@@ -93,10 +108,10 @@ For customer research specifically, this replaces hours of manual transcription 
 
 ---
 
-## 3. Crayon — Best for Ongoing Competitive Intelligence
+## 4. Crayon — Best for Ongoing Competitive Intelligence
 
-**Best for:** Product marketers and sales teams needing continuous competitive monitoring  
-**Price:** Custom (typically $1,500–$5,000/year for SMBs)  
+**Best for:** Product marketers and sales teams needing continuous competitive monitoring
+**Price:** Custom (typically $1,500–$5,000/year for SMBs)
 
 Crayon monitors hundreds of competitor signals simultaneously — website changes, pricing updates, job postings, social mentions, press releases, G2 reviews — and surfaces the most significant changes with AI-generated summaries. It's designed for competitive intelligence as a continuous practice, not a quarterly report.
 
@@ -106,10 +121,10 @@ The job posting monitoring is underrated: tracking what roles competitors are hi
 
 ---
 
-## 4. Perplexity Pro — Best for Fast Secondary Research
+## 5. Perplexity Pro — Best for Fast Secondary Research
 
-**Best for:** Analysts and strategists doing rapid secondary research  
-**Price:** $20/month (Pro)  
+**Best for:** Analysts and strategists doing rapid secondary research
+**Price:** $20/month (Pro)
 **Free plan:** Yes
 
 Perplexity Pro functions as an AI research assistant with real-time web access. Unlike generic ChatGPT, it cites sources, surfaces recent data, and can synthesise across dozens of sources in minutes. For market sizing questions, trend analysis, or background research on an unfamiliar industry, it's dramatically faster than manual searching.
@@ -118,10 +133,10 @@ It won't replace primary research or deep competitive tools, but as a starting p
 
 ---
 
-## 5. Typeform + AI Analysis — Best for Survey-Based Research
+## 6. Typeform + AI Analysis — Best for Survey-Based Research
 
-**Best for:** Marketing teams that need to run primary research surveys  
-**Price:** Typeform from $25/month; AI analysis via integrations  
+**Best for:** Marketing teams that need to run primary research surveys
+**Price:** Typeform from $25/month; AI analysis via integrations
 
 For primary quantitative research, Typeform remains the best survey tool for response quality (its conversational format significantly outperforms traditional survey forms for completion rates). Pair it with an AI analysis layer — either via Typeform's native AI insights feature or by exporting to ChatGPT/Claude for theme extraction — and you can run surveys and have synthesised insights within hours.
 
@@ -131,6 +146,7 @@ For primary quantitative research, Typeform remains the best survey tool for res
 
 | Tool | Best For | Starting Price | Free Trial |
 |------|----------|---------------|------------|
+| **[Frase](https://frase.io/?fp_ref=toolpolaris)** | SERP/content research | $15/mo | $1 trial |
 | **Semrush Market Explorer** | Competitive landscape | ~$229/mo (suite) | 7 days |
 | **Speak.ai** | Qualitative analysis | $67/mo | Free plan |
 | **Crayon** | Competitive intelligence | Custom | Demo |

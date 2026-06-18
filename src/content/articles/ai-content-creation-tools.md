@@ -25,7 +25,7 @@ This guide is written for marketers, not general creators. The goal is not just 
 | Blog and campaign writing | **Jasper** | Brand-consistent marketing teams | Blogs, emails, landing pages, campaigns |
 | Conversion copy | **Copy.ai** | Paid and lifecycle marketers | Ads, landing pages, email sequences |
 | SEO content briefs | **Frase** | Content marketers and editors | Briefs, drafts, SERP-informed outlines |
-| Social visuals | **[Predis.ai](https://predis.ai?ref=isaac77)** | Brands needing images + captions | Posts, carousels, hashtags |
+| Social visuals | **[Predis.ai](https://predis.ai?ref=toolpolaris)** | Brands needing images + captions | Posts, carousels, hashtags |
 | Paid ad creative | **[AdCreative.ai](https://free-trial.adcreative.ai/706wlvvtk3mp)** | Performance marketers | Ad images, copy, CTA variants |
 | General design | **Canva AI** | Marketers without design support | Social graphics, decks, thumbnails |
 | Video repurposing | **Opus Clip** | Teams with webinars or long videos | Short-form clips |

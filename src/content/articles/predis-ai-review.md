@@ -11,7 +11,7 @@ featured: false
 heroImage: /images/ai-social-media-tools.png
 tools:
   - name: "Predis.ai"
-    url: "https://predis.ai?ref=isaac77"
+    url: "https://predis.ai?ref=toolpolaris"
     bestFor: "Brands and social media managers who want AI-generated visuals, captions, carousels, short videos, and competitor insights in one workflow"
     price: "19"
     rating: "4.5"
@@ -42,7 +42,7 @@ Predis.ai is one of the best AI social media tools for turning rough ideas into 
 
 **Not best for:** teams that only need scheduling, enterprise approval workflows, or highly art-directed brand campaigns.
 
-[Try Predis.ai](https://predis.ai?ref=isaac77)
+[Try Predis.ai](https://predis.ai?ref=toolpolaris)
 
 ---
 
@@ -188,7 +188,7 @@ Yes, Predis.ai is worth it if your social media bottleneck is creating visual co
 
 It is not the cheapest way to schedule posts, and video-heavy teams should watch credit usage carefully. But for small marketing teams and creators who need consistent visual output, Predis.ai can save meaningful production time.
 
-[Try Predis.ai](https://predis.ai?ref=isaac77)
+[Try Predis.ai](https://predis.ai?ref=toolpolaris)
 
 ---
 
