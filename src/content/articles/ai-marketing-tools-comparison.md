@@ -56,7 +56,7 @@ Finding the right AI marketing tool in 2026 is genuinely hard. There are hundred
 
 I've spent the past four weeks testing 20+ tools across every major marketing category. This page is the comparison chart I wish had existed — organised by use case, with honest "Best for:" labels, current pricing, and a free tier column that's actually accurate.
 
-Use this page as the canonical cross-category comparison. For deeper category picks, start with the broader [AI marketing tools](/tools/ai-marketing-tools/) guide, the [AI SEO tools](/tools/best-ai-seo-tools/) ranking, the [AI PPC ad generators](/tools/best-ai-ppc-ad-generators/), or the [AI landing page copy generators](/tools/best-ai-landing-page-copy-generators/).
+Use this page as the canonical cross-category comparison. For deeper category picks, start with the broader [AI marketing tools](/tools/ai-marketing-tools/) guide, the [AI SEO tools comparison](/tools/ai-seo-tools-comparison/), the [AI PPC ad generators](/tools/best-ai-ppc-ad-generators/), or the [AI landing page copy generators](/tools/best-ai-landing-page-copy-generators/).
 
 Jump to the category you need:
 - [Social Media AI Tools](#social-media-ai-tools-comparison)

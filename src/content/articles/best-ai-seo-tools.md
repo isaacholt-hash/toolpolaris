@@ -89,7 +89,7 @@ Skip straight to the side-by-side? Here's how the top tools stack up across the 
 - **Write + optimize in one step?** → [Writesonic](https://writesonic.com/?via=toolpolaris) pulls live search data while you draft
 - **Enterprise scale?** → Clearscope for consistency; MarketMuse for strategy
 
-> **Looking for a broader comparison?** See our [AI Marketing Tools Comparison Chart](/tools/ai-marketing-tools-comparison/) — covers 20+ tools across social, SEO, content, and ad copy categories.
+> **Looking for comparison tables?** See the dedicated [AI SEO Tools Comparison 2026](/tools/ai-seo-tools-comparison/) or the broader [AI Marketing Tools Comparison Chart](/tools/ai-marketing-tools-comparison/) covering 20+ tools across social, SEO, content, and ad copy categories.
 
 ---
 
