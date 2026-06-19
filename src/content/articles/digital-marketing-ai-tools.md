@@ -26,7 +26,7 @@ Three patterns emerge from conversations with experienced digital marketers:
 
 **They have a clear ROI.** Experienced marketers track their time carefully. Tools that couldn't demonstrate a clear time saving within the first week rarely made the cut.
 
-For research-specific workflows, see the [AI market research tools hub](/tools/ai-research-tools-marketers/) before choosing between survey, qualitative, and competitor-intelligence software.
+For research-specific workflows, see the [AI market research tools hub](/tools/ai-tools-for-market-research/) before choosing between survey, qualitative, and competitor-intelligence software.
 
 ---
 

@@ -12,6 +12,14 @@
 /tools/ai-tools-for-social-media-posting/   /tools/ai-social-media-tools/   301!
 /tools/ai-tools-for-social-media-posting    /tools/ai-social-media-tools/   301!
 
+# Market research cluster - redirect duplicate category URL to canonical article
+/tools/ai-research-tools-marketers/   /tools/ai-tools-for-market-research/   301!
+/tools/ai-research-tools-marketers    /tools/ai-tools-for-market-research/   301!
+
+# Legacy writing/free-content slug - consolidate signals to live free tools guide
+/tools/best-free-ai-tools-for-content-writing/   /tools/best-free-ai-marketing-tools/   301!
+/tools/best-free-ai-tools-for-content-writing    /tools/best-free-ai-marketing-tools/   301!
+
 # Empty category pages - send visitors to the populated tools hub until content exists
 /tools/ai-analytics-tools-marketers/   /tools/   301!
 /tools/ai-analytics-tools-marketers    /tools/   301!
