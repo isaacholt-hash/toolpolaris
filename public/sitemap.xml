@@ -4,6 +4,7 @@
   <!-- Core pages -->
   <url><loc>https://toolpolaris.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://toolpolaris.com/about/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://toolpolaris.com/editorial-policy/</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
   <url><loc>https://toolpolaris.com/contact/</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
   <url><loc>https://toolpolaris.com/affiliate-disclosure/</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
   <url><loc>https://toolpolaris.com/privacy/</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>

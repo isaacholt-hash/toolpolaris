@@ -291,6 +291,29 @@ if (type === 'article') {
           </div>
         )}
 
+        <div class="category-context">
+          <div>
+            <p class="section-label">Selection Criteria</p>
+            <h2>How we choose {catMeta?.name} tools</h2>
+            <p>
+              This hub is for marketers comparing tools by job-to-be-done, not by the loudest product category label. We prioritize tools that solve a repeatable marketing workflow, show clear pricing or trial access, and give teams enough control to move from a rough AI output to publishable work.
+            </p>
+            <p>
+              The picks above are chosen for different buying situations: the strongest specialist, the best value option, and a practical fallback for teams that need lower risk or a broader platform. The deeper reviews below explain where each tool is strong, where it struggles, and which marketer it fits best.
+            </p>
+          </div>
+          <aside class="criteria-panel">
+            <h3>What we check</h3>
+            <ul>
+              <li>Output quality on real marketing tasks</li>
+              <li>Workflow fit with existing team tools</li>
+              <li>Pricing transparency and free-trial usefulness</li>
+              <li>Export, collaboration, and approval controls</li>
+              <li>Clear limits, tradeoffs, and support signals</li>
+            </ul>
+          </aside>
+        </div>
+
         {catArticles.length === 0 ? (
           <div class="empty-state">
             <p>Reviews for this category are coming soon.</p>
@@ -308,6 +331,16 @@ if (type === 'article') {
             ))}
           </div>
         )}
+        <div class="category-guidance">
+          <h2>When this category is the right starting point</h2>
+          <p>
+            Start here if the problem you are solving belongs mostly inside {catMeta?.name.toLowerCase()} work. If your need crosses several workflows, compare the individual reviews and the all-tools directory before buying. A cheaper specialist often beats an expensive suite when one person owns the work; a broader platform can make more sense when approvals, shared assets, or reporting matter.
+          </p>
+          <p>
+            We keep category hubs intentionally practical: short verdicts first, then review links with last-reviewed dates. If pricing, feature limits, or affiliate status changes materially, the linked review is updated before the category summary is refreshed.
+          </p>
+          <a href="/editorial-policy/">Read our editorial policy &rarr;</a>
+        </div>
         <div class="browse-more">
           <a href="/tools/" class="btn-primary">Browse All Tools &rarr;</a>
           <a href="/categories/" class="btn-secondary">All Categories</a>
@@ -338,6 +371,19 @@ if (type === 'article') {
   .top-pick-verdict { font-size: 0.86rem; color: var(--text-muted); line-height: 1.55; flex: 1; }
   .top-pick-cta { font-size: 0.8rem; font-weight: 800; color: var(--brand-dark); }
 
+  .category-context { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 32px; align-items: start; margin-bottom: 44px; }
+  .category-context h2,
+  .category-guidance h2 { font-size: 1.35rem; font-weight: 800; color: var(--brand-dark); margin-bottom: 10px; }
+  .category-context p,
+  .category-guidance p { font-size: 0.96rem; line-height: 1.75; color: var(--text-muted); margin-bottom: 1em; }
+  .criteria-panel { background: var(--brand-light); border: 1px solid #d9e2f2; border-radius: var(--radius); padding: 22px; }
+  .criteria-panel h3 { font-size: 0.95rem; font-weight: 800; color: var(--brand-dark); margin-bottom: 10px; }
+  .criteria-panel ul { margin-left: 1.1em; }
+  .criteria-panel li { font-size: 0.86rem; line-height: 1.55; color: var(--text-muted); margin-bottom: 0.45em; }
+  .category-guidance { margin-top: 44px; padding-top: 32px; border-top: 1px solid #e4e9f0; max-width: 820px; }
+  .category-guidance a { color: var(--brand-accent); font-size: 0.9rem; font-weight: 800; text-decoration: none; }
+  .category-guidance a:hover { text-decoration: underline; }
+
   .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
   .article-card { display: flex; flex-direction: column; gap: 8px; background: #fff; border: 1.5px solid #e4e9f0; border-radius: var(--radius); padding: 24px; text-decoration: none; color: var(--text-primary); transition: border-color .2s, box-shadow .15s; }
   .article-card:hover { border-color: var(--brand-accent); box-shadow: 0 4px 18px rgba(15,31,61,0.08); }
@@ -346,4 +392,8 @@ if (type === 'article') {
   .article-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; flex: 1; }
   .article-meta { font-size: 0.75rem; color: #aab; font-weight: 500; }
   .browse-more { display: flex; gap: 12px; margin-top: 48px; flex-wrap: wrap; }
+
+  @media (max-width: 760px) {
+    .category-context { grid-template-columns: 1fr; }
+  }
 </style>

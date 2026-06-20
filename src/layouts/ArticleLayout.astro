@@ -51,6 +51,7 @@ const formattedPub     = pubDate.toLocaleDateString('en-US', dateFormatOptions);
 const formattedUpdated = updatedDate?.toLocaleDateString('en-US', dateFormatOptions);
 const reviewDate       = updatedDate ?? pubDate;
 const formattedReview  = reviewDate.toLocaleDateString('en-US', dateFormatOptions);
+const authorName       = 'Isaac Holt';
 
 // Canonical map: category display name → URL slug
 const CATEGORY_SLUGS: Record<string, string> = {
@@ -84,9 +85,9 @@ const showDisclosure = affiliate || tools.length > 0;
     "datePublished": pubDate.toISOString(),
     "dateModified": reviewDate.toISOString(),
     "author": {
-      "@type": "Organization",
-      "name": "ToolPolaris",
-      "url": "https://toolpolaris.com"
+      "@type": "Person",
+      "name": authorName,
+      "url": "https://toolpolaris.com/about/"
     },
     "publisher": {
       "@type": "Organization",
@@ -180,6 +181,11 @@ const showDisclosure = affiliate || tools.length > 0;
       <h1>{title}</h1>
       <p class="article-description">{description}</p>
       <p class="review-date">Last reviewed: {formattedReview}</p>
+      <p class="article-byline">
+        By <a href="/about/">{authorName}</a>, ToolPolaris editor
+        <span aria-hidden="true">&middot;</span>
+        <a href="/editorial-policy/">Editorial policy</a>
+      </p>
       <div class="article-meta">
         <span>Published {formattedPub}</span>
         {updatedDate && <span>&middot; Updated {formattedUpdated}</span>}
@@ -290,6 +296,9 @@ const showDisclosure = affiliate || tools.length > 0;
   .article-header h1 { font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 800; color: #fff; line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 14px; }
   .article-description { font-size: 1.05rem; color: rgba(255,255,255,0.68); line-height: 1.65; margin-bottom: 18px; max-width: 680px; }
   .review-date { color: rgba(255,255,255,0.72); font-size: 0.86rem; font-weight: 700; margin-bottom: 8px; }
+  .article-byline { color: rgba(255,255,255,0.66); font-size: 0.84rem; font-weight: 600; margin-bottom: 8px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .article-byline a { color: var(--brand-accent); text-decoration: none; }
+  .article-byline a:hover { text-decoration: underline; }
   .article-meta { font-size: 0.8rem; color: rgba(255,255,255,0.4); display: flex; gap: 8px; flex-wrap: wrap; }
 
   /* DISCLOSURE */

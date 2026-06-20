@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Editorial Policy | ToolPolaris"
+  description="How ToolPolaris evaluates AI tools, handles affiliate relationships, updates reviews, and corrects errors."
+>
+  <div class="page-hero">
+    <div class="container">
+      <p class="section-label">Editorial Policy</p>
+      <h1>How ToolPolaris reviews AI tools</h1>
+      <p class="page-sub">Last updated: June 2026</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container prose-page">
+      <p class="lead">ToolPolaris exists to help marketers choose practical AI tools with less guesswork. Our recommendations are based on workflow fit, output quality, pricing clarity, and usefulness for real marketing work.</p>
+
+      <h2>Who edits ToolPolaris</h2>
+      <p>ToolPolaris is edited by Isaac Holt. Reviews and comparison pages are written for marketing professionals who need usable recommendations, not generic software directories.</p>
+
+      <h2>How we evaluate tools</h2>
+      <p>We assess tools against real marketing tasks: drafting campaign copy, planning content, building SEO briefs, repurposing social posts, researching competitors, and automating repeatable workflows. When a page includes a ranking, we weigh output quality, workflow fit, price-to-value ratio, reliability, support signals, and transparency.</p>
+      <p>Hands-on testing is preferred. When a tool has not been tested directly, we say so in the article and rely on documented product information, pricing pages, changelogs, and verified user feedback until direct testing is practical.</p>
+
+      <h2>Affiliate independence</h2>
+      <p>ToolPolaris may earn commissions from qualifying links, but affiliate status does not determine rankings. Tools can rank well without an affiliate program, and tools with affiliate programs can be criticized, ranked lower, or excluded when they do not fit the use case.</p>
+
+      <h2>Updates and corrections</h2>
+      <p>We review priority rankings monthly and update articles when pricing, features, availability, or competitive positioning changes materially. Each article displays a last-reviewed date. Readers can flag outdated information through the <a href="/contact/">contact form</a>; confirmed corrections are usually updated within 48 hours.</p>
+
+      <h2>Sponsored content</h2>
+      <p>Sponsored placements, if used, are labeled clearly. Paid placement does not override editorial rankings or remove critical context from a review.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero { background: var(--brand-dark); padding: 64px 0 52px; }
+  .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: #fff; margin: 10px 0 8px; letter-spacing: -0.3px; }
+  .page-sub { font-size: 0.85rem; color: rgba(255,255,255,0.4); }
+
+  .prose-page { max-width: 740px; }
+  .lead { font-size: 1.1rem; line-height: 1.75; color: var(--text-primary); margin-bottom: 2em; font-weight: 500; }
+  .prose-page h2 { font-size: 1.25rem; font-weight: 800; color: var(--brand-dark); margin: 2em 0 0.6em; }
+  .prose-page p  { font-size: 1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 1em; }
+  .prose-page a { color: var(--brand-accent); font-weight: 600; text-decoration: none; }
+  .prose-page a:hover { text-decoration: underline; }
+</style>
