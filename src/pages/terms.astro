@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Terms and Refund Policy | ToolPolaris"
+  description="Terms, refund policy, delivery terms, acceptable use, and support details for ToolPolaris digital products."
+>
+  <div class="page-hero">
+    <div class="container">
+      <p class="section-label">Legal</p>
+      <h1>Terms and Refund Policy</h1>
+      <p class="page-sub">Last updated: June 2026</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container prose-page">
+      <p class="lead">These terms apply when you use ToolPolaris or purchase a ToolPolaris digital product such as the Polaris Stack Report.</p>
+
+      <h2>1. Business and support contact</h2>
+      <p>ToolPolaris publishes independent AI tool research, reviews, and digital reports for marketing professionals. For purchase support, refund requests, or terms questions, contact us through the <a href="/contact/">ToolPolaris contact page</a> or email hello [at] toolpolaris [dot] com.</p>
+
+      <h2>2. Digital product delivery</h2>
+      <p>The Polaris Stack Report is a digital PDF product. After payment is completed through Stripe, access is delivered electronically to the email address used at checkout. If you do not receive the report within one hour, contact support and include the checkout email address.</p>
+
+      <h2>3. Payments</h2>
+      <p>Payments are processed by Stripe. ToolPolaris does not store full payment card details. Stripe may process payment, fraud prevention, tax, and receipt data according to its own terms and privacy policy.</p>
+
+      <h2>4. Refund policy</h2>
+      <p>If the Polaris Stack Report does not deliver value, contact support within 7 days of purchase and we will refund the purchase price. Refunds are sent to the original payment method. Abuse of the refund policy, duplicate requests, or requests submitted after the 7-day window may be declined.</p>
+
+      <h2>5. Updates</h2>
+      <p>When a product page says lifetime or quarterly updates are included, those updates apply to the purchased report edition and its future refreshes while ToolPolaris continues publishing that product. Delivery methods, update cadence, and included tools may change as the market changes.</p>
+
+      <h2>6. License and acceptable use</h2>
+      <p>Your purchase grants you a personal or internal business-use license. You may use the report to evaluate tools, plan campaigns, and brief your team. You may not resell, publicly repost, scrape, repackage, or distribute the report as a competing product.</p>
+
+      <h2>7. Editorial independence and affiliate relationships</h2>
+      <p>ToolPolaris may earn affiliate commissions from some tools mentioned on the site or in paid reports. Affiliate relationships do not determine rankings or recommendations. See our <a href="/affiliate-disclosure/">affiliate disclosure</a> for more detail.</p>
+
+      <h2>8. No professional advice</h2>
+      <p>ToolPolaris content is provided for general informational purposes. Tool pricing, features, availability, affiliate terms, and policies can change. You are responsible for checking current vendor terms before buying or implementing a tool.</p>
+
+      <h2>9. Changes to these terms</h2>
+      <p>We may update these terms as the site, products, or payment process changes. The latest version will be posted on this page.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero { background: var(--brand-dark); padding: 64px 0 52px; }
+  .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: #fff; margin: 10px 0 8px; letter-spacing: -0.3px; }
+  .page-sub { font-size: 0.85rem; color: rgba(255,255,255,0.4); }
+
+  .prose-page { max-width: 740px; }
+  .lead { font-size: 1.1rem; line-height: 1.75; color: var(--text-primary); margin-bottom: 2em; font-weight: 500; }
+  .prose-page h2 { font-size: 1.25rem; font-weight: 800; color: var(--brand-dark); margin: 2em 0 0.6em; }
+  .prose-page p  { font-size: 1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 1em; }
+  .prose-page a { color: var(--brand-accent); font-weight: 600; text-decoration: none; }
+  .prose-page a:hover { text-decoration: underline; }
+</style>

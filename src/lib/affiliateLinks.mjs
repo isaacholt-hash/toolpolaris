@@ -4,6 +4,8 @@ const AFFILIATE_URL_PATTERNS = [
   /^https:\/\/publer\.com\/toolpolaris\/?$/i,
 ];
 
+const INTERNAL_HOSTNAMES = new Set(['toolpolaris.com', 'www.toolpolaris.com']);
+
 export function isAffiliateUrl(href) {
   if (typeof href !== 'string') {
     return false;
@@ -12,14 +14,35 @@ export function isAffiliateUrl(href) {
   return AFFILIATE_URL_PATTERNS.some((pattern) => pattern.test(href));
 }
 
-function withAffiliateRel(existingRel) {
+export function isExternalUrl(href) {
+  if (typeof href !== 'string') {
+    return false;
+  }
+
+  try {
+    const url = new URL(href, 'https://toolpolaris.com');
+    return (url.protocol === 'http:' || url.protocol === 'https:') && !INTERNAL_HOSTNAMES.has(url.hostname);
+  } catch {
+    return false;
+  }
+}
+
+function withRelValues(existingRel, valuesToAdd) {
   const relValues = Array.isArray(existingRel)
     ? existingRel
     : typeof existingRel === 'string'
       ? existingRel.split(/\s+/)
       : [];
 
-  return Array.from(new Set([...relValues, 'sponsored', 'nofollow'])).join(' ');
+  return Array.from(new Set([...relValues, ...valuesToAdd].filter(Boolean))).join(' ');
+}
+
+export function getCommercialOutboundRel(href, existingRel) {
+  if (!isExternalUrl(href)) {
+    return existingRel;
+  }
+
+  return withRelValues(existingRel, isAffiliateUrl(href) ? ['sponsored', 'nofollow'] : ['nofollow']);
 }
 
 export function rehypeAffiliateRel() {
@@ -29,10 +52,15 @@ export function rehypeAffiliateRel() {
         return;
       }
 
-      if (node.type === 'element' && node.tagName === 'a' && isAffiliateUrl(node.properties?.href)) {
+      if (node.type === 'element' && node.tagName === 'a') {
+        const rel = getCommercialOutboundRel(node.properties?.href, node.properties?.rel);
+        if (!rel) {
+          return;
+        }
+
         node.properties = {
           ...node.properties,
-          rel: withAffiliateRel(node.properties?.rel),
+          rel,
         };
       }
 

@@ -1,6 +1,7 @@
 ---
 // Polaris Stack Report — $39 digital product sales page
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCommercialOutboundRel } from '../lib/affiliateLinks.mjs';
 
 const stripeLink = "https://buy.stripe.com/aFa5kwag8eYm1TC2nAe3e00";
 
@@ -52,7 +53,7 @@ const faqs = [
       <h1>The AI marketing stack<br/>your peers haven't built yet.</h1>
       <p class="hero-sub">Stop wasting hours testing tools that don't fit how marketers work. The Polaris Stack Report gives you a complete, opinionated AI tool stack — with side-by-side comparisons, pricing breakdowns, and a 30-day setup plan.</p>
       <div class="hero-cta-wrap">
-        <a href={stripeLink} class="btn-buy">Get the Report — $39 <span class="btn-note">one-time · instant PDF delivery</span></a>
+        <a href={stripeLink} class="btn-buy" rel={getCommercialOutboundRel(stripeLink)}>Get the Report — $39 <span class="btn-note">one-time · instant PDF delivery</span></a>
       </div>
       <p class="hero-trust">✓ 30-page PDF &nbsp;·&nbsp; ✓ Quarterly updates included &nbsp;·&nbsp; ✓ 7-day money-back guarantee &nbsp;·&nbsp; Used by early ToolPolaris readers to compare 40+ tools</p>
     </div>
@@ -117,7 +118,7 @@ const faqs = [
           <li>✓ Ad copy generators — for Google, Meta, and PPC</li>
           <li>✓ Free tier filter — what's actually usable for free</li>
         </ul>
-        <a href={stripeLink} class="btn-primary">Get the Report — $39 →</a>
+        <a href={stripeLink} class="btn-primary" rel={getCommercialOutboundRel(stripeLink)}>Get the Report — $39 →</a>
       </div>
       <div class="preview-table-wrap">
         <div class="preview-table">
@@ -159,8 +160,9 @@ const faqs = [
           <li>✓ All future quarterly updates — free</li>
           <li>✓ 7-day money-back guarantee</li>
         </ul>
-        <a href={stripeLink} class="btn-buy-large">Get Instant Access — $39 →</a>
+        <a href={stripeLink} class="btn-buy-large" rel={getCommercialOutboundRel(stripeLink)}>Get Instant Access — $39 →</a>
         <p class="pricing-secure">🔒 Secure payment via Stripe &nbsp;·&nbsp; Instant PDF delivery to your email</p>
+        <p class="pricing-terms">By purchasing, you agree to the <a href="/terms/">terms, refund policy, and delivery terms</a>.</p>
       </div>
     </div>
   </section>
@@ -186,7 +188,7 @@ const faqs = [
     <div class="container">
       <h2>Stop guessing. Start with the right stack.</h2>
       <p>The Polaris Stack Report is the only AI tool guide written specifically for marketing professionals — not tech generalists, not VC-backed blogs, not vendors promoting themselves.</p>
-      <a href={stripeLink} class="btn-buy">Get the Report — $39 →</a>
+      <a href={stripeLink} class="btn-buy" rel={getCommercialOutboundRel(stripeLink)}>Get the Report — $39 →</a>
       <p class="final-trust">✓ 7-day money-back guarantee &nbsp;·&nbsp; ✓ Instant PDF delivery &nbsp;·&nbsp; ✓ No subscription</p>
     </div>
   </section>
@@ -251,6 +253,9 @@ const faqs = [
   .pricing-features { list-style: none; margin-bottom: 32px; display: flex; flex-direction: column; gap: 10px; }
   .pricing-features li { font-size: 0.92rem; color: rgba(255,255,255,0.8); text-align: left; }
   .pricing-secure { font-size: 0.75rem; color: rgba(255,255,255,0.35); }
+  .pricing-terms { font-size: 0.75rem; color: rgba(255,255,255,0.45); line-height: 1.6; margin-top: 8px; }
+  .pricing-terms a { color: rgba(255,255,255,0.72); font-weight: 700; text-decoration: none; }
+  .pricing-terms a:hover { text-decoration: underline; }
 
   /* FAQ */
   .faq-inner { max-width: 700px; margin: 0 auto; }

@@ -24,21 +24,15 @@ const { title, description, canonicalUrl, noindex } = Astro.props;
   <meta property="og:url"         content={canonicalUrl ?? Astro.url.href} />
   <meta name="twitter:card"       content="summary_large_image" />
   <meta name="impact-site-verification" content="de6421a5-42f2-4346-a159-965bc74e4747" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-066V9FSHB8"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-066V9FSHB8');
-  </script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "x6xeu2ykmx");
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -102,6 +96,18 @@ const { title, description, canonicalUrl, noindex } = Astro.props;
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; }
     .footer-disclosure { font-size: 0.75rem; opacity: .55; max-width: 600px; line-height: 1.6; }
     .footer-disclosure a { color: rgba(255,255,255,0.6); }
+    .cookie-button { border: 0; background: transparent; color: rgba(255,255,255,0.6); font: inherit; font-size: 0.85rem; cursor: pointer; padding: 0; text-align: left; }
+    .cookie-button:hover { color: #fff; }
+
+    /* COOKIE NOTICE */
+    .cookie-notice { position: fixed; left: 18px; right: 18px; bottom: 18px; z-index: 200; display: none; }
+    .cookie-notice.is-visible { display: block; }
+    .cookie-panel { max-width: 680px; margin: 0 auto; background: #fff; border: 1px solid #d9e2f2; border-radius: 8px; box-shadow: 0 16px 44px rgba(15,31,61,0.22); padding: 18px; }
+    .cookie-panel p { color: var(--text-primary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 14px; }
+    .cookie-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .cookie-actions button { border: 0; border-radius: 6px; cursor: pointer; font: inherit; font-size: 0.86rem; font-weight: 700; padding: 10px 16px; }
+    .cookie-accept { background: var(--brand-accent); color: var(--brand-dark); }
+    .cookie-decline { background: var(--brand-light); color: var(--brand-dark); }
 
     /* BREADCRUMB */
     .breadcrumb { font-size: 0.8rem; color: var(--text-muted); padding: 14px 0; }
@@ -155,6 +161,8 @@ const { title, description, canonicalUrl, noindex } = Astro.props;
             <li><a href="/contact/">Contact</a></li>
             <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
             <li><a href="/privacy/">Privacy Policy</a></li>
+            <li><a href="/terms/">Terms &amp; Refunds</a></li>
+            <li><button class="cookie-button" type="button" data-cookie-preferences>Cookie Preferences</button></li>
           </ul>
         </div>
       </div>
@@ -166,6 +174,69 @@ const { title, description, canonicalUrl, noindex } = Astro.props;
       </div>
     </div>
   </footer>
+
+  <div class="cookie-notice" data-cookie-notice role="region" aria-label="Cookie notice">
+    <div class="cookie-panel">
+      <p>ToolPolaris uses optional analytics cookies to understand which pages help readers. You can accept analytics or decline non-essential cookies.</p>
+      <div class="cookie-actions">
+        <button class="cookie-accept" type="button" data-cookie-accept>Accept analytics</button>
+        <button class="cookie-decline" type="button" data-cookie-decline>Decline</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const consentKey = 'toolpolaris_cookie_consent';
+      const notice = document.querySelector('[data-cookie-notice]');
+      const acceptButton = document.querySelector('[data-cookie-accept]');
+      const declineButton = document.querySelector('[data-cookie-decline]');
+      const preferencesButton = document.querySelector('[data-cookie-preferences]');
+      let analyticsLoaded = false;
+
+      const loadAnalytics = () => {
+        if (analyticsLoaded) return;
+        analyticsLoaded = true;
+
+        gtag('consent', 'update', {
+          analytics_storage: 'granted'
+        });
+
+        const gaScript = document.createElement('script');
+        gaScript.async = true;
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-066V9FSHB8';
+        document.head.appendChild(gaScript);
+
+        gtag('js', new Date());
+        gtag('config', 'G-066V9FSHB8');
+
+        (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, 'clarity', 'script', 'x6xeu2ykmx');
+      };
+
+      const setConsent = (value) => {
+        window.localStorage.setItem(consentKey, value);
+        notice?.classList.remove('is-visible');
+        if (value === 'accepted') {
+          loadAnalytics();
+        }
+      };
+
+      acceptButton?.addEventListener('click', () => setConsent('accepted'));
+      declineButton?.addEventListener('click', () => setConsent('declined'));
+      preferencesButton?.addEventListener('click', () => notice?.classList.add('is-visible'));
+
+      const savedConsent = window.localStorage.getItem(consentKey);
+      if (savedConsent === 'accepted') {
+        loadAnalytics();
+      } else if (!savedConsent) {
+        notice?.classList.add('is-visible');
+      }
+    })();
+  </script>
 
 </body>
 </html>

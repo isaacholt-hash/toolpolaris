@@ -1,7 +1,7 @@
 ---
 // ArticleLayout.astro — template for all tool review & comparison articles
 import BaseLayout from './BaseLayout.astro';
-import { isAffiliateUrl } from '../lib/affiliateLinks.mjs';
+import { getCommercialOutboundRel } from '../lib/affiliateLinks.mjs';
 
 interface ToolEntry {
   name:     string;
@@ -219,7 +219,7 @@ const showDisclosure = affiliate || tools.length > 0;
         <h2>Tool Quick Picks</h2>
         <div class="tool-picks-grid">
           {tools.map((tool) => (
-            <a class="tool-pick" href={tool.url} rel={isAffiliateUrl(tool.url) ? 'sponsored nofollow' : undefined}>
+            <a class="tool-pick" href={tool.url} rel={getCommercialOutboundRel(tool.url)}>
               <span class="tool-pick-name">{tool.name}</span>
               <span class="tool-pick-best"><strong>Best for:</strong> {tool.bestFor}</span>
               <span class="tool-pick-meta">
