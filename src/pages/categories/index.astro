@@ -2,33 +2,32 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const categories = [
-  { emoji: '✍️', name: 'AI Writing',           slug: 'ai-writing-tools-marketers',    desc: 'Long-form content, blog posts, email copy, product descriptions.' },
-  { emoji: '📱', name: 'Social Media',          slug: 'ai-social-media-marketing-tools', desc: 'Caption generation, scheduling, hashtag research, repurposing.' },
-  { emoji: '🔎', name: 'SEO & Content',         slug: 'ai-seo-tools-marketers',        desc: 'Keyword research, content briefs, on-page optimisation.' },
-  { emoji: '📣', name: 'Ad Copy',               slug: 'ai-ad-copy-tools',              desc: 'Google Ads, Meta Ads, landing page copy, A/B variants.' },
-  { emoji: '🧠', name: 'Market Research',       slug: 'ai-tools-for-market-research',  desc: 'Competitor intelligence, audience insights, trend analysis.' },
-  { emoji: '⚡', name: 'Automation',            slug: 'ai-automation-tools-marketers', desc: 'Workflow automation, multi-channel orchestration, AI agents.' },
+  { emoji: '✍️', name: 'AI Writing', slug: 'ai-writing-tools-marketers', desc: 'Long-form content, blog posts, email copy, product descriptions.' },
+  { emoji: '📱', name: 'Social Media', slug: 'ai-social-media-marketing-tools', desc: 'Caption generation, scheduling, hashtag research, repurposing.' },
+  { emoji: '🔎', name: 'SEO & Content', slug: 'ai-seo-tools-marketers', desc: 'Keyword research, content briefs, on-page optimization.' },
+  { emoji: '📣', name: 'Ad Copy', slug: 'ai-ad-copy-tools', desc: 'Google Ads, Meta Ads, landing page copy, A/B variants.' },
+  { emoji: '🧠', name: 'Market Research', slug: 'ai-tools-for-market-research', desc: 'Competitor intelligence, audience insights, trend analysis.' },
+  { emoji: '⚡', name: 'Automation', slug: 'ai-automation-tools-marketers', desc: 'Workflow automation, multi-channel orchestration, AI agents.' },
 ];
 ---
 
 <BaseLayout
   title="Browse AI Tools by Marketing Use Case | ToolPolaris"
-  description="Find the best AI tools for your specific marketing role. Browse by use case — writing, SEO, social media, ad copy, analytics, email, design, and more."
+  description="Find the best AI tools for your specific marketing role. Browse by use case - writing, SEO, social media, ad copy, analytics, email, design, and more."
 >
-
   <div class="page-hero">
     <div class="container">
       <p class="section-label">Browse by Use Case</p>
       <h1>Find the right AI tools for <em>your</em> workflow</h1>
-      <p class="page-sub">Not your colleague's workflow. Not a generic "best AI tools" list. Pick a use case and get rankings built around how you actually work.</p>
+      <p class="page-sub">Not your colleague's workflow. Not a generic best AI tools list. Pick a use case and get rankings built around how you actually work.</p>
     </div>
   </div>
 
   <section class="section">
     <div class="container">
       <div class="cat-grid">
-        {categories.map(cat => (
-          <a href={`/tools/${cat.slug}/`} class="cat-card">
+        {categories.map((cat) => (
+          <a href={`/tools/${cat.slug}/`} class="cat-card surface-card">
             <div class="cat-emoji">{cat.emoji}</div>
             <div class="cat-body">
               <h2>{cat.name}</h2>
@@ -44,32 +43,70 @@ const categories = [
   <section class="cta-section">
     <div class="container">
       <h2>Not sure where to start?</h2>
-      <p>Browse all tool reviews or tell us your role and we&rsquo;ll point you in the right direction.</p>
-      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <p>Browse all tool reviews or tell us your role and we will point you in the right direction.</p>
+      <div class="cta-actions">
         <a href="/tools/" class="btn-primary">All Tool Reviews &rarr;</a>
         <a href="/contact/" class="btn-secondary">Ask Us</a>
       </div>
     </div>
   </section>
-
 </BaseLayout>
 
 <style>
-  .page-hero { background: var(--brand-dark); padding: 64px 0 52px; }
-  .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: #fff; margin: 10px 0 14px; letter-spacing: -0.3px; }
-  .page-hero h1 em { color: var(--brand-accent); font-style: normal; }
-  .page-sub { font-size: 1.05rem; color: rgba(255,255,255,0.65); max-width: 580px; }
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 18px;
+  }
 
-  .cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
-  .cat-card { display: flex; align-items: center; gap: 16px; background: #fff; border: 1.5px solid #e4e9f0; border-radius: var(--radius); padding: 20px 20px; text-decoration: none; color: var(--text-primary); transition: border-color .2s, box-shadow .2s, transform .15s; }
-  .cat-card:hover { border-color: var(--brand-accent); box-shadow: 0 4px 18px rgba(15,31,61,0.08); transform: translateY(-1px); }
-  .cat-emoji { font-size: 1.8rem; flex-shrink: 0; width: 48px; text-align: center; }
-  .cat-body { flex: 1; }
-  .cat-body h2 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
-  .cat-body p  { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
-  .cat-arrow { font-size: 1.1rem; color: var(--brand-accent); font-weight: 700; flex-shrink: 0; }
+  .cat-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px;
+    text-decoration: none;
+    color: var(--text-primary);
+  }
 
-  .cta-section { background: var(--brand-dark); text-align: center; padding: 72px 0; }
-  .cta-section h2 { font-size: 1.9rem; font-weight: 800; color: #fff; margin-bottom: 10px; }
-  .cta-section p  { color: rgba(255,255,255,0.65); margin-bottom: 28px; }
+  .cat-emoji {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    border-radius: var(--radius);
+    background: rgba(245, 166, 35, 0.12);
+    display: grid;
+    place-items: center;
+    font-size: 1.45rem;
+  }
+
+  .cat-body {
+    flex: 1;
+  }
+
+  .cat-body h2 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--brand-dark);
+    margin-bottom: 6px;
+  }
+
+  .cat-body p {
+    font-size: 0.84rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+  }
+
+  .cat-arrow {
+    font-size: 1.15rem;
+    color: var(--brand-accent);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 </style>

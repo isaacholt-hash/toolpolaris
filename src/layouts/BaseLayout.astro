@@ -1,11 +1,13 @@
 ---
-// BaseLayout.astro — shared shell for every page on ToolPolaris
+import '../styles/design-system.css';
+
 interface Props {
-  title:        string;
-  description:  string;
+  title: string;
+  description: string;
   canonicalUrl?: string;
-  noindex?:     boolean;
+  noindex?: boolean;
 }
+
 const { title, description, canonicalUrl, noindex } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -18,11 +20,11 @@ const { title, description, canonicalUrl, noindex } = Astro.props;
   <link rel="canonical" href={canonicalUrl ?? Astro.url.href} />
   {noindex && <meta name="robots" content="noindex, follow" />}
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta property="og:title"       content={title} />
+  <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:type"        content="website" />
-  <meta property="og:url"         content={canonicalUrl ?? Astro.url.href} />
-  <meta name="twitter:card"       content="summary_large_image" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalUrl ?? Astro.url.href} />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="impact-site-verification" content="de6421a5-42f2-4346-a159-965bc74e4747" />
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -34,99 +36,14 @@ const { title, description, canonicalUrl, noindex } = Astro.props;
       ad_personalization: 'denied'
     });
   </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-
-  <style is:global>
-    /* ============================================================
-       DESIGN TOKENS — swap 6 values to rebrand for new niche
-       ============================================================ */
-    :root {
-      --brand-dark:    #0f1f3d;
-      --brand-accent:  #f5a623;
-      --brand-light:   #f0f4ff;
-      --text-primary:  #1a1a2e;
-      --text-muted:    #6b7280;
-      --radius:        10px;
-      --font:          'Inter', system-ui, sans-serif;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: var(--font); color: var(--text-primary); background: #fff; line-height: 1.6; }
-    img  { max-width: 100%; display: block; }
-    a    { color: inherit; }
-
-    /* LAYOUT */
-    .container  { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-    .section    { padding: 80px 0; }
-    .section--alt { background: var(--brand-light); }
-
-    /* NAV — scoped to .site-nav so breadcrumb <nav> elements are not affected */
-    .site-nav { position: sticky; top: 0; z-index: 100; background: var(--brand-dark); padding: 16px 0; }
-    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo  { font-weight: 800; font-size: 1.25rem; color: #fff; text-decoration: none; letter-spacing: -0.3px; }
-    .nav-logo span { color: var(--brand-accent); }
-    .nav-links { display: flex; gap: 28px; list-style: none; }
-    .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color .2s; }
-    .nav-links a:hover { color: #fff; }
-    .nav-cta { background: var(--brand-accent); color: var(--brand-dark) !important; padding: 8px 18px; border-radius: 6px; font-weight: 700 !important; }
-
-    /* BUTTONS */
-    .btn-primary   { background: var(--brand-accent); color: var(--brand-dark); font-weight: 700; font-size: 1rem; padding: 14px 28px; border-radius: var(--radius); text-decoration: none; transition: opacity .2s; display: inline-flex; align-items: center; gap: 6px; }
-    .btn-primary:hover { opacity: .88; }
-    .btn-secondary { background: rgba(255,255,255,0.08); color: #fff; font-weight: 600; font-size: 1rem; padding: 14px 28px; border-radius: var(--radius); text-decoration: none; border: 1px solid rgba(255,255,255,0.2); transition: background .2s; }
-    .btn-secondary:hover { background: rgba(255,255,255,0.14); }
-
-    /* SECTION HEADERS */
-    .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--brand-accent); margin-bottom: 10px; }
-    .section-title { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; letter-spacing: -0.3px; line-height: 1.2; }
-    .section-sub   { font-size: 1rem; color: var(--text-muted); max-width: 560px; margin-top: 12px; }
-
-    /* FOOTER */
-    footer { background: var(--brand-dark); color: rgba(255,255,255,0.5); padding: 40px 0; font-size: 0.82rem; }
-    .footer-inner { display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; align-items: flex-start; margin-bottom: 28px; }
-    .footer-brand .nav-logo { font-size: 1.1rem; }
-    .footer-brand p { margin-top: 8px; font-size: 0.8rem; color: rgba(255,255,255,0.4); max-width: 240px; line-height: 1.6; }
-    .footer-col h4 { font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 12px; }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-    .footer-col a  { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem; transition: color .2s; }
-    .footer-col a:hover { color: #fff; }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; }
-    .footer-disclosure { font-size: 0.75rem; opacity: .55; max-width: 600px; line-height: 1.6; }
-    .footer-disclosure a { color: rgba(255,255,255,0.6); }
-    .cookie-button { border: 0; background: transparent; color: rgba(255,255,255,0.6); font: inherit; font-size: 0.85rem; cursor: pointer; padding: 0; text-align: left; }
-    .cookie-button:hover { color: #fff; }
-
-    /* COOKIE NOTICE */
-    .cookie-notice { position: fixed; left: 18px; right: 18px; bottom: 18px; z-index: 200; display: none; }
-    .cookie-notice.is-visible { display: block; }
-    .cookie-panel { max-width: 680px; margin: 0 auto; background: #fff; border: 1px solid #d9e2f2; border-radius: 8px; box-shadow: 0 16px 44px rgba(15,31,61,0.22); padding: 18px; }
-    .cookie-panel p { color: var(--text-primary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 14px; }
-    .cookie-actions { display: flex; flex-wrap: wrap; gap: 10px; }
-    .cookie-actions button { border: 0; border-radius: 6px; cursor: pointer; font: inherit; font-size: 0.86rem; font-weight: 700; padding: 10px 16px; }
-    .cookie-accept { background: var(--brand-accent); color: var(--brand-dark); }
-    .cookie-decline { background: var(--brand-light); color: var(--brand-dark); }
-
-    /* BREADCRUMB */
-    .breadcrumb { font-size: 0.8rem; color: var(--text-muted); padding: 14px 0; }
-    .breadcrumb a { color: var(--text-muted); text-decoration: none; }
-    .breadcrumb a:hover { color: var(--brand-accent); }
-    .breadcrumb span { margin: 0 6px; }
-
-    /* RESPONSIVE */
-    @media (max-width: 640px) {
-      .nav-links { display: none; }
-      .section { padding: 56px 0; }
-    }
-  </style>
 </head>
 <body>
-
   <nav class="site-nav">
     <div class="container nav-inner">
-      <a class="nav-logo" href="/">Tool<span>Polaris</span></a>
+      <a class="nav-logo" href="/">
+        <img src="/toolpolaris-logo-300.png" alt="ToolPolaris" width="36" height="36" />
+        <span>Tool<span>Polaris</span></span>
+      </a>
       <ul class="nav-links">
         <li><a href="/categories/">Browse by Role</a></li>
         <li><a href="/tools/">All Tools</a></li>
@@ -138,11 +55,14 @@ const { title, description, canonicalUrl, noindex } = Astro.props;
 
   <slot />
 
-  <footer>
+  <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
-          <a class="nav-logo" href="/">Tool<span>Polaris</span></a>
+          <a class="nav-logo" href="/">
+            <img src="/toolpolaris-logo-300.png" alt="ToolPolaris" width="36" height="36" />
+            <span>Tool<span>Polaris</span></span>
+          </a>
           <p>Honest, role-specific AI tool rankings for marketing professionals.</p>
         </div>
         <div class="footer-col">
@@ -238,6 +158,5 @@ const { title, description, canonicalUrl, noindex } = Astro.props;
       }
     })();
   </script>
-
 </body>
 </html>

@@ -23,18 +23,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <p class="hidden"><label>Don&rsquo;t fill this out: <input name="bot-field" /></label></p>
 
           <div class="form-group">
-            <label for="name">Your name</label>
-            <input type="text" id="name" name="name" required placeholder="Jane Smith" />
+            <label class="field-label" for="name">Your name</label>
+            <input class="field-control" type="text" id="name" name="name" required placeholder="Jane Smith" />
           </div>
 
           <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" id="email" name="email" required placeholder="jane@company.com" />
+            <label class="field-label" for="email">Email address</label>
+            <input class="field-control" type="email" id="email" name="email" required placeholder="jane@company.com" />
           </div>
 
           <div class="form-group">
-            <label for="reason">What&rsquo;s this about?</label>
-            <select id="reason" name="reason" required>
+            <label class="field-label" for="reason">What&rsquo;s this about?</label>
+            <select class="field-control" id="reason" name="reason" required>
               <option value="" disabled selected>Select a reason</option>
               <option value="tool-request">Request a tool review</option>
               <option value="category-suggestion">Suggest a missing category</option>
@@ -45,8 +45,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
 
           <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required rows="5" placeholder="Tell us which tool you&rsquo;d like reviewed, or describe your question..."></textarea>
+            <label class="field-label" for="message">Message</label>
+            <textarea class="field-control" id="message" name="message" required rows="5" placeholder="Tell us which tool you&rsquo;d like reviewed, or describe your question..."></textarea>
           </div>
 
           <button type="submit" class="btn-submit">Submit Tool Review Request &rarr;</button>
@@ -73,9 +73,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
-  .page-hero { background: var(--brand-dark); padding: 64px 0 52px; }
-  .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: #fff; margin: 10px 0 8px; letter-spacing: -0.3px; }
-  .page-sub { font-size: 0.9rem; color: rgba(255,255,255,0.5); }
   .page-hero-cta { margin-top: 24px; }
 
   .contact-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; }
@@ -84,25 +81,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   /* FORM */
   .contact-form { display: flex; flex-direction: column; gap: 20px; }
   .form-group { display: flex; flex-direction: column; gap: 6px; }
-  .form-group label { font-size: 0.85rem; font-weight: 700; color: var(--text-primary); }
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    border: 1.5px solid #e2e8f0; border-radius: var(--radius);
-    padding: 10px 14px; font-family: var(--font); font-size: 0.95rem;
-    color: var(--text-primary); background: #fff; transition: border-color .2s;
-    width: 100%;
-  }
-  .form-group input:focus,
-  .form-group select:focus,
-  .form-group textarea:focus { outline: none; border-color: var(--brand-accent); }
   .form-group textarea { resize: vertical; min-height: 120px; }
   .btn-submit { background: var(--brand-accent); color: var(--brand-dark); font-weight: 700; font-size: 1rem; padding: 13px 28px; border-radius: var(--radius); border: none; cursor: pointer; transition: opacity .2s; align-self: flex-start; }
   .btn-submit:hover { opacity: .88; }
   .hidden { display: none; }
 
   /* ASIDE */
-  .aside-block { background: var(--brand-light); border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
+  .aside-block { background: var(--brand-light); border: 1px solid var(--color-gray-200); border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
   .aside-block h3 { font-size: 0.95rem; font-weight: 700; color: var(--brand-dark); margin-bottom: 8px; }
   .aside-block p  { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
 </style>

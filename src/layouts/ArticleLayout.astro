@@ -1,33 +1,32 @@
 ---
-// ArticleLayout.astro — template for all tool review & comparison articles
 import BaseLayout from './BaseLayout.astro';
 import { getCommercialOutboundRel } from '../lib/affiliateLinks.mjs';
 
 interface ToolEntry {
-  name:     string;
-  url:      string;
-  bestFor:  string;
-  price?:   string;
-  rating?:  string;
+  name: string;
+  url: string;
+  bestFor: string;
+  price?: string;
+  rating?: string;
 }
 
 interface FaqEntry {
   question: string;
-  answer:   string;
+  answer: string;
 }
 
 interface Props {
-  title:        string;
-  description:  string;
-  pubDate:      Date;
+  title: string;
+  description: string;
+  pubDate: Date;
   updatedDate?: Date;
-  category:     string;
-  tags?:        string[];
-  readTime?:    number;
-  affiliate?:   boolean;
-  heroImage?:   string;
-  tools?:       ToolEntry[];
-  faqs?:        FaqEntry[];
+  category: string;
+  tags?: string[];
+  readTime?: number;
+  affiliate?: boolean;
+  heroImage?: string;
+  tools?: ToolEntry[];
+  faqs?: FaqEntry[];
   canonicalUrl?: string;
 }
 
@@ -37,37 +36,34 @@ const {
   pubDate,
   updatedDate,
   category,
-  tags      = [],
-  readTime  = 8,
+  tags = [],
+  readTime = 8,
   affiliate = true,
   heroImage,
-  tools     = [],
-  faqs      = [],
+  tools = [],
+  faqs = [],
   canonicalUrl,
 } = Astro.props;
 
-const dateFormatOptions = { year:'numeric', month:'long', day:'numeric', timeZone:'UTC' } as const;
-const formattedPub     = pubDate.toLocaleDateString('en-US', dateFormatOptions);
-const formattedUpdated = updatedDate?.toLocaleDateString('en-US', dateFormatOptions);
-const reviewDate       = updatedDate ?? pubDate;
-const formattedReview  = reviewDate.toLocaleDateString('en-US', dateFormatOptions);
-const authorName       = 'Isaac Holt';
+const dateFormatOptions = { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' } as const;
+const formattedReview = (updatedDate ?? pubDate).toLocaleDateString('en-US', dateFormatOptions);
+const authorName = 'Isaac Holt';
 
-// Canonical map: category display name → URL slug
 const CATEGORY_SLUGS: Record<string, string> = {
-  'AI Writing':          'ai-writing-tools-marketers',
-  'Social Media':        'ai-social-media-tools',
-  'SEO & Content':       'ai-seo-tools-marketers',
-  'Ad Copy':             'ai-ad-copy-tools',
-  'Ad Copy & Creative':  'ai-ad-copy-tools',
-  'Analytics':           'ai-analytics-tools-marketers',
-  'Email Marketing':     'ai-email-marketing-tools',
-  'Design & Creative':   'ai-design-tools-marketers',
-  'Marketing Tools':     'ai-marketing-tools-comparison',
-  'Market Research':     'ai-tools-for-market-research',
+  'AI Writing': 'ai-writing-tools-marketers',
+  'Social Media': 'ai-social-media-tools',
+  'SEO & Content': 'ai-seo-tools-marketers',
+  'Ad Copy': 'ai-ad-copy-tools',
+  'Ad Copy & Creative': 'ai-ad-copy-tools',
+  'Analytics': 'ai-analytics-tools-marketers',
+  'Email Marketing': 'ai-email-marketing-tools',
+  'Design & Creative': 'ai-design-tools-marketers',
+  'Marketing Tools': 'ai-marketing-tools-comparison',
+  'Market Research': 'ai-tools-for-market-research',
   'Video & Repurposing': 'ai-video-tools-marketers',
-  'Automation':          'ai-automation-tools-marketers',
+  'Automation': 'ai-automation-tools-marketers',
 };
+
 const categorySlug = CATEGORY_SLUGS[category] ?? category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 const brandedTitle = `${title} | ToolPolaris`;
 const seoTitle = brandedTitle.length <= 65 ? brandedTitle : title;
@@ -75,146 +71,123 @@ const showDisclosure = affiliate || tools.length > 0;
 ---
 
 <BaseLayout title={seoTitle} description={description} canonicalUrl={canonicalUrl}>
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: title,
+      description,
+      datePublished: pubDate.toISOString(),
+      dateModified: (updatedDate ?? pubDate).toISOString(),
+      author: {
+        '@type': 'Person',
+        name: authorName,
+        url: 'https://toolpolaris.com/about/'
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'ToolPolaris',
+        url: 'https://toolpolaris.com',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://toolpolaris.com/toolpolaris-logo-300.png'
+        }
+      },
+      ...(heroImage ? {
+        image: { '@type': 'ImageObject', url: `https://toolpolaris.com${heroImage}` }
+      } : {})
+    })}
+  />
 
-  <!-- JSON-LD: Article schema for Google AIO citation eligibility -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": title,
-    "description": description,
-    "datePublished": pubDate.toISOString(),
-    "dateModified": reviewDate.toISOString(),
-    "author": {
-      "@type": "Person",
-      "name": authorName,
-      "url": "https://toolpolaris.com/about/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "ToolPolaris",
-      "url": "https://toolpolaris.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://toolpolaris.com/toolpolaris-logo-300.png"
-      }
-    },
-    ...(heroImage ? {
-      "image": { "@type": "ImageObject", "url": `https://toolpolaris.com${heroImage}` }
-    } : {})
-  })} />
-
-  <!-- JSON-LD: ItemList schema — tool comparison eligibility for Google AIO -->
   {tools.length > 0 && (
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": title,
-      "description": description,
-      "url": `https://toolpolaris.com/tools/`,
-      "numberOfItems": tools.length,
-      "itemListElement": tools.map((tool, i) => ({
-        "@type": "ListItem",
-        "position": i + 1,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": tool.name,
-          "url": tool.url,
-          "applicationCategory": category,
-          "description": tool.bestFor,
-          ...(tool.price ? { "offers": { "@type": "Offer", "price": tool.price, "priceCurrency": "USD" } } : {}),
-          ...(tool.rating ? { "aggregateRating": { "@type": "AggregateRating", "ratingValue": tool.rating, "bestRating": "5", "worstRating": "1", "reviewCount": "1" } } : {})
-        }
-      }))
-    })} />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: title,
+        description,
+        url: 'https://toolpolaris.com/tools/',
+        numberOfItems: tools.length,
+        itemListElement: tools.map((tool, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          item: {
+            '@type': 'SoftwareApplication',
+            name: tool.name,
+            url: tool.url,
+            applicationCategory: category,
+            description: tool.bestFor,
+            ...(tool.price ? { offers: { '@type': 'Offer', price: tool.price, priceCurrency: 'USD' } } : {}),
+            ...(tool.rating ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: tool.rating, bestRating: '5', worstRating: '1', reviewCount: '1' } } : {})
+          }
+        }))
+      })}
+    />
   )}
 
-  <!-- JSON-LD: FAQPage schema — PAA question eligibility for Google AIO -->
   {(faqs.length > 0 || tools.length > 0) && (
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": faqs.length > 0 ? faqs.map(faq => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": faq.answer
-        }
-      })) : [
-        {
-          "@type": "Question",
-          "name": `What are the top ${tools.length} most popular AI tools?`,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": `Based on our testing in 2026, the top tools are: ${tools.slice(0, 5).map((t, i) => `${i+1}. ${t.name} — Best for ${t.bestFor}`).join('; ')}.`
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.length > 0 ? faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: { '@type': 'Answer', text: faq.answer }
+        })) : [
+          {
+            '@type': 'Question',
+            name: `What are the top ${tools.length} most popular AI tools?`,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: `Based on our testing in 2026, the top tools are: ${tools.slice(0, 5).map((tool, index) => `${index + 1}. ${tool.name} - Best for ${tool.bestFor}`).join('; ')}.`
+            }
+          },
+          {
+            '@type': 'Question',
+            name: `Which ${category} tool is best for beginners?`,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: `${tools[tools.length - 1]?.name ?? tools[0]?.name} is typically the most accessible entry point with its free tier and lower starting price.`
+            }
           }
-        },
-        {
-          "@type": "Question",
-          "name": `Which ${category} tool is best for beginners?`,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": `${tools[tools.length - 1]?.name ?? tools[0]?.name} is typically the most accessible entry point with its free tier and lower starting price.`
-          }
-        }
-      ]
-    })} />
+        ]
+      })}
+    />
   )}
 
-  <!-- BREADCRUMB -->
-  <div class="container">
-    <nav class="breadcrumb" aria-label="breadcrumb">
-      <a href="/">Home</a>
-      <span aria-hidden="true">/</span>
-      <a href="/tools/">Tools</a>
-      <span aria-hidden="true">/</span>
-      <a href={`/tools/${categorySlug}/`}>{category}</a>
-      <span aria-hidden="true">/</span>
-      <span aria-current="page">{title}</span>
-    </nav>
-  </div>
-
-  <!-- ARTICLE HEADER -->
   <header class="article-header">
     <div class="container article-header-inner">
+      <nav class="article-breadcrumb" aria-label="breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">/</span>
+        <a href="/tools/">Tools</a>
+        <span aria-hidden="true">/</span>
+        <a href={`/tools/${categorySlug}/`}>{category}</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">{title}</span>
+      </nav>
+
       <a href={`/tools/${categorySlug}/`} class="category-badge">{category}</a>
       <h1>{title}</h1>
       <p class="article-description">{description}</p>
-      <p class="review-date">Last reviewed: {formattedReview}</p>
-      <p class="article-byline">
-        By <a href="/about/">{authorName}</a>, ToolPolaris editor
-        <span aria-hidden="true">&middot;</span>
-        <a href="/editorial-policy/">Editorial policy</a>
-      </p>
       <div class="article-meta">
-        <span>Published {formattedPub}</span>
-        {updatedDate && <span>&middot; Updated {formattedUpdated}</span>}
-        <span>&middot; {readTime} min read</span>
+        <span>Last reviewed: {formattedReview}</span>
+        <span class="meta-dot" aria-hidden="true"></span>
+        <span>By <a href="/about/">{authorName}</a>, ToolPolaris editor · <a href="/editorial-policy/" class="meta-link-muted">Editorial policy</a></span>
+        <span class="meta-dot" aria-hidden="true"></span>
+        <span>{readTime} min read</span>
       </div>
     </div>
   </header>
 
-  <!-- HERO IMAGE -->
-  {heroImage && (
-    <div class="hero-image-wrap">
-      <div class="container">
-        <img
-          src={heroImage}
-          alt={`${title} — ToolPolaris`}
-          class="hero-image"
-          width="1200"
-          height="630"
-          loading="eager"
-        />
-      </div>
-    </div>
-  )}
-
-  <!-- AFFILIATE DISCLOSURE BANNER -->
   {showDisclosure && (
     <div class="disclosure-banner">
       <div class="container">
-        <strong>Affiliate disclosure:</strong> ToolPolaris may earn a commission if you sign up through qualifying links &mdash; at no extra cost to you. This never influences our rankings or recommendations. <a href="/affiliate-disclosure/">Learn more &rarr;</a>
+        <strong>Affiliate disclosure:</strong> ToolPolaris may earn a commission if you sign up through qualifying links - at no extra cost to you. This never influences our rankings or recommendations. <a href="/affiliate-disclosure/">Learn more &rarr;</a>
       </div>
     </div>
   )}
@@ -230,7 +203,7 @@ const showDisclosure = affiliate || tools.length > 0;
               <span class="tool-pick-best"><strong>Best for:</strong> {tool.bestFor}</span>
               <span class="tool-pick-meta">
                 {tool.price && <>From ${tool.price}/mo</>}
-                {tool.price && tool.rating && <span aria-hidden="true"> &middot; </span>}
+                {tool.price && tool.rating && <span aria-hidden="true"> · </span>}
                 {tool.rating && <>{tool.rating}/5 rating</>}
               </span>
             </a>
@@ -240,121 +213,471 @@ const showDisclosure = affiliate || tools.length > 0;
     </section>
   )}
 
-  <!-- ARTICLE BODY -->
   <div class="article-wrap">
     <div class="container article-layout">
-
-      <!-- MAIN CONTENT -->
       <article class="article-body prose">
         <slot />
       </article>
 
-      <!-- SIDEBAR -->
       <aside class="article-sidebar">
         <div class="sidebar-card">
-          <div class="sidebar-card-title">📬 Weekly AI Tool Picks</div>
-          <p class="sidebar-card-desc">Get the best new tools for marketers — straight to your inbox, free.</p>
-          <a href="/#newsletter" class="btn-sidebar">Subscribe Free &rarr;</a>
+          <div class="sidebar-card-eyebrow">✦ Weekly AI Tool Picks</div>
+          <div class="sidebar-card-title">One new tool worth knowing. One that is overhyped.</div>
+          <p class="sidebar-card-desc">Every week, straight to your inbox. Free, no sponsored content.</p>
+          <a href="/#newsletter" class="btn-sidebar btn-sidebar--accent">Subscribe Free &rarr;</a>
         </div>
+
+        <div class="sidebar-card sidebar-card--light">
+          <div class="sidebar-card-eyebrow sidebar-card-eyebrow--light">✦ Polaris Stack Report</div>
+          <div class="sidebar-card-title sidebar-card-title--light">The complete AI stack for marketing teams</div>
+          <p class="sidebar-card-desc sidebar-card-desc--light">Role-by-role tool recommendations, tested and ranked. One-time purchase.</p>
+          <a href="https://buy.stripe.com/aFa5kwag8eYm1TC2nAe3e00" class="btn-sidebar btn-sidebar--accent">Get the Report - $39 &rarr;</a>
+        </div>
+
         {tags.length > 0 && (
           <div class="sidebar-tags">
             <div class="sidebar-tags-label">Tags</div>
             <div class="tags-wrap">
-              {tags.map(tag => <span class="tag">{tag}</span>)}
+              {tags.map((tag) => <span class="tag">{tag}</span>)}
             </div>
           </div>
         )}
       </aside>
-
     </div>
   </div>
 
-  <!-- BOTTOM CTA -->
   <section class="article-cta">
     <div class="container">
       <h2>Found this useful?</h2>
-      <p>Explore more role-specific AI tool rankings &mdash; free, no signup required.</p>
-      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <p>Explore more role-specific AI tool rankings - free, no signup required.</p>
+      <div class="article-cta-actions">
         <a href="/categories/" class="btn-primary">Browse by Role &rarr;</a>
         <a href="/tools/" class="btn-secondary">All Tool Reviews</a>
       </div>
     </div>
   </section>
-
 </BaseLayout>
 
 <style>
-  /* HERO IMAGE */
-  .hero-image-wrap { background: var(--brand-dark); padding: 0 0 36px; }
-  .hero-image { display: block; width: 100%; max-width: 860px; height: auto; border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.35); }
+  .article-header {
+    background: var(--brand-dark);
+    padding: 44px 0 52px;
+  }
 
-  /* HEADER */
-  .article-header { background: var(--brand-dark); padding: 52px 0 44px; }
-  .article-header-inner { max-width: 760px; }
-  .category-badge { display: inline-block; background: rgba(245,166,35,0.15); color: var(--brand-accent); font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; text-decoration: none; margin-bottom: 18px; transition: background .2s; }
-  .category-badge:hover { background: rgba(245,166,35,0.28); }
-  .article-header h1 { font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 800; color: #fff; line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 14px; }
-  .article-description { font-size: 1.05rem; color: rgba(255,255,255,0.68); line-height: 1.65; margin-bottom: 18px; max-width: 680px; }
-  .review-date { color: rgba(255,255,255,0.72); font-size: 0.86rem; font-weight: 700; margin-bottom: 8px; }
-  .article-byline { color: rgba(255,255,255,0.66); font-size: 0.84rem; font-weight: 600; margin-bottom: 8px; display: flex; flex-wrap: wrap; gap: 8px; }
-  .article-byline a { color: var(--brand-accent); text-decoration: none; }
-  .article-byline a:hover { text-decoration: underline; }
-  .article-meta { font-size: 0.8rem; color: rgba(255,255,255,0.4); display: flex; gap: 8px; flex-wrap: wrap; }
+  .article-header-inner {
+    max-width: 760px;
+  }
 
-  /* DISCLOSURE */
-  .disclosure-banner { background: #fffbeb; border-bottom: 1px solid #fde68a; padding: 10px 0; font-size: 0.82rem; color: #78350f; }
-  .disclosure-banner a { color: #92400e; font-weight: 600; text-decoration: none; }
-  .disclosure-banner a:hover { text-decoration: underline; }
+  .article-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.38);
+    margin-bottom: 24px;
+  }
 
-  /* QUICK PICKS */
-  .tool-quick-picks { background: #fff; border-bottom: 1px solid #e4e9f0; padding: 28px 0; }
-  .tool-quick-picks h2 { font-size: 1rem; font-weight: 800; color: var(--brand-dark); margin-bottom: 14px; }
-  .tool-picks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
-  .tool-pick { display: flex; flex-direction: column; gap: 5px; padding: 14px; border: 1px solid #e4e9f0; border-radius: 8px; text-decoration: none; color: var(--text-primary); background: var(--brand-light); transition: border-color .2s, box-shadow .2s; }
-  .tool-pick:hover { border-color: var(--brand-accent); box-shadow: 0 4px 14px rgba(15,31,61,0.08); }
-  .tool-pick-name { font-weight: 800; color: var(--brand-dark); font-size: 0.95rem; }
-  .tool-pick-best { font-size: 0.82rem; color: var(--text-primary); line-height: 1.45; }
-  .tool-pick-meta { font-size: 0.74rem; color: var(--text-muted); font-weight: 600; }
+  .article-breadcrumb a {
+    color: rgba(255, 255, 255, 0.38);
+    text-decoration: none;
+    transition: color 200ms ease;
+  }
 
-  /* LAYOUT */
-  .article-wrap { padding: 52px 0 64px; }
-  .article-layout { display: grid; grid-template-columns: 1fr 280px; gap: 52px; align-items: start; }
-  @media (max-width: 880px) { .article-layout { grid-template-columns: 1fr; } .article-sidebar { display: none; } }
+  .article-breadcrumb a:hover {
+    color: rgba(255, 255, 255, 0.72);
+  }
 
-  /* PROSE — uses :global() so styles reach markdown rendered via <slot /> */
-  .prose { font-size: 1rem; line-height: 1.8; color: var(--text-primary); }
-  .prose :global(h2) { font-size: 1.5rem; font-weight: 800; margin: 2.4em 0 0.7em; color: var(--brand-dark); letter-spacing: -0.2px; }
-  .prose :global(h3) { font-size: 1.15rem; font-weight: 700; margin: 1.8em 0 0.5em; color: var(--brand-dark); }
-  .prose :global(p)  { margin-bottom: 1.2em; }
-  .prose :global(ul), .prose :global(ol) { margin: 0.8em 0 1.2em 1.4em; }
-  .prose :global(li) { margin-bottom: 0.4em; }
-  .prose :global(strong) { font-weight: 700; color: var(--brand-dark); }
-  .prose :global(a)  { color: var(--brand-accent); font-weight: 600; text-decoration: none; }
-  .prose :global(a:hover) { text-decoration: underline; }
-  .prose :global(blockquote) { border-left: 3px solid var(--brand-accent); padding: 12px 20px; background: var(--brand-light); border-radius: 0 var(--radius) var(--radius) 0; margin: 1.6em 0; font-style: italic; color: var(--text-muted); }
-  .prose :global(table) { width: 100%; border-collapse: collapse; margin: 1.6em 0; font-size: 0.9rem; }
-  .prose :global(th) { background: var(--brand-dark); color: #fff; padding: 10px 14px; text-align: left; font-size: 0.82rem; letter-spacing: 0.5px; text-transform: uppercase; }
-  .prose :global(td) { padding: 10px 14px; border-bottom: 1px solid #e4e9f0; }
-  .prose :global(tr:nth-child(even) td) { background: var(--brand-light); }
-  .prose :global(hr) { border: none; border-top: 2px solid #e4e9f0; margin: 2.5em 0; }
-  .prose :global(img) { border-radius: var(--radius); margin: 1.6em 0; }
+  .category-badge {
+    display: inline-block;
+    background: rgba(245, 166, 35, 0.18);
+    color: var(--brand-accent);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
 
-  /* SIDEBAR */
-  .article-sidebar { position: sticky; top: 80px; }
-  .sidebar-card { background: var(--brand-dark); border-radius: var(--radius); padding: 24px; margin-bottom: 20px; }
-  .sidebar-card-eyebrow { font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--brand-accent); margin-bottom: 6px; }
-  .sidebar-card-title { font-size: 0.92rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
-  .sidebar-card-desc  { font-size: 0.82rem; color: rgba(255,255,255,0.6); line-height: 1.55; margin-bottom: 16px; }
-  .btn-sidebar { display: block; text-align: center; background: rgba(255,255,255,0.1); color: #fff; font-weight: 700; font-size: 0.88rem; padding: 10px 16px; border-radius: 6px; text-decoration: none; transition: opacity .2s; border: 1px solid rgba(255,255,255,0.15); }
-  .btn-sidebar:hover { opacity: .88; }
-  .btn-sidebar--accent { background: var(--brand-accent); color: var(--brand-dark); border: none; }
-  .sidebar-tags { padding: 16px; background: var(--brand-light); border-radius: var(--radius); }
-  .sidebar-tags-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; }
-  .tags-wrap { display: flex; flex-wrap: wrap; gap: 6px; }
-  .tag { background: #fff; border: 1px solid #e4e9f0; color: var(--text-muted); font-size: 0.75rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; }
+  .category-badge:hover {
+    background: rgba(245, 166, 35, 0.28);
+  }
 
-  /* BOTTOM CTA */
-  .article-cta { background: var(--brand-dark); text-align: center; padding: 64px 0; }
-  .article-cta h2 { font-size: 1.8rem; font-weight: 800; color: #fff; margin-bottom: 10px; }
-  .article-cta p  { color: rgba(255,255,255,0.65); margin-bottom: 28px; }
+  .article-header h1 {
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    font-weight: 800;
+    line-height: 1.18;
+    letter-spacing: -0.35px;
+    color: var(--color-white);
+    margin-bottom: 16px;
+  }
+
+  .article-description {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.7;
+    margin-bottom: 24px;
+    max-width: 680px;
+  }
+
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.48);
+  }
+
+  .article-meta a {
+    color: var(--brand-accent);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .article-meta a:hover {
+    text-decoration: underline;
+  }
+
+  .meta-link-muted {
+    color: rgba(255, 255, 255, 0.42) !important;
+    font-weight: 500 !important;
+  }
+
+  .meta-dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.22);
+    flex-shrink: 0;
+  }
+
+  .disclosure-banner {
+    border-top: 1px solid var(--color-gray-200);
+    border-bottom: 1px solid var(--color-gray-200);
+    padding: 11px 0;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .disclosure-banner strong {
+    color: var(--text-primary);
+  }
+
+  .disclosure-banner a {
+    color: var(--brand-accent);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .disclosure-banner a:hover {
+    text-decoration: underline;
+  }
+
+  .tool-quick-picks {
+    background: var(--color-white);
+    border-bottom: 1px solid var(--color-gray-200);
+    padding: 28px 0;
+  }
+
+  .tool-quick-picks h2 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--brand-dark);
+    margin-bottom: 14px;
+  }
+
+  .tool-picks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+  }
+
+  .tool-pick {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 14px;
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: var(--text-primary);
+    background: var(--brand-light);
+    transition: var(--transition-color), box-shadow 200ms ease;
+  }
+
+  .tool-pick:hover {
+    border-color: var(--brand-accent);
+    box-shadow: var(--shadow-md);
+  }
+
+  .tool-pick-name {
+    font-weight: 800;
+    color: var(--brand-dark);
+    font-size: 0.95rem;
+  }
+
+  .tool-pick-best {
+    font-size: 0.82rem;
+    color: var(--text-primary);
+    line-height: 1.45;
+  }
+
+  .tool-pick-meta {
+    font-size: 0.74rem;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+
+  .article-wrap {
+    padding: 52px 0 64px;
+  }
+
+  .article-layout {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 52px;
+    align-items: start;
+  }
+
+  .prose {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+  }
+
+  .prose :global(h2) {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 2.4em 0 0.7em;
+    color: var(--brand-dark);
+    letter-spacing: -0.2px;
+  }
+
+  .prose :global(h3) {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 1.8em 0 0.5em;
+    color: var(--brand-dark);
+  }
+
+  .prose :global(p) {
+    margin-bottom: 1.2em;
+  }
+
+  .prose :global(ul),
+  .prose :global(ol) {
+    margin: 0.8em 0 1.2em 1.4em;
+  }
+
+  .prose :global(li) {
+    margin-bottom: 0.4em;
+  }
+
+  .prose :global(strong) {
+    font-weight: 700;
+    color: var(--brand-dark);
+  }
+
+  .prose :global(a) {
+    color: var(--brand-accent);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .prose :global(a:hover) {
+    text-decoration: underline;
+  }
+
+  .prose :global(blockquote) {
+    border-left: 3px solid var(--brand-accent);
+    padding: 12px 20px;
+    background: var(--brand-light);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 1.6em 0;
+    font-style: italic;
+    color: var(--text-muted);
+  }
+
+  .prose :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.6em 0;
+    font-size: 0.9rem;
+  }
+
+  .prose :global(th) {
+    background: var(--brand-dark);
+    color: var(--color-white);
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 0.82rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .prose :global(td) {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--color-gray-200);
+  }
+
+  .prose :global(tr:nth-child(even) td) {
+    background: var(--brand-light);
+  }
+
+  .prose :global(hr) {
+    border: none;
+    border-top: 2px solid var(--color-gray-200);
+    margin: 2.5em 0;
+  }
+
+  .prose :global(img) {
+    border-radius: var(--radius);
+    margin: 1.6em 0;
+  }
+
+  .article-sidebar {
+    position: sticky;
+    top: 88px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .sidebar-card {
+    background: var(--brand-dark);
+    border-radius: var(--radius);
+    padding: 22px;
+  }
+
+  .sidebar-card--light {
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+  }
+
+  .sidebar-card-eyebrow {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 7px;
+  }
+
+  .sidebar-card-eyebrow--light {
+    color: var(--brand-accent);
+  }
+
+  .sidebar-card-title {
+    font-size: 0.92rem;
+    font-weight: 800;
+    color: var(--color-white);
+    margin-bottom: 8px;
+    line-height: 1.35;
+  }
+
+  .sidebar-card-title--light {
+    color: var(--brand-dark);
+  }
+
+  .sidebar-card-desc {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+
+  .sidebar-card-desc--light {
+    color: var(--text-muted);
+  }
+
+  .btn-sidebar {
+    display: block;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 700;
+    padding: 10px 16px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: opacity 200ms ease;
+  }
+
+  .btn-sidebar--accent {
+    background: var(--brand-accent);
+    color: var(--brand-dark);
+  }
+
+  .btn-sidebar--accent:hover {
+    opacity: 0.88;
+  }
+
+  .sidebar-tags {
+    padding: 16px;
+    background: var(--brand-light);
+    border-radius: var(--radius);
+  }
+
+  .sidebar-tags-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+  }
+
+  .tags-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .tag {
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: var(--radius-pill);
+  }
+
+  .article-cta {
+    background: var(--brand-dark);
+    text-align: center;
+    padding: 64px 0;
+  }
+
+  .article-cta h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--color-white);
+    margin-bottom: 10px;
+  }
+
+  .article-cta p {
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 28px;
+  }
+
+  .article-cta-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 880px) {
+    .article-layout {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .article-sidebar {
+      position: static;
+    }
+  }
 </style>
